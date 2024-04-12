@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form styling</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+  </head>
+  <body>
+    <h1>Form tanpa Bootstrap</h1>
+    <form>
+      <label for="inputNama">Nama</label>
+      <input type="text" id="inputNama" placeholder="Nama lengkap" />
+      <label for="inputPassword">Password</label>
+      <input type="password" id="inputPassword" placeholder="Password" />
+      <label for="inputEmail">Email</label>
+      <input type="email" id="inputEmail" placeholder="Alamat email" />
+      <label for="inputTahun">Tahun</label>
+      <select id="inputTahun">
+        <option>2021</option>
+        <option>2022</option>
+        <option>2023</option>
+        <option>2024</option>
+        <option>2025</option>
+      </select>
+      <label for="inputKomentar">Komentar</label>
+      <textarea id="inputKomentar"></textarea>
+    </form>
+
+    <!-- 
+        Tampilan di atas tampak "berantakan" karena hanya berisi tag HTML tanpa CSS maupun
+        Bootstrap. Dan ini normal, biasanya form harus di-style dengan CSS agar tampak rapi,
+        terutama mengatur width, margin dan padding setiap inputan.
+
+        Tag <label> dipakai untuk membuat teks penjelasan dari setiap inputan. Atribut for yang ada
+        di dalamnya berguna untuk menghubungkan <label> dengan atribut id pada kotak inputan
+        form. Sebagai contoh, tag <label for="inputNama"> akan berpasangan dengan <input
+        type="text" id="inputNama"> .
+
+        Penulisan pasangan atribut for dan id ini tidak wajib, tapi lebih ke rekomendasi penggunaan
+        tag <label>. Jikapun di ganti dengan <span> atau tanpa tag sekalipun, itu tidak masalah.
+        Namun di Bootstrap, tag <label> memiliki peranan khusus terutama untuk checkbox dan
+        radio button agar user mudah mengisi form.
+    -->
+
+    <!-- ________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Form-control</h1>
+
+    <!-- 
+        Class Bootstrap pertama yang bisa kita tambah untuk mempercantik tampilan form adalah
+        class .form-control. Class ini memberikan style umum ke setiap inputan form:
+    -->
+
+    <form>
+      <label for="inputNama">Nama</label>
+      <input
+        type="text"
+        id="inputNama"
+        class="form-control"
+        placeholder="Nama lengkap"
+      />
+      <label for="inputPassword">Password</label>
+      <input
+        type="password"
+        id="inputPassword"
+        class="form-control"
+        placeholder="Password"
+      />
+      <label for="inputEmail">Email</label>
+      <input
+        type="email"
+        id="inputEmail"
+        class="form-control"
+        placeholder="Alamat email"
+      />
+      <label for="inputTahun">Tahun</label>
+      <select id="inputTahun" class="form-select">
+        <option>2021</option>
+        <option>2022</option>
+        <option>2023</option>
+        <option>2024</option>
+        <option>2025</option>
+      </select>
+      <label for="inputKomentar">Komentar</label>
+      <textarea id="inputKomentar" class="form-control"></textarea>
+    </form>
+
+    <!-- 
+        Kode HTML ini nyaris sama seperti contoh sebelumnya. Hanya saja sekarang setiap tag
+        <input>, <select> dan <textarea> memiliki class .form-control. Serta tag <select> dengan
+        class .form-select. Dengan tambahan ini, tampilan form langsung berubah drastis.
+
+        Class .form-control mengubah cukup banyak style form, diantaranya teks berwarna abu-abu,
+        memiliki border radius, efek animasi border yang berwarna biru ketika inputan form dipilih,
+        serta inputan form sekarang diubah menjadi block level element dengan lebar 100%.
+    -->
+
+    <!-- 
+        Meskipun sudah tampil menarik, jarak antar inputan masih terlalu rapat. Solusinya, tempatkan
+        pasangan tag <label> dan tag <input> ke dalam container tag <div>, kemudian atur margin
+        dengan menambah class .mt-3:
+    -->
+
+    <div class="mt-3"></div>
+
+    <form>
+      <div class="mt-3">
+        <label for="inputNama" class="form-label">Nama</label>
+        <input
+          type="text"
+          id="inputNama"
+          class="form-control"
+          placeholder="Nama lengkap"
+        />
+      </div>
+      <div class="mt-3">
+        <label for="inputPassword" class="form-label">Password</label>
+        <input
+          type="password"
+          id="inputPassword"
+          class="form-control"
+          placeholder="Password"
+        />
+      </div>
+      <div class="mt-3">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input
+          type="email"
+          id="inputEmail"
+          class="form-control"
+          placeholder="Alamat email"
+        />
+      </div>
+      <div class="mt-3">
+        <label for="inputTahun" class="form-label">Tahun</label>
+        <select id="inputTahun" class="form-select">
+          <option>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+          <option>2025</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="inputKomentar" class="form-label">Komentar</label>
+        <textarea id="inputKomentar" class="form-control"></textarea>
+      </div>
+    </form>
+
+    <!-- ______________________________________________________________________________________________________ -->
+
+    <!-- Form style -->
+
+    <div class="mt-5"></div>
+    <h1>Form Size</h1>
+
+    <!-- 
+        Untuk membuat inputan yang lebih kecil atau lebih besar, tersedia class .form-control-sm dan
+        form-control-lg. Berikut tampilannya:
+     -->
+
+    <form>
+      <div class="mt-3">
+        <input
+          type="text"
+          class="form-control form-control-sm"
+          placeholder="Small"
+        />
+      </div>
+      <div class="mt-3">
+        <input type="text" class="form-control" placeholder="Regular" />
+      </div>
+      <div class="mt-3">
+        <input
+          type="text"
+          class="form-control form-control-lg"
+          placeholder="Large"
+        />
+      </div>
+    </form>
+
+    <!-- 
+        Untuk membuat inputan form yang lebih kecil, gunakan class .form-control-sm (baris 4).
+        Untuk tampilan yang lebih besar, gunakan class .form-control-lg (baris 12). Tanpa kedua class
+        ini, inputan form tampil dalam ukuran normal (baris 8).
+    -->
+
+    <!-- __________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Readonly, Disabled dan Plaintext</h1>
+
+    <!-- 
+        Untuk menonaktifkan inputan form, HTML menyediakan atribut readonly dan disabled. Jika
+        ditambah atribut readonly, inputan form menjadi tidak bisa diakses namun masih tampak
+        normal. Jika menggunakan atribut disabled, selain tidak bisa diakses tampilan form juga
+        menjadi abu-abu yang menandakan tidak aktif.
+
+        Sebagai tambahan dari 2 kondisi ini, Bootstrap menyediakan class .form-control-plaintext
+        yang membuat inputan form menjadi seperti teks biasa. Berikut contoh penggunaannya:
+    -->
+
+    <form>
+      <div class="mt-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Readonly"
+          readonly
+        />
+      </div>
+      <div class="mt-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Disabled"
+          disabled
+        />
+      </div>
+      <div class="mt-3">
+        <input
+          type="text"
+          class="form-control form-control-plaintext"
+          placeholder="Plaintext"
+        />
+      </div>
+    </form>
+
+    <!-- 
+        Baris ke-4 menggunakan atribut readonly. Hasilnya, efek animasi border masih aktif ketika
+        kita klik, namun inputan form tidak bisa diisi dengan teks apapun.
+
+        Baris ke-8 menggunakan atribut disabled. Hasilnya, inputan form tidak lagi bisa di klik dan
+        juga tidak bisa diisi teks apapun.
+
+        Baris ke-12 menggunakan class .form-control-plaintext. Hasilnya inputan form tampil
+        seperti teks biasa dengan warna abu-abu dan masih bisa di klik.
+
+        Ketiga jenis kondisi ini bisa digunakan ke semua inputan form lain seperti select, textarea,
+        radio dan checkbox.
+     -->
+
+    <!-- ______________________________________________________________________________________________________ -->
+
+    <!-- Form File, Form Range dan Form Color -->
+    <div class="mt-5"></div>
+    <h1>Form File, Form Range dan Form Color</h1>
+
+    <!-- 
+        Untuk men-style inputan form yang berbentuk tag <input type="file">, <input
+        type="range">, <input type="color">, bisa menggunakan class .form-control, .form-range,
+        dan .form-control-color Berikut tampilannya:
+    -->
+
+    <form>
+      <div class="mt-3">
+        <label for="formFile1">Upload File: </label>
+        <input type="file" id="formFile1" />
+      </div>
+      <div class="mt-3">
+        <label for="formRange1">Jarak: </label>
+        <input type="range" id="formRange1" />
+      </div>
+      <div class="mt-3">
+        <label for="formColor1">Warna: </label>
+        <input type="color" id="formColor1" />
+      </div>
+      <br /><br />
+      <div class="mt-3">
+        <label for="formFile2" class="form-label">Upload File: </label>
+        <input class="form-control" type="file" id="formFile2" />
+      </div>
+      <div class="mt-3">
+        <label for="formRange2" class="form-label">Jarak: </label>
+        <input class="form-range" type="range" id="formRange2" />
+      </div>
+      <div class="mt-3">
+        <label for="formColor2" class="form-label">Warna: </label>
+        <input
+          class="form-control form-control-color"
+          type="color"
+          id="formColor2"
+        />
+      </div>
+    </form>
+
+    <!-- 
+        Dalam contoh ini saya membuat inputan tag <input type="file">, <input type="range">,
+        dan <input type="color"> bawaan HTML (atas) dan dengan tambahan class Bootstrap
+        (bawah). Bootstrap mengubah cukup drastis tampilannya tag <input type="file">, serta
+        setiap inputan form memanjang hingga 100% parent element.
+    -->
+
+    <!-- ______________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Form Checkbox dan Form Radio</h1>
+
+    <!-- 
+        Untuk men-style tampilan checkbox dan radio, tersedia class .form-check-input untuk tag
+        <input>, serta class .form-check-label untuk tag <label>. Berikut contoh penggunaannya:
+     -->
+
+    <form>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="inputCheck1" />
+        <label class="form-check-label" for="inputCheck1">Pilihan 1</label>
+      </div>
+      <div class="form-check">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="inputCheck2"
+          disabled
+        />
+        <label class="form-check-label" for="inputCheck2">Pilihan 2</label>
+      </div>
+    </form>
+
+    <!-- 
+        Efek dari Bootstrap membuat tampilan checkbox lebih menarik. Untuk checkbox kedua
+        (bawah) saya menambah atribut disabled sehingga menjadi tidak aktif (berwarna abu-abu).
+
+        Penggunaan atribut for di dalam tag <label> yang berpasangan dengan atribut id di tag
+        <input>, menambah fitur user experience ke dalam checkbox (dan juga nantinya radio). Kita
+        bisa menceklis checkbox hanya dengan men-klik teks saja. Tanpa tag <label>, kita terpaksa
+        men-klik persis di dalam kotak checkbox.
+    -->
+
+    <div class="mt-5"></div>
+
+    <form>
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="inputRadio1"
+          name="contohRadio"
+        />
+        <label class="form-check-label" for="inputRadio1">Pilihan 1</label>
+      </div>
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="inputRadio2"
+          name="contohRadio"
+        />
+        <label class="form-check-label" for="inputRadio2">Pilihan 2</label>
+      </div>
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="inputRadio3"
+          name="contohRadio"
+          disabled
+        />
+        <label class="form-check-label" for="inputRadio3">Pilihan 3</label>
+      </div>
+    </form>
+
+    <!-- 
+        Dari hasil checkbox dan radio button, setiap pilihan berada dalam 1 baris terpisah. Bagaimana
+        jika kita ingin pilihan ini berjejer satu sama lain ke kanan (inline)? Caranya, tambahan class
+        .form-check-inline ke dalam container dari setiap checkbox dan radio:
+     -->
+
+    <div class="mt-5"></div>
+
+    <form>
+      <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input" id="inputCheck1" />
+        <label class="form-check-label" for="inputCheck1">Pilihan 1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input" id="inputCheck2" />
+        <label class="form-check-label" for="inputCheck2">Pilihan 2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="inputCheck3"
+          disabled
+        />
+        <label class="form-check-label" for="inputCheck3">Pilihan 3</label>
+      </div>
+      <br />
+      <div class="form-check form-check-inline">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="inputRadio1"
+          name="contohRadio"
+        />
+        <label class="form-check-label" for="inputRadio1">Pilihan 1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="inputRadio2"
+          name="contohRadio"
+        />
+        <label class="form-check-label" for="inputRadio2">Pilihan 2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="inputRadio3"
+          name="contohRadio"
+          disabled
+        />
+        <label class="form-check-label" for="inputRadio3">Pilihan 3</label>
+      </div>
+    </form>
+
+    <!-- 
+        Dengan tambahan class .form-check-inline di setiap container tag <div class="form-
+        check>, tombol checkbox dan radio button akan berjejer dari kiri ke kanan seperti sebuah
+        inline level element. Jika tidak terdapat tag <br> di baris 18, maka radio button di baris kedua
+        masih akan menyambung checkbox di baris pertama.
+     -->
+
+    <!-- _____________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Switches</h1>
+
+    <!-- 
+        Bootstrap menyediakan tampilan lain dari checkbox yang disebut sebagai switches. Untuk
+        membuatnya, cukup tambah class .form-switch ke dalam container tag <div>:
+    -->
+
+    <form>
+      <div class="form-check form-switch">
+        <input type="checkbox" class="form-check-input" id="inputSwitch1" />
+        <label class="form-check-label" for="inputSwitch1">Pilihan 1</label>
+      </div>
+      <div class="form-check form-switch">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="inputSwitch2"
+          checked
+        />
+        <label class="form-check-label" for="inputSwitch2">Pilihan 2</label>
+      </div>
+      <div class="form-check form-switch">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="inputSwitch3"
+          disabled
+        />
+        <label class="form-check-label" for="inputSwitch3">Pilihan 3</label>
+      </div>
+    </form>
+
+    <!-- 
+        Secara internal HTML, switches tetap di proses sebagaimana inputan checkbox biasa,
+        termasuk bisa ditambah dengan atribut checked dan disabled.
+    -->
+
+    <!-- ___________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Form Select</h1>
+
+    <!-- 
+        Untuk men-style tampilan tag <select>, Bootstrap menyediakan class .form-select. Serta
+        untuk mengatur ukuran, tersedia juga class .form-select-lg dan .form-select-sm. Berikut
+        contoh penggunaannya:
+     -->
+
+    <form>
+      <div class="mt-3">
+        <label for="inputTahun1" class="form-label">Tahun</label>
+        <select id="inputTahun1" class="form-select">
+          <option selected>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="inputTahun2" class="form-label">Tahun</label>
+        <select id="inputTahun2" class="form-select form-select-lg">
+          <option selected>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <label for="inputTahun3" class="form-label">Tahun</label>
+        <select id="inputTahun3" class="form-select form-select-sm">
+          <option selected>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+        </select>
+      </div>
+    </form>
+
+    <!-- 
+        Di sini saya membuat 3 buah tag <select>. Inputan pertama hanya menggunakan .form-select
+        saja, sedangkan inputan kedua dan ketiga ditambah dengan class .form-select-lg dan .form-
+        select-sm.
+     -->
+
+    <!-- ___________________________________---_________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Form Grid</h1>
+
+    <!-- 
+        Dari contoh form Bootstrap yang sudah kita coba, tambahan class .form-control membuat
+        inputan form memanjang memenuhi parent element ( width:100%). Namun jika digabung
+        dengan grid system, kita bisa dengan mudah mengatur lebar dan posisi inputan ini. Berikut
+        contohnya:
+    -->
+
+    <form>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Nama Lengkap" />
+        </div>
+        <div class="col">
+          <input type="password" class="form-control" placeholder="Password" />
+        </div>
+      </div>
+    </form>
+
+    <!-- 
+        Di sini saya menempatkan setiap inputan ke dalam class .col. Apabila masih ingat, class .col
+        tanpa jumlah segmen akan membagi .row dengan ukuran yang sama besar.
+
+        Untuk mengatur jarak spasi antar kolom, bisa menggunakan utility class gutter seperti .g-3.
+        Berikut contoh penggunaannya:
+     -->
+
+    <div class="mt-3"></div>
+
+    <form>
+      <div class="row g-3">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Nama Lengkap" />
+        </div>
+        <div class="col">
+          <input type="password" class="form-control" placeholder="Password" />
+        </div>
+      </div>
+    </form>
+
+    <!-- _____________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+
+    <h1>Horizontal Form</h1>
+
+    <!-- 
+        Dalam contoh sebelumnya, posisi tampilan tag <input> selalu berada di bawah tag <label>.
+        Bagaimana jika kita ingin membuat inputan form yang tampil bersebelahan dengan teks label
+        secara horizontal (bukan di bawahnya)?
+
+        Untuk mengatasi hal ini, Bootstrap menyediakan class .col-form-label. Selain itu kita perlu
+        memodifikasi penempatan class .row dan .col. Berikut kode program yang saya pakai:
+    -->
+
+    <form>
+      <div class="row mt-3">
+        <label class="col-sm-2 col-form-label" for="inputNama">Nama </label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            id="inputNama"
+            placeholder="Nama Lengkap"
+          />
+        </div>
+      </div>
+      <div class="row mt-3">
+        <label class="col-sm-2 col-form-label" for="inputPassword"
+          >Password
+        </label>
+        <div class="col-sm-10">
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword"
+            placeholder="Password"
+          />
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-sm-2">Syarat</div>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="checkSyarat" />
+            <label class="form-check-label" for="checkSyarat">
+              Saya setuju
+            </label>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Sign in</button>
+    </form>
+
+    <!-- 
+        Setiap pasangan tag <label> dan <input> berada di dalam 1 baris row, yakni baris 3-9, 11 – 17,
+        dan 19-29.
+
+        Kemudian saya menambah class .col-sm-2 dan .col-form-label ke dalam tag <label> (baris
+        4 dan 12). Class .col-sm-2 dipakai agar tag <label> mengambil tempat selebar 2 segmen pada
+        breakpoint small ke atas. Kemudian tag .col-form-label berfungsi untuk mengatur padding
+        dan margin agar pas dengan tag <input>.
+
+        Tag <input> sendiri berada di dalam container tag <div class="col-sm-10"> (baris 5 dan 13).
+        Artinya, tag <input> akan memakai 10 segmen pada breakpoint small ke atas.
+        Dengan pembagian tag <label> sebesar 2 segmen dan tag <input> sebesar 10 segmen seperti
+        ini, totalnya pas 12 segmen.
+
+        Untuk checkbox (baris 19 - 29), penempatan classnya sedikit berbeda karena tag <label>
+        harus berada setelah tag <input type="checkbox"> .
+     -->
+
+    <!-- ______________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Horizontal Form Label Size</h1>
+
+    <!-- 
+        Untuk form yang ditempatkan secara horizontal, terdapat class khusus . col-form-label-sm
+        dan .col-form-label-lg untuk mengatur agar ukuran tag <label> sama dengan tag <input>:
+     -->
+
+    <form>
+      <div class="row mt-3">
+        <label class="col-sm-2 col-form-label col-form-label-sm" for="input1">
+          Small
+        </label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            id="input1"
+            placeholder="Small"
+          />
+        </div>
+      </div>
+      <div class="row mt-3">
+        <label class="col-sm-2 col-form-label" for="input2"> Regular </label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            id="input2"
+            placeholder="Regular"
+          />
+        </div>
+      </div>
+      <div class="row mt-3">
+        <label class="col-sm-2 col-form-label col-form-label-lg" for="input3">
+          Large
+        </label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="input3"
+            placeholder="Large"
+          />
+        </div>
+      </div>
+    </form>
+
+    <!-- 
+        Di sini terdapat 3 pasangan tag <label> dan <input>. Jika tag <label> menggunakan class
+        .col-form-label-sm (baris 4), maka itu akan berpasangan dengan .form-control-sm (baris 8).
+
+        Begitu juga dengan class .col-form-label-lg (baris 24), yang berpasangan dengan .form-
+        control-lg (baris 28).
+
+        Tanpa kedua class ini, tag <label> dan <input> tampil sesuai ukuran normal (baris 14 dan 18).
+     -->
+
+    <!-- _______________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Form Inline</h1>
+
+    <!-- 
+        Membuat form yang tampil secara vertikal sudah, secara horizontal juga sudah. Sekarang
+        bagaimana membuat form yang inline? Yakni seluruh label dan inputan form memanjang ke
+        samping?
+
+        Kita kembali memanfaatkan grid system. Idenya adalah, gunakan class .row-cols-auto:
+     -->
+
+    <form>
+      <div class="row row-cols-auto g-3">
+        <label for="inputNama" class="col col-form-label">Nama: </label>
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            id="inputNama"
+            placeholder="Nama Lengkap"
+          />
+        </div>
+        <label for="inputPassword" class="col-form-label">Password: </label>
+        <div class="col">
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword"
+            placeholder="Password"
+          />
+        </div>
+        <div class="col">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- 
+        Di baris 3, container tag <div> memiliki class .row-cols-auto. Dengan ini, setiap class .col
+        nantinya akan mengambil tempat sesuai lebar konten yang ada. Tambahan class .g-3
+        membuat jarak antar kolom menjadi lebih dekat dengan gutter level 3.
+
+        Tag <label> di baris 4 dan dan 9 memiliki class .col, sehingga akan menjadi satu kolom
+        tersendiri. Sedangkan untuk tag <input> dan juga tag <button>, berada dalam <div
+        class="col">.
+
+        Ketika membuat inline form, perlu diperhatikan bagaimana tampilan form untuk layar kecil.
+        Setiap inputan form harus di susun ulang agar tidak berantakan di breakpoint small dan extra-
+        small.
+     -->
+
+    <!-- ________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Form Help Text</h1>
+
+    <!-- 
+      Bootstrap menyediakan class .form-text yang ditujukan untuk membuat teks keterangan,
+      misalnya bagaimana cara mengisi inputan form. Berikut contoh penggunaannya:
+    -->
+
+    <form>
+      <label for="inputPassword" class="form-label"> Password </label>
+      <input type="password" id="inputPassword" class="form-control" />
+      <div class="form-text">
+        Password minimal 6 karakter alfanumerik (huruf dan angka), tidak
+        mengandung spasi atau karakter khusus
+      </div>
+    </form>
+
+    <!-- 
+      Teks penjelasan saya tulis dengan tag <div class="form-text"> (baris 5). Tidak harus tag
+      <div>, class .form-text juga bisa ditempatkan ke tag lain seperti <span> atau <small>.
+    -->
+
+    <!-- ____________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Floating Labels</h1>
+
+    <!-- 
+      Floating labels merupakan fitur baru di Bootstrap 5. Dengan ini, lokasi label ada di dalam isian
+      form dan bergeser ketika kita mulai mengisi nilai. Efek seperti ini cukup sering ditemukan
+      pada design web modern.
+    -->
+
+    <form>
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="inputNama"
+          placeholder="Nama Lengkap"
+        />
+        <label for="inputNama">Nama Lengkap</label>
+      </div>
+      <div class="form-floating mt-3">
+        <input
+          type="password"
+          class="form-control"
+          id="inputPassword"
+          placeholder="Password"
+        />
+        <label for="inputPassword">Password</label>
+      </div>
+    </form>
+
+    <!-- 
+      Di sini saya membuat 2 inputan. Begitu kita mulai mengisi nilai nama atau password, label
+      "Nama Lengkap" dan "Password" akan mengecil dan pindah ke sisi atas.
+      Untuk membuatnya, tempatkan pasangan tag <input> dan <label> ke dalam class .form-
+      floating. Syarat lain, posisi tag <label> harus ditulis setelah tag <input>, kemudian di dalam
+      tag <input> harus ada atribut placeholder meskipun nilainya tidak akan dipakai Bootstrap.
+    -->
+
+    <!-- _________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Form Validation</h1>
+
+    <!-- 
+      Form validation adalah cara untuk memeriksa apakah inputan form sudah diisi user dengan
+      data yang benar. "Benar" di sini tergantung syarat yang kita buat sendiri, misalnya username
+      tidak boleh mengandung spasi, atau password minimal harus 8 karakter.
+
+      Pemeriksaan inputan form bukan bagian dari HTML maupun Bootstrap, tapi menjadi jatah
+      bahasa pemrograman seperti JavaScript atau PHP. Di sini kita hanya akan membahas efek
+      tampilan yang disediakan Bootstrap saat error terjadi validasi.
+
+      HTML5 menyediakan beberapa atribut validasi yang bisa kita pakai sebagai "trigger" untuk
+      menghasilkan form yang error. Contohnya atribut required yang akan error jika inputan form
+      tidak diisi. Berikut contoh penggunaannya:
+    -->
+
+    <form>
+      <div class="row">
+        <div class="col">
+          <label for="inputNama" class="form-label">Nama Lengkap</label>
+          <input type="text" class="form-control" id="inputNama" />
+        </div>
+        <div class="col">
+          <label for="inputUsername" class="form-label">Username</label>
+          <input type="text" class="form-control" id="inputUsername" required />
+        </div>
+        <div class="col">
+          <label for="inputEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail" required />
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="checkSyarat"
+              required
+            />
+            <label class="form-check-label" for="checkSyarat">
+              Saya setuju dengan syarat dan ketentuan
+            </label>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Daftar</button>
+    </form>
+
+    <!-- 
+      Di sini saya menulis atribut required untuk 3 inputan: username (baris 11), email (baris 16) dan
+      syarat (baris 22). Ketika form langsung di submit tanpa mengisi apapun, border untuk ketiga
+      inputan akan menjadi merah.
+
+      Khusus untuk inputan username, memiliki border biru karena sedang mengalami event focus.
+      Silahkan klik selagi di luar form, maka border merah ini akan terlihat.
+
+      Dan masih banyak lagi cara validasi di bootstrap
+     -->
+
+    <!-- _________________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Input Group</h1>
+
+    <!-- 
+      Input Group adalah komponen Bootstrap yang terdiri dari gabungan tag <input type="text">
+      dengan teks biasa atau berbagai komponen Bootstrap lain seperti Button dan Dropdown.
+      Komponen input group ini cukup menarik karena membuat tampilan textbox menjadi lebih
+      modern (tidak seperti textbox pada umumnya).
+
+      Untuk membuat input group, class yang diperlukan adalah .input-group. Class ini berfungsi
+      sebagai "container" yang di dalamnya terdapat tag <input type="text"> serta komponen lain.
+      Berikut contoh penggunaannya:
+      -->
+
+    <form>
+      <div class="input-group">
+        <span class="input-group-text">www.</span>
+        <input type="text" class="form-control" placeholder="nama_website" />
+      </div>
+      <div class="input-group mt-4">
+        <input type="text" class="form-control" placeholder="nama_website" />
+        <span class="input-group-text">.com</span>
+      </div>
+      <div class="input-group mt-4">
+        <span class="input-group-text">www.</span>
+        <input type="text" class="form-control" placeholder="nama_website" />
+        <span class="input-group-text">.com</span>
+      </div>
+    </form>
+
+    <!-- 
+      Di sini saya membuat 3 buah class .input-group (baris 3-6, 8-11 dan 13-17). Ketiganya dibuat
+      dari gabungan tag <input> serta tag <span> yang memiliki class .input-group-text. Class
+      .input-group-text ini memberitahu Bootstrap bahwa kita ingin menggabung sebuah teks.
+     -->
+
+    <!-- ___________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Input Group Size</h1>
+
+    <!-- 
+      Ukuran komponen input group juga bisa diatur. Sama seperti komponen Bootstrap lain,
+      terdapat 3 size: small (class .input-group-sm), regular (default), dan large (class .input-
+      group-lg):
+    -->
+
+    <div class="container mt-3">
+      <div class="input-group input-group-sm">
+        <span class="input-group-text">Small</span>
+        <input type="text" class="form-control" />
+      </div>
+      <div class="input-group mt-4">
+        <span class="input-group-text">Regular</span>
+        <input type="text" class="form-control" />
+      </div>
+      <div class="input-group input-group-lg mt-4">
+        <span class="input-group-text">Large</span>
+        <input type="text" class="form-control" />
+      </div>
+    </div>
+
+    <!-- __________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Multiple Input Group</h1>
+
+    <!-- 
+    Komponen input group bisa menampung lebih dari 1 teks tambahan maupun lebih dari 1 tag
+    <input type="text"> . Berikut contoh kode untuk membuat input group dengan 3 teks:
+  -->
+
+    <label for="inputProfile" class="form-label">URL Facebook</label>
+    <div class="input-group">
+      <span class="input-group-text">https://</span>
+      <span class="input-group-text">www.</span>
+      <span class="input-group-text">facebook.com/</span>
+      <input
+        type="text"
+        class="form-control"
+        id="inputProfile"
+        placeholder="URL profile"
+      />
+    </div>
+
+    <!-- Sebaliknya, kita juga bisa membuat input group dengan 3 buah tag <input type="text">: -->
+
+    <div class="mt-3"></div>
+
+    <div class="input-group">
+      <span class="input-group-text">Lokasi</span>
+      <input
+        type="text"
+        class="form-control"
+        id="inputProvinsi"
+        placeholder="Provinsi"
+      />
+      <input
+        type="text"
+        class="form-control"
+        id="inputKota"
+        placeholder="Kabupaten / Kota"
+      />
+      <input
+        type="text"
+        class="form-control"
+        id="inputKec"
+        placeholder="Kecamatan"
+      />
+    </div>
+
+    <!-- 
+      Kali ini terdapat 3 kotak inputan untuk provinsi, kabupaten / kota, dan kecamatan. Gabungan
+      tag input ini tampak cukup menarik dan dari sisi pemrosesan di server nanti juga tidak ada
+      masalah karena setiap tag input diproses secara terpisah.
+    -->
+
+    <!-- __________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Input Group Button</h1>
+
+    <!-- Komponen selanjutnya yang bisa digabung ke dalam input group adalah button: -->
+
+    <div class="input-group">
+      <button class="btn btn-outline-secondary" type="button">Button</button>
+      <input type="text" class="form-control" />
+    </div>
+    <div class="input-group mt-4">
+      <input type="text" class="form-control" />
+      <button class="btn btn-outline-secondary" type="button">Button</button>
+    </div>
+    <div class="input-group mt-4">
+      <input type="text" class="form-control" />
+      <button class="btn btn-outline-secondary" type="button">Button</button>
+      <button class="btn btn-outline-secondary" type="button">Button</button>
+    </div>
+
+    <!-- 
+    Dalam contoh ini saya membuat 3 input group dengan berbagai variasi posisi tombol. Cara
+    pembuatannya kurang lebih sama seperti sebelumnya. Yang berbeda adalah kita menggunakan
+    tag <button> di dalam class .input-group.
+  -->
+
+    <!-- __________________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Input Group Button</h1>
+
+    <!-- Variasi lain dari input group adalah digabung dengan dropdown: -->
+
+    <div class="input-group">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+      >
+        Dropdown
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+      </div>
+      <input type="text" class="form-control" />
+    </div>
+
+    <script src="./js/bootstrap.bundle.js"></script>
+  </body>
+</html>

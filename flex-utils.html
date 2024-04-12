@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-utils</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+  </head>
+  <body>
+    <h1>Flex container</h1>
+
+    <!-- 
+        Agar bisa menerapkan flexbox, sebuah element perlu diubah menjadi "flex element". Jika tidak,
+        semua property flexbox tidak akan berefek. Di dalam CSS, ini dibuat dengan cara menambah
+        property display:flexbox atau display:inline-block seperti contoh berikut:
+
+        <div style="display:flexbox">
+        ...
+        </div>
+        <div style="display:inline-flexbox">
+        ...
+        </div>
+     -->
+
+    <!-- 
+        Bootstrap menyediakan class khusus untuk membuat kode yang mirip, yakni melalui class .d-
+        flex dan .d-inline-flex. Berikut contoh penggunaannya:
+      -->
+
+    <div class="p-2 mb-3 bg-dark text-white">
+      <div class="p-3 bg-primary">Box 1</div>
+      <div class="p-3 bg-danger">Box 2</div>
+      <div class="p-3 bg-success">Box 3</div>
+    </div>
+    <div class="p-2 mb-3 bg-dark text-white d-flex">
+      <div class="p-3 bg-primary">Box 1</div>
+      <div class="p-3 bg-danger">Box 2</div>
+      <div class="p-3 bg-success">Box 3</div>
+    </div>
+    <div class="p-2 mb-3 bg-dark text-white d-inline-flex">
+      <div class="p-3 bg-primary">Box 1</div>
+      <div class="p-3 bg-danger">Box 2</div>
+      <div class="p-3 bg-success">Box 3</div>
+    </div>
+
+    <!-- 
+        Di sini saya membuat 3 buah kelompok box dengan memanfaatkan berbagai utility class
+        bawaan Bootstrap. Misalnya class .p-2 untuk membuat padding level 2, class .mb-3 untuk
+        margin bottom level 3, class .bg-dark untuk membuat warna background putih, serta class
+        .text-white untuk mengubah warna teks menjadi putih.
+
+        Kelompok box pertama (baris 1 - 5) adalah tampilan normal element HTML tanpa flexbox.
+        Setiap box berada di baris terpisah dan memanjang selebar parent element karena tag <div>
+        adalah block level element.
+
+        Kode untuk kelompok box kedua (baris 7 - 11) nyaris sama seperti kelompok box pertama.
+        Bedanya, ada tambahan class .d-flex di baris 7. Akibatnya, seluruh element yang ada di
+        dalamnya akan berperilaku khusus sesuai aturan CSS flexbox.
+
+        Efek yang langsung terlihat adalah, ketiga box mengecil sesuai lebar teks meskipun masih ada
+        ruang di sisi kanan parent element.
+
+        Kelompok box ketiga (baris 13 – 17) memiliki tambahan class .d-inline-flex di akhir baris 13.
+        Class ini juga dipakai untuk mengaktifkan flex element. Hanya saja, parent element akan
+        menjadi inline level element sehingga tidak terlihat ada ruang kosong di sisi kanan.
+    -->
+
+    <!-- ________________________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Flex Container Breakpoint</h1>
+
+    <!-- 
+        Bootstrap adalah framework CSS dengan efek responsive bawaan, karena itulah hampir semua
+        utility class Bootstrap memiliki variasi breakpoint. Untuk flex container, kita bisa mengatur
+        agar parent element bisa menjadi flex container hanya ketika masuk ke breakpoint tertentu.
+
+        Aturan dasar cara penulisan kode breakpoint adalah: d-<kode_breakpoint>-<jenis_display>
+        Sehingga untuk class flex dan inline-flex terdapat 6 class untuk setiap jenis flex :
+        .d-flex, .d-sm-flex, .d-ms-flex, .d-lg-flex, .d-xl-flex, .d-xxl-flex
+        .d-inline-flex, .d-sm-inline-flex, .d-ms-inline-flex, .d-lg-inline-flex, .d-xl- , inline-flex, .d-xxl-inline-flex
+
+        Penulisan ini sama dengan utility class display Bootstrap lain yang pernah kita bahas seperti
+        .d-block, .d-sm-block, atau .d-md-inline-block. Berikut contoh penggunaannya:
+     -->
+
+    <div class="p-2 bg-dark text-white d-block d-sm-inline-flex d-md-flex">
+      <div class="p-3 bg-primary">Box 1</div>
+      <div class="p-3 bg-danger">Box 2</div>
+      <div class="p-3 bg-success">Box 3</div>
+    </div>
+
+    <!-- 
+        Di baris 1 terdapat 3 class: .d-block, .d-sm-inline-flex dan .d-md-flex. Artinya, ketika
+        masuk ke breakpoint extra-small, container akan menjadi display block biasa (efek dari .d-
+        block). Ketika masuk ke breakpoint small, akan berubah menjadi inline-flex (efek dari .d-sm-
+        inline-flex). Begitu masuk ke breakpoint middle dan ke atas, akan berubah menjadi flex (efek
+        dari .d-md-flex).
+
+        Flex container harus selalu ditulis agar kita bisa menggunakan flex utilities class sepanjang bab
+        ini.
+    -->
+
+    <!-- ___________________________________________________________________________________________________________     -->
+
+    <div class="mt-5"></div>
+    <h1>Flex Direction</h1>
+
+    <!-- 
+        Flex direction adalah class Bootstrap untuk mengatur urutan flex item, sekaligus menentukan
+        main axis atau sumbu utama flexbox. Konsep tentang sumbu utama (main axis) dan sumbu
+        silang (cross axis) memang cukup membingungkan, terutama bagi yang baru mempelajari
+        flexbox.
+
+        Di dalam flexbox, kita harus menentukan apa yang jadi arah sumbu utama, apakah secara
+        horizontal (sumbu x), atau vertikal (sumbu y).
+
+        Jika sumbu x dipilih sebagai sumbu utama atau main axis, maka otomatis sumbu y menjadi
+        cross axis. Begitu juga sebaliknya, jika sumbu y dipilih sebagai main axis, maka sumbu x akan
+        menjadi cross axis.
+
+        Arah sumbu x berarti mengurutkan flex item dari kiri ke kanan atau kanan ke kiri (dalam satu
+        baris / row). Sedangkan arah sumbu y berarti kita mengurutkan flex item dari atas ke bawah
+        atau bawah ke atas (dalam satu kolom / column). Karena itulah class flex direction bawaan
+        Bootstrap hadir dalam 2 variasi, yakni flex-row dan flex-column.
+     -->
+
+    <h1>Flex Direction Row</h1>
+
+    <!-- 
+        Flex direction row dipakai untuk menetapkan sumbu x sebagai main axis dari flex container.
+        Terdapat 2 class yang tersedia, yakni .flex-row dan .flex-row-reverse. Berikut contoh
+        penggunaannya:
+    -->
+
+    <div class="p-2 mb-3 bg-dark text-white d-flex flex-row">
+      <div class="p-3 bg-primary">Box 1</div>
+      <div class="p-3 bg-danger">Box 2</div>
+      <div class="p-3 bg-success">Box 3</div>
+    </div>
+    <div class="p-2 bg-dark text-white d-flex flex-row-reverse">
+      <div class="p-3 bg-primary">Box 1</div>
+      <div class="p-3 bg-danger">Box 2</div>
+      <div class="p-3 bg-success">Box 3</div>
+    </div>
+
+    <!-- 
+        Kelompok box pertama (atas), menggunakan class .flex-row di baris 1. Hasilnya seolah-olah
+        tidak ada perubahan dari contoh kita sebelumnya. Ini karena secara default, flex item di dalam
+        flex container akan berjejer dari kiri ke kanan, atau dengan kata lain class .flex-row sudah
+        otomatis dipakai.
+
+        Kelompok box kedua (bawah), menggunakan class .flex-row-reverse di baris 7. Hasilnya,
+        urutan box mulai dari kanan terlebih dahulu baru ke kiri. Perhatikan urutan Box juga berubah
+        dimana Box 1 berada paling kanan, kemudian diikuti Box 2, dan terakhir Box 3 di sisi kiri.
+    -->
+
+    <div class="mt-5"></div>
+    <h1>Flex Direction Column</h1>
+
+    <!-- 
+        Flex direction column dipakai untuk menetapkan sumbu y sebagai main axis dari flex
+        container. Terdapat 2 class yang tersedia, yakni .flex-column dan .flex-column-reverse.
+        Berikut contoh penggunaannya:
+    -->
+
+    <div class="p-2 mb-3 bg-dark text-white d-flex">
+      <div class="p-3 bg-primary">Box 1</div>
+      <div class="p-3 bg-danger">Box 2</div>
+      <div class="p-3 bg-success">Box 3</div>
+    </div>
+    <div class="p-2 mb-3 bg-dark text-white d-flex flex-column">
+      <div class="p-3 bg-primary">Box 1</div>
+      <div class="p-3 bg-danger">Box 2</div>
+      <div class="p-3 bg-success">Box 3</div>
+    </div>
+    <div class="p-2 bg-dark text-white d-flex flex-column-reverse">
+      <div class="p-3 bg-primary">Box 1</div>
+      <div class="p-3 bg-danger">Box 2</div>
+      <div class="p-3 bg-success">Box 3</div>
+    </div>
+
+    <!-- 
+        Pada kode ini terdapat 3 kelompok box. Kelompok box pertama (paling atas) hanya
+        menggunakan class .d-flex untuk membuat flexbox container tanpa tambahan class lain.
+
+        Kelompok box kedua (tengah) menggunakan class .flex-column. Hasilnya, seluruh box di
+        dalam flex container tersusun dari atas ke bawah, dan setiap flex item juga memanjang
+        memenuhi flex container.
+
+        Kelompok box ketiga (paling bawah) menggunakan class .flex-column-reverse. Kali ini
+        urutan flex item terbalik dari bawah ke atas, dimana Box 1 berada di posisi paling bawah,
+        diikuti Box 2 dan Box 3 di urutan paling atas
+     -->
+
+    <!-- __________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Flex Direction Breakpoint</h1>
+
+    <!-- 
+        Flex direction juga hadir dalam bentuk breakpoint, yakni dengan format:
+        flex-<kode_breakpoint>-<row|row-reverse|column|column-reserve>
+        Berikut contoh penerapannya:
+    -->
+
+    <div class="p-2 bg-dark text-white d-flex flex-sm-row-reverse flex-md-row">
+      <div class="p-3 bg-primary">Box 1</div>
+      <div class="p-3 bg-danger">Box 2</div>
+      <div class="p-3 bg-success">Box 3</div>
+    </div>
+
+    <!-- 
+        Di baris 1 terdapat penggunaan class .flex-sm-row-reverse dan .flex-md-row. Artinya, ketika
+        masuk ke breakpoint medium, flex item di urutkan dari kiri ke kanan (berlaku efek .flex-row).
+
+        Ketika masuk ke breakpoint small, flex item di urutkan dari kanan ke kiri (berlaku efek .flex-
+        row-reverse). Lalu ketika masuk ke breakpoint extra-small, flex item kembali di urutkan dari
+        kiri ke kanan karena inilah efek default bawaan flexbox (berlaku efek .flex-row).
+    -->
+
+    <!-- ___________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Flex Align Self</h1>
+
+    <!-- 
+      Flex align self sangat mirip seperti align items yang baru saja kita bahas. Bedanya, class ini
+      dipakai untuk mengatur flex item secara individu, bukan keseluruhan seperti align items.
+      Terdapat 5 jenis variasi class untuk flex align self:
+
+      .align-self-start
+      .align-self-end
+      .align-self-center
+      .align-self-baseline
+      .align-self-stretch
+    -->
+
+    <div style="height: 200px" class="p-2 bg-dark text-white d-flex">
+      <div class="p-3 bg-primary align-self-start">Box 1</div>
+      <div class="p-3 bg-danger align-self-center">Box 2</div>
+      <div class="p-3 bg-success align-self-end">Box 3</div>
+      <div class="p-3 bg-secondary align-self-baseline">Box 4</div>
+      <div class="p-3 bg-info align-self-stretch">Box 5</div>
+    </div>
+
+    <!-- _____________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Flex Align Self Breakpoint</h1>
+
+    <!-- 
+      Juga sama seperti class align items, class align self punya variasi breakpoint dengan format:
+      align-self-<kode_breakpoint>-<start|end|center|baseline|stretch>
+      Berikut contoh prakteknya:
+    -->
+
+    <div style="height: 100px" class="p-2 bg-dark text-white d-flex">
+      <div class="p-3 bg-primary align-self-sm-start align-self-md-end">
+        Box 1
+      </div>
+      <div class="p-3 bg-danger align-self-sm-center align-self-md-center">
+        Box 2
+      </div>
+      <div class="p-3 bg-success align-self-sm-end align-self-md-start">
+        Box 3
+      </div>
+    </div>
+
+    <!-- 
+      Saya yakin anda sudah bisa membaca maksud dari kode ini karena sangat mirip seperti contoh
+      pada align items, hanya saja sekarang beroperasi di setiap flex item secara individu.
+    -->
+
+    <!-- ___________________________________________________________________________________________________++ -->
+
+    <div class="mt-5"></div>
+    <h1>Flex Fill</h1>
+
+    <!-- 
+      Flex fill adalah class untuk membuat flex item melebar pada main axis untuk memenuhi ruang
+      yang masih tersedia. Untuk membuatnya tambahkan class .flex-fill seperti contoh berikut:
+    -->
+
+    <!-- <div class="p-2 mb-3 bg-dark text-white d-flex flex-row">
+      <div class="p-3 bg-primary flex-fill">Box 1</div>
+      <div class="p-3 bg-danger">Box 2</div>
+      <div class="p-3 bg-success">Box 3</div>
+      </div>
+
+      <div class="p-2 mb-3 bg-dark text-white d-flex flex-row"">
+      <div class="p-3 bg-primary flex-fill">Box 1</div>
+      <div class="p-3 bg-danger flex-fill">Box 2</div>
+      <div class="p-3 bg-success">Box 3</div>
+      </div>
+      
+      <div class="p-2 mb-3 bg-dark text-white d-flex flex-row"">
+      <div class="p-3 bg-primary flex-fill">Box 1</div>
+      <div class="p-3 bg-danger flex-fill">Box 2</div>
+      <div class="p-3 bg-success flex-fill">Box 3</div>
+      </div> -->
+
+    <!-- 
+      Class .d-flex dan .flex-row akan menetapkan sumbu x sebagai main axis, sehingga flex fill akan
+      berpengaruh di sumbu x (kiri-kanan)
+      Kelompok box pertama memiliki class .flex-fill untuk Box 1. Hasilnya, Box 1 akan melebar
+      ke samping mengambil seluruh tempat yang masih kosong. Efek ini mirip seperti class .col
+      milik Bootstrap grid system.
+      Kelompok box kedua memiliki class .flex-fill di Box 1 dan Box 2. Hasilnya, Box 1 dan Box 2
+      akan berbagi tempat sesuai dengan ruang yang masih kosong.
+      Dan untuk kelompok box ketika, class .flex-fill ada di ketiga Box. Hasilnya, Box 1, Box 2 dan
+      Box 3 akan berbagi tempat sama besar.
+    -->
+
+    <!-- _____________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Flex Fill Breakpoint</h1>
+
+    <!-- 
+      Untuk variasi breakpoint, class flex fill menggunakan format .flex-<kode_breakpoint>-fill.
+      Berikut contoh penggunaannya:
+    -->
+
+    <div
+      style="height: 300px"
+      class="p-2 bg-dark text-white d-flex flex-column"
+    >
+      <div class="p-3 bg-primary flex-fill">Box 1</div>
+      <div class="p-3 bg-danger flex-sm-fill">Box 2</div>
+      <div class="p-3 bg-success flex-md-fill">Box 3</div>
+    </div>
+
+    <!-- 
+      Kali ini main axis ada di sumbu y, karena terdapat penggunaan class .flex-column di flex
+      container. Maka class flex-fill juga akan berpengaruh di sumbu y (atas-bawah).
+
+      Ketika masuk ke breakpoint medium (bawah), seluruh flex item akan "meninggi" karena ketiga
+      Box memiliki class flex fill yang berlaku pada breakpoint medium ke atas.
+
+      Saat masuk ke breakpoint small (kanan atas), Box 3 tidak lagi memiliki efek flex fill karena
+      class .flex-md-fill (baris 4) hanya aktif di breakpoint medium ke atas.
+
+      Dan pada saat masuk ke breakpoint extra-small (kiri atas), Box 2 dan Box 3 juga tidak lagi
+      memiliki efek flex fill karena class .flex-sm-fill (baris 3) juga hanya aktif di breakpoint small
+      ke atas. Di sini hanya Box 1 saja yang memiliki efek flex fill.
+     -->
+
+    <!-- _______________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Flex grow</h1>
+
+    <!-- 
+      Dalam konsep CSS, flex grow adalah cara untuk mengatur skala "pembesaran" dari setiap flex
+      item. Namun di Bootstrap, class flex grow hanya bisa diatur dengan 2 nilai saja: 0 untuk tidak
+      ada pembesaran (class .flex-grow-0), dan 1 untuk pembesaran normal (class .flex-grow-1) .
+      Akibatnya, flex grow ini nyaris tidak berbeda dengan flex fill yang baru saja kita bahas.
+
+      Berikut contoh praktek dari flex grow:
+    -->
+
+    <div class="p-2 mb-3 bg-dark text-white d-flex flex-row">
+      <div class="p-3 bg-primary flex-grow-1">Box 1</div>
+      <div class="p-3 bg-danger flex-grow-0">Box 2</div>
+      <div class="p-3 bg-success flex-grow-0">Box 3</div>
+    </div>
+    <div class="p-2 mb-3 bg-dark text-white d-flex flex-row">
+      <div class="p-3 bg-primary flex-grow-1">Box 1</div>
+      <div class="p-3 bg-danger flex-grow-1">Box 2</div>
+      <div class="p-3 bg-success flex-grow-0">Box 3</div>
+    </div>
+    <div class="p-2 mb-3 bg-dark text-white d-flex flex-row">
+      <div class="p-3 bg-primary flex-grow-1">Box 1</div>
+      <div class="p-3 bg-danger flex-grow-1">Box 2</div>
+      <div class="p-3 bg-success flex-grow-1">Box 3</div>
+    </div>
+
+    <!-- 
+      Seperti yang terlihat, class .flex-grow-1 memiliki efek yang sama seperti .flex-fill. Class ini
+      dipakai untuk membuat flex item memanjang memenuhi ruang yang masih tersedia.
+      Sedangkan class .flex-grow-0 dipakai agar ukuran flex item tidak ikut membesar.
+    -->
+
+    <!-- _________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Flex grow Breakpoints</h1>
+
+    <!-- 
+      Untuk variasi breakpoint, class flex grow menggunakan format:
+      flex-<kode_breakpoint>-grow-<0|1>
+     -->
+
+    <div class="p-2 bg-dark text-white d-flex flex-row">
+      <div class="p-3 bg-primary flex-sm-grow-1 flex-md-grow-0">Box 1</div>
+      <div class="p-3 bg-danger flex-md-grow-1">Box 2</div>
+      <div class="p-3 bg-success">Box 3</div>
+    </div>
+
+    <!-- 
+      Pada breakpoint medium (bawah), hanya Box 2 yang melebar karena terdapat class .flex-md-
+      grow-1. Box 1 tidak ikut melebar karena ada class .flex-md-grow-0. Box 3 juga tidak melebar
+      karena tidak memiliki class flex grow apapun.
+
+      Pada breakpoint small (kanan atas), giliran Box 1 yang melebar karena class .flex-sm-grow-1.
+      Box 2 dan Box 3 tampil normal sebab tidak memiliki class flex grow apapun.
+
+      Terakhir di breakpoint extra small (kiri atas), tidak ada satu pun Box yang melebar karena
+      tidak ada class flex grow yang berefek di breakpoint ini.
+    -->
+
+    <!-- ____________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Flex Wrap</h1>
+
+    <!-- 
+      Flex wrap adalah class flexbox Bootstrap untuk mengatur proses "wraping" atau pemindahan
+      sebagian flex item ke baris baru jika sudah tidak muat lagi. Ada 3 variasi class yang tersedia,
+      yakni .flex-nowrap, .flex-wrap dan .flex-wrap-reverse.
+
+      Mari kita bahas dengan contoh kode program:
+     -->
+    <div class="p-2 mb-3 bg-dark text-white d-flex flex-row flex-nowrap">
+      <div class="p-3 bg-primary">Box Satu</div>
+      <div class="p-3 bg-danger">Box Dua</div>
+      <div class="p-3 bg-success">Box Tiga</div>
+      <div class="p-3 bg-secondary">Box Empat</div>
+      <div class="p-3 bg-warning">Box Lima</div>
+      <div class="p-3 bg-info">Box Enam</div>
+      <div class="p-3 bg-primary">Box Tujuh</div>
+    </div>
+
+    <div class="p-2 mb-3 bg-dark text-white d-flex flex-row flex-wrap">
+      <div class="p-3 bg-primary">Box Satu</div>
+      <div class="p-3 bg-danger">Box Dua</div>
+      <div class="p-3 bg-success">Box Tiga</div>
+      <div class="p-3 bg-secondary">Box Empat</div>
+      <div class="p-3 bg-warning">Box Lima</div>
+      <div class="p-3 bg-info">Box Enam</div>
+      <div class="p-3 bg-primary">Box Tujuh</div>
+    </div>
+
+    <div class="p-2 mb-3 bg-dark text-white d-flex flex-row flex-wrap-reverse">
+      <div class="p-3 bg-primary">Box Satu</div>
+      <div class="p-3 bg-danger">Box Dua</div>
+      <div class="p-3 bg-success">Box Tiga</div>
+      <div class="p-3 bg-secondary">Box Empat</div>
+      <div class="p-3 bg-warning">Box Lima</div>
+      <div class="p-3 bg-info">Box Enam</div>
+      <div class="p-3 bg-primary">Box Tujuh</div>
+    </div>
+
+    <!-- 
+      Class pertama, yakni .flex-nowrap akan menahan flex item agar tidak pindah ke baris di
+      bawahnya. Jika dalam flex item terdapat beberapa kata, kata itulah yang akan pindah ke baris
+      baru, bukan flex item-nya. Ini merupakan efek default.
+
+      Class kedua, .flex-wrap akan memindahkan flex item ke baris baru jika tidak muat lagi ruang
+      untuk seluruh flex item.
+
+      Class kedua, .flex-wrap-reverse sama seperti .flex-wrap dimana flex item akan pindah ke
+      baris baru jika tidak muat lagi. Akan tetapi baris baru itu ada di atas baris saat ini.
+    -->
+
+    <!-- ______________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Flex Wrap Breakpoint</h1>
+
+    <!-- 
+      Variasi breakpoint dari flex wrap menggunakan format:
+      flex-<kode_breakpoint>-<jenis_wrap>
+      Berikut contoh penggunaan class flex wrap dengan sistem breakpoint:
+    -->
+
+    <div
+      class="p-2 bg-dark text-white d-flex flex-sm-wrap flex-md-wrap-reverse"
+    >
+      <div class="p-3 bg-primary">Box Satu yang cukup panjang</div>
+      <div class="p-3 bg-danger">Box Dua yang cukup panjang</div>
+      <div class="p-3 bg-success">Box Tiga yang cukup panjang</div>
+      <div class="p-3 bg-secondary">Box Empat yang cukup panjang</div>
+      <div class="p-3 bg-info">Box Lima yang cukup panjang</div>
+    </div>
+
+    <!-- 
+      Ketika masuk ke breakpoint medium (bawah), class .flex-md-wrap-reverse akan aktif.
+      Akibatnya flex item yang tidak tertampung di 1 baris "naik" mengisi baris baru di atas baris
+      yang ada saat ini.
+
+      Ketika tampilan masuk ke breakpoint small (kanan atas), class .flex-sm-wrap akan aktif.
+      Hasilnya flex item yang tidak tertampung akan mengisi baris baru di bawah baris yang ada
+      sekarang.
+
+      Untuk tampilan breakpoint extra-small (kiri atas), tidak ada class flex yang aktif, namun
+      secara default ini sama artinya dengan .flex-no-wrap sehingga setiap flex item akan tetap
+      dipertahankan dalam 1 baris.
+    -->
+
+
+    <!-- _________________________________________________________________________________________________________________________ -->
+
+    
+
+    <script src="./js/bootstrap.bundle.js"></script>
+  </body>
+</html>

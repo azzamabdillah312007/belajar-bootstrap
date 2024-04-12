@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap component</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <style></style>
+  </head>
+  <body>
+    <h1>Button</h1>
+
+    <!-- 
+        Button adalah komponen Bootstrap untuk membuat tombol. Dalam HTML, button bisa dibuat
+        dengan berbagai cara, misalnya menggunakan tag <button> atau tag <input type=button>.
+        Selain itu Bootstrap juga membolehkan kita membuat button dari tag lain seperti <span> atau
+        <a>. Caranya, tambahkan class .btn ke dalam element tersebut.
+
+        Berikut contoh pembuatan button di dalam Bootstrap:
+     -->
+
+    <button class="btn">Tombol</button>
+    <input type="button" class="btn" value="Tombol" />
+    <span class="btn">Tombol</span>
+    <a href="#" class="btn">Tombol</a>
+
+    <!-- 
+        Poin penting di sini adalah, class .btn dipakai untuk membuat struktur dasar button.
+        Bootstrap menyediakan berbagai class tambahan lain agar tampilannya menjadi lebih menarik.
+     -->
+
+    <!-- Color -->
+
+    <div class="mt-5"></div>
+    <h1>Color button</h1>
+
+    <!-- 
+        Modifikasi paling sering yang dilakukan untuk button adalah mengubah warnanya. Dalam
+        Bootstrap, jika berhubungan dengan warna maka yang dimaksud adalah contextual classes,
+        yakni sistem penamaan warna sesuai dengan tujuan warna tersebut.
+        Bootstrap menyediakan 8 class untuk mengubah warna tombol, yakni:
+
+        ✔ .btn-primary
+        ✔ .btn-secondary
+        ✔ .btn-success
+        ✔ .btn-danger
+        ✔ .btn-warning
+        ✔ .btn-info
+        ✔ .btn-light
+        ✔ .btn-dark
+
+        Berikut contoh penggunaannya:
+    -->
+
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+
+    <!-- Mari kita coba menggunakan class warna ini untuk tag lain selain <button>: -->
+
+    <a href="#" class="btn btn-primary">Link</a>
+    <span class="btn btn-secondary">Span</span>
+    <input type="button" class="btn btn-success" value="Input" />
+    <i class="btn btn-danger">i</i>
+    <b class="btn btn-warning">b</b>
+    <em class="btn btn-info">em</em>
+    <strong class="btn btn-light">strong</strong>
+    <small class="btn btn-dark">small</small>
+
+    <!-- ___________________________________________________________ -->
+
+    <!-- Color button -->
+
+    <div class="mt-5"></div>
+    <h1>Color button</h1>
+
+    <!-- 
+        Outline adalah variasi lain dari warna tombol. Jika menggunakan class ini, tombol memiliki
+        warna background putih dan baru berubah warna begitu cursor mouse berada di atasnya.
+        Class outline juga menggunakan contextual classes dengan nama class sebagai berikut:
+
+        ✔ .btn-outline-primary
+        ✔ .btn-outline-secondary
+        ✔ .btn-outline-success
+        ✔ .btn-outline-danger
+        ✔ .btn-outline-warning
+        ✔ .btn-outline-info
+        ✔ .btn-outline-light
+        ✔ .btn-outline-dark
+
+        Berikut contoh penggunaannya:
+    -->
+
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="btn btn-outline-success">Success</button>
+    <button type="button" class="btn btn-outline-danger">Danger</button>
+    <button type="button" class="btn btn-outline-warning">Warning</button>
+    <button type="button" class="btn btn-outline-info">Info</button>
+    <button type="button" class="btn btn-outline-light">Light</button>
+    <button type="button" class="btn btn-outline-dark">Dark</button>
+
+    <!-- __________________________________________________________ -->
+
+    <!-- size -->
+    <div class="mt-5"></div>
+    <h1>Size button</h1>
+
+    <!-- 
+        Bootstrap menyediakan 3 ukuran tombol: large, regular dan small. Class .btn-lg dipakai
+        untuk membuat tampilan tombol large (besar). Class .btn-sm dipakai untuk membuat tampilan
+        tombol small (kecil). Sedangkan untuk tombol regular tidak butuh tambahan class apapun
+        karena sudah menjadi ukuran default.
+
+        Berikut perbandingan ketiga ukuran tombol:
+    -->
+
+    <button type="button" class="btn btn-primary btn-lg">Large button</button>
+    <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+    <button type="button" class="btn btn-primary">Normal button</button>
+    <button type="button" class="btn btn-secondary">Normal button</button>
+    <button type="button" class="btn btn-primary btn-sm">Small button</button>
+    <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+
+    <!-- _____________________________________________________________________________ -->
+
+    <!-- Block button -->
+    <div class="mt-5"></div>
+    <h1>Block button</h1>
+
+    <!-- 
+        Dalam situasi tertentu, kadang kita ingin membuat button yang melebar memenuhi parent
+        element. Di Bootstrap 4 ini bisa dibuat dengan tambahan class .btn-block. Akan tetapi di
+        Bootstrap 5 class ini sudah dihapus. Untuk membuat efek yang sama, bisa dengan cara
+        menambah class .d-grid ke parent element:
+    -->
+
+    <div class="container mt-3 d-grid">
+      <button type="button" class="btn btn-primary">Block level button</button>
+      <button type="button" class="btn btn-secondary mt-2">
+        Block level button
+      </button>
+    </div>
+
+    <!-- _____________________________________________________________________________ -->
+
+    <!-- Block button -->
+    <div class="mt-5"></div>
+    <h1>Active state Button</h1>
+
+    <!-- 
+        Secara bawaan, Bootstrap button akan berubah warna menjadi sedikit gelap ketika cursor
+        mouse berada di atasnya (hover state). Efek ini bisa di-permanenkan, yakni jika kita ingin
+        warna tombol selalu gelap seolah-oleh cursor mouse berada di atasnya. Untuk membuat efek
+        ini, tersedia class .active seperti contoh berikut:
+    -->
+
+    <button type="button" class="btn btn-primary active">Active</button>
+    <button type="button" class="btn btn-primary">Normal</button>
+
+    <span class="me-4"></span>
+
+    <button type="button" class="btn btn-secondary active">Active</button>
+    <button type="button" class="btn btn-secondary">Normal</button>
+
+    <span class="me-4"></span>
+
+    <button type="button" class="btn btn-info active">Active</button>
+    <button type="button" class="btn btn-info">Normal</button>
+
+    <!-- Class .active bisa disebut sebagai class yang "mempermanenkan" efek hover ke sebuah element. -->
+
+    <!-- _____________________________________________________________________________ -->
+
+    <!-- Block button -->
+    <div class="mt-5"></div>
+    <h1>Disabled State button</h1>
+
+    <!-- 
+        Disabled state adalah efek tampilan tombol yang tidak bisa di-klik (disabled). Terdapat 2 cara
+        untuk membuat efek disabled ini: menggunakan class .disabled, atau menambah atribut
+        disabled. Khusus untuk button yang dibuat dari tag <a>, hanya bisa dibuat dari class
+        .disabled saja dan tidak bisa dari atribut disabled.
+        
+        Berikut cara pembuatan button disabled:
+    -->
+
+    <button type="button" class="btn btn-primary">Normal</button>
+    <button type="button" class="btn btn-primary disabled">Disabled</button>
+
+    <span class="me-4"></span>
+
+    <button type="button" class="btn btn-primary">Normal</button>
+    <button type="button" class="btn btn-primary" disabled>Disabled</button>
+
+    <!-- ________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Button group</h1>
+
+    <!-- 
+        Button group merupakan fitur lanjutan dari button yang telah kita pelajari sebelumnya. Button
+        group dipakai untuk membuat kumpulan button yang tampil secara berkelompok. Caranya,
+        tempatkan beberapa class .btn ke dalam parent element dengan class .btn-group.
+        Berikut contoh pembuatan button group:
+    -->
+
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary">Left</button>
+      <button type="button" class="btn btn-primary">Middle</button>
+      <button type="button" class="btn btn-primary">Right</button>
+    </div>
+
+    <!-- Di sini saya membuat sebuah tag <div> dengan class .btn-group sebagai parent element dari 3 buah tag <button>. -->
+
+    <!-- 
+        Button group ini cocok dipakai untuk membuat tampilan seperti toolbar, dimana berbagai
+        tombol saling berkelompok dan menempel satu sama lain. Digabung dengan utility class
+        Bootstrap, kita bisa membuat tampilan berikut:
+    -->
+
+    <div class="mt-5"></div>
+
+    <div class="btn-toolbar">
+      <div class="btn-group me-2">
+        <button type="button" class="btn btn-secondary">1</button>
+        <button type="button" class="btn btn-secondary">2</button>
+        <button type="button" class="btn btn-secondary">3</button>
+        <button type="button" class="btn btn-secondary">4</button>
+      </div>
+      <div class="btn-group me-2">
+        <button type="button" class="btn btn-warning"><i>i</i></button>
+        <button type="button" class="btn btn-warning"><b>b</b></button>
+        <button type="button" class="btn btn-warning"><u>u</u></button>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary"><<</button>
+        <button type="button" class="btn btn-primary">play</button>
+        <button type="button" class="btn btn-primary">>></button>
+      </div>
+    </div>
+
+    <!-- Untuk tag <div> terluar terdapat tambahan class .btn-toolbar agar kumpulan button group
+        tampil sebagai 1 kelompok besar. Di dalamnya terdapat 3 button group dengan berbagai variasi
+        warna. 
+    -->
+
+    <!-- __________________________________________________________________________________________ -->
+
+    <!-- Size -->
+    <div class="mt-5"></div>
+    <h1>SIze button group</h1>
+
+    <!-- 
+        Sama seperti button, button group juga tersedia dalam 3 kombinasi ukuran: large, regular dan
+        small. Class yang dipakai juga sama, yakni .btn-lg untuk membuat tombol besar, .btn-sm
+        untuk membuat tombol kecil, serta tidak perlu class untuk tombol regular.
+        Berikut contoh penggunaannya:
+    -->
+
+    <div class="btn-group btn-group-lg">
+      <button type="button" class="btn btn-warning">Left</button>
+      <button type="button" class="btn btn-warning">Middle</button>
+      <button type="button" class="btn btn-warning">Right</button>
+    </div>
+    <br />
+    <div class="btn-group mt-3">
+      <button type="button" class="btn btn-warning">Left</button>
+      <button type="button" class="btn btn-warning">Middle</button>
+      <button type="button" class="btn btn-warning">Right</button>
+    </div>
+    <br />
+    <div class="btn-group btn-group-sm mt-3">
+      <button type="button" class="btn btn-warning">Left</button>
+      <button type="button" class="btn btn-warning">Middle</button>
+      <button type="button" class="btn btn-warning">Right</button>
+    </div>
+
+    <!-- Berbeda dengan button, untuk mengubah ukuran button group, class .btn-lg dan .btn-sm
+         ditempatkan ke parent element dari tag <button>, bukan lagi ke tag <button>. Class .mt-3
+         dalam contoh di atas dipakai untuk membuat jarak dengan button group di atasnya.
+    -->
+
+    <!-- _______________________________________________________________________________________________ -->
+
+    <!-- Vertical Button Group -->
+    <div class="mt-5"></div>
+    <h1>Vertical button group</h1>
+
+    <!-- 
+        Vertical button group adalah variasi button group yang memanjang ke bawah (vertikal), bukan
+        ke samping (horizontal) sebagaimana biasanya. Untuk membuat tampilan ini, gunakan class
+        .btn-group-vertical ke dalam parent element tag <button> seperti contoh berikut:
+    -->
+
+    <div class="btn-group-vertical">
+      <button type="button" class="btn btn-danger">Button 1</button>
+      <button type="button" class="btn btn-danger">Button 2</button>
+      <button type="button" class="btn btn-danger">Button 3</button>
+    </div>
+
+    <!-- _______________________________________________________________________________________________ -->
+
+    <!-- Nested Button Group -->
+    <div class="mt-5"></div>
+    <h1>Nested button group</h1>
+
+    <!-- 
+        Nested button group adalah sebutan untuk button yang "bersarang", yakni tombol di dalam
+        tombol. Untuk membuat tampilan ini, tempatkan class .btn-group ke dalam .btn-group lain.
+        Berikut contoh penggunaannya:
+    -->
+
+    <div class="btn-group">
+      <button type="button" class="btn btn-secondary">1</button>
+      <button type="button" class="btn btn-secondary">2</button>
+      <div class="btn-group">
+        <button
+          type="button"
+          class="btn btn-secondary dropdown-toggle"
+          data-bs-toggle="dropdown"
+        >
+          Dropdown
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+          <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- __________________________________________________________________________________________________________ -->
+
+    <!-- Dropdown -->
+    <div class="mt-5"></div>
+    <h1>Dropdown</h1>
+
+    <div class="dropdown">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+      >
+        Dropdown button
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+      </div>
+    </div>
+
+    <!-- 
+        Ketika dijalankan, dropdown berbentuk tombol biasa dengan tambahan tanda segitiga di sisi
+        kanan. Saat di klik, akan tampil menu memanjang ke arah bawah.
+
+        Untuk menampilkan menu dropdown, Bootstrap memutuskan bahwa menu baru bisa muncul
+        jika tombol di klik, bukan di hover. Keputusan ini diambil untuk menghindari menu yang
+        tampil secara tidak sengaja.
+        
+        Mari kita bahas kode program untuk membuat dropdown. Pertama, seluruh dropdown
+        ditempatkan ke dalam sebuah tag <div> dengan class .dropdown (baris 1). Setelah itu element
+        pertama yang ditulis berupa tag <button> dengan tambahan class .dropdown-toggle (baris 2),
+        serta tambahan atribut data-bs-toggle="dropdown" (baris 3).
+
+        Atribut data-bs-toggle adalah atribut khusus Bootstrap untuk "memanggil" kode JavaScript
+        tertentu. Kita akan sering melihat atribut dengan awalan " data-bs", terutama untuk komponen
+        Bootstrap yang memiliki efek interaktif. Ini adalah cara Bootstrap untuk menghubungkan kode
+        HTML dengan JavaScript tanpa perlu menulis kode JavaScript secara langsung.
+        Atribut data-bs-toggle="dropdown" bisa dibaca sebagai "panggil kode JavaScript untuk
+        membuat menu dropdown Bootstrap". 
+    -->
+
+    <!-- __________________________________________________________________________________________________________ -->
+
+    <!-- Dropdown COlor -->
+    <div class="mt-5"></div>
+    <h1>Dropdown Color</h1>
+
+    <!-- 
+        Untuk mengubah warna dropdown, tambah class warna button seperti .btn-primary, .btn-
+        secondary, atau .btn-warning ke dalam tag <button>. Berikut contoh penggunaannya: 
+    -->
+
+    <div class="dropdown float-start me-4">
+      <button
+        class="btn dropdown-toggle btn-primary"
+        type="button"
+        data-bs-toggle="dropdown"
+      >
+        Dropdown button color
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+      </div>
+    </div>
+
+    <div class="dropdown float-start me-4">
+      <button
+        class="btn dropdown-toggle btn-warning"
+        type="button"
+        data-bs-toggle="dropdown"
+      >
+        Dropdown button color
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+      </div>
+    </div>
+
+    <div class="dropdown float-start me-4">
+      <button
+        class="btn dropdown-toggle btn-info"
+        type="button"
+        data-bs-toggle="dropdown"
+      >
+        Dropdown button color
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+      </div>
+    </div>
+
+    <div class="dropdown float-start me-4">
+      <button
+        class="btn dropdown-toggle btn-danger"
+        type="button"
+        data-bs-toggle="dropdown"
+      >
+        Dropdown button color
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+      </div>
+    </div>
+
+    <!-- ___________________________________________________________________________________________________________________ -->
+
+    <!-- Active and Disabled -->
+
+    <div class="mt-5"></div>
+    <h1>Dropdown Active and Disable</h1>
+
+    <!-- 
+      Untuk membuat efek active dan disabled, tempatkan class .active dan .disabled ke dalam
+      dropdown item. Berikut contoh penggunaannya:
+    -->
+
+    <div class="dropdown">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+      >
+        Dropdown button
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+        <a class="dropdown-item active" href="#">Pilihan Menu 2</a>
+        <a class="dropdown-item disabled" href="#">Pilihan Menu 3</a>
+      </div>
+    </div>
+
+    <!-- ______________________________________________________________________________________________________________________ -->
+
+    <!--Menu Alignment -->
+
+    <div class="mt-5"></div>
+    <h1>Menu Alignment</h1>
+
+    <!-- 
+      Secara default, dropdown item tampil dengan rata kiri. Untuk mengubahnya menjadi rata
+      kanan, tambah class .dropdown-menu-end seperti contoh berikut:
+    -->
+
+    <div class="dropdown">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+      >
+        Dropdown button
+      </button>
+      <div class="dropdown-menu dropdown-menu-end">
+        <a class="dropdown-item" href="#">Pilihan Menu </a>
+        <a class="dropdown-item" href="#">Pilihan Menu Panjang </a>
+        <a class="dropdown-item" href="#">Pilihan Menu Panjang Sekali</a>
+      </div>
+    </div>
+
+    <!-- 
+      Dengan tambahan class .dropdown-menu-end di pembungkus <a> nya, dropdown item menjadi rata kanan.
+      Namun jika ruang di sebelah kiri dropdown tidak cukup, dropdown item ini akan kembali ke
+      posisi rata kiri.
+    -->
+
+    <!-- ______________________________________________________________________________________________________________________ -->
+
+    <!-- Menu Header and Menu Divider -->
+
+    <div class="mt-5"></div>
+    <h1>Menu Header and Menu Divider</h1>
+
+    <!-- 
+      Menu header dan menu divider adalah tambahan item untuk membuat judul dan pembatas.
+      Langsung saja kita lihat tampilan dari menu header dan divider ini:
+    -->
+
+    <div class="dropdown">
+      <button
+        class="btn btn-danger dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+      >
+        Dropdown button
+      </button>
+      <div class="dropdown-menu">
+        <h6 class="dropdown-header">Ini adalah judul menu 1</h6>
+        <a class="dropdown-item" href="#">Pilihan Menu 1.1</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 1.2</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 1.3</a>
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">Ini adalah judul menu 2</h6>
+        <a class="dropdown-item" href="#">Pilihan Menu 2.1</a>
+      </div>
+    </div>
+
+    <!-- 
+      Tag <h6> dengan class .dropdown-header di baris 5 dan 10 adalah judul atau header dari
+      dropdown menu. Header menu ini tidak bisa di klik dan berguna untuk membuat penjelasan
+      judul. Tag <div> dengan class .dropdown-divider di baris 9 dipakai untuk membuat garis
+      pembatas antara satu dropdown item dengan dropdown item lainnya.
+
+      Baik header dan divider bisa dipakai untuk membuat tampilan item dropdown agar lebih rapi,
+      terutama untuk pilihan menu yang cukup banyak. Header sendiri hanya berfungsi sebagai
+      pemberi keterangan dan tidak bisa dipilih.
+     -->
+
+    <!-- 
+      Alternatif lain untuk membuat menu yang tidak bisa dipilih adalah dari tag <span> dengan
+      class .dropdown-item-text, seperti contoh berikut:
+    -->
+
+    <div class="dropdown">
+      <button
+        class="btn btn-info dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+      >
+        Dropdown button
+      </button>
+      <div class="dropdown-menu">
+        <h6 class="dropdown-header">Header tidak bisa dipilih</h6>
+        <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+        <span class="dropdown-item-text">Item ini juga tidak bisa dipilih</span>
+      </div>
+    </div>
+
+    <!-- 
+      Dropdown item terakhir hanya berupa teks biasa dan tidak bisa dipilih serta tidak memiliki
+      efek hover. Ini dibuat dengan tag <span> dan class .dropdown-item-text seperti di baris ke 8.
+    -->
+
+    <!-- _____________________________________________________________________________________________________________________ -->
+
+    <!-- Menu Offset -->
+
+    <div class="mt-5"></div>
+    <h1>Menu Offset</h1>
+
+    <!-- 
+      Untuk keperluan khusus, kita bisa memindahkan atau membuat jarak antara tombol dengan
+      item dropdown. Caranya, tambah atribut data-bs-offset seperti contoh berikut:
+    -->
+
+    <div class="dropdown">
+      <button
+        class="btn btn-primary dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        data-bs-offset="30,30"
+      >
+        Dropdown button
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+        <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+      </div>
+    </div>
+
+    <!-- 
+      Dalam contoh ini saya menambahkan atribut data-bs-offset="30,30" di baris ke 3. Hasilnya,
+      antara tombol dropdown dan menu item memiliki jarak 30 pixel ke kanan dan 30 pixel ke
+      bawah. Inilah efek dari penambahan atribut data-offset.
+
+      Efek offset ini sepertinya jarang terpakai, kecuali untuk membuat efek-efek yang tidak biasa.
+     -->
+
+    <!-- ___________________________________________________________________________________________________________________ -->
+
+    <!-- Pagination -->
+
+    <div class="mt-5"></div>
+    <h1>Pagination</h1>
+
+    <!-- 
+      Pagination adalah komponen Bootstrap berupa kumpulan tombol angka yang saling
+      bersambung. Pagination ini sering terdapat di bagian bawah forum atau blog sebagai sarana
+      untuk pindah dari satu halaman ke halaman lain.
+      Berikut kode dasar pembuatan komponen pagination Bootstrap:
+    -->
+
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+
+    <!-- 
+      Bootstrap menggunakan struktur list untuk membuat pagination. Tag <ul> ditambahkan class
+      pagination (baris 1), kemudian diikuti beberapa tag <li> dengan class .page-item (baris 2-6).
+      Tag <li> ini kemudian berisi link dari tag <a> dengan class .page-link.
+    -->
+
+    <!-- 
+      Jika ingin tampilan lain, bisa mengganti tombol "Previous" dan "Next" dengan tanda panah "<<"
+      dan ">>". Caranya, gunakan HTML entities &laquo; dan &raquo; seperti contoh berikut:
+    -->
+
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+    </ul>
+
+    <!-- 
+      Dalam dokumentasi Bootstrap, pagination disarankan untuk berada di dalam tag <nav>.
+      Namun ini tidak wajib:
+    -->
+
+    <nav>
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+        ...
+        <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+      </ul>
+    </nav>
+
+    <!-- _____________________________________________________________________________________________________________________ -->
+
+    <!-- Pagination size -->
+
+    <div class="mt-5"></div>
+    <h1>Pagination size</h1>
+
+    <!-- 
+      Pagination hadir dengan 3 ukuran, yakni (seperti yang bisa ditebak): large, regular dan small.
+      Untuk membuat ukuran large, gunakan class pagination-lg, dan untuk ukuran small gunakan
+
+      class .pagination-sm. Tanpa kedua class ini, pagination tampil dengan ukuran regular.
+      Berikut perbandingan dari ketiga ukuran pagination:
+    -->
+
+    <!-- 
+      <ul class="pagination pagination-lg">
+      ...
+      </ul>
+      <ul class="pagination">
+      ...
+      </ul>
+      <ul class="pagination pagination-sm">
+      ...
+      </ul>
+     -->
+
+    <!-- ______________________________________________________________________________________________ -->
+
+    <!-- Active and Disabled pagination -->
+
+    <div class="mt-5"></div>
+    <h1>Active and Disabled pagination</h1>
+
+    <!-- 
+        Efek active dan disabled cocok digunakan dalam pagination. Class .active bisa dipakai untuk
+        menandai user sedang berada di halaman tersebut. Sedangkan class .disabled bisa dipakai
+        untuk menandai user ada di halaman terakhir sehingga tombol "Next" tidak bisa di klik lagi.
+
+        Berikut contoh penggunaan class .active dan .disabled pagination:
+      -->
+
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item active"><a class="page-link" href="#">3</a></li>
+      <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+    </ul>
+
+    <!-- Class .active di baris ke 5 mengubah tombol dengan teks putih dan background biru.
+         Sedangkan class .disabled di baris ke 6 akan membuat tombol "Next" tidak bisa di klik.
+    -->
+
+    <!-- _______________________________________________________________________________________________________ -->
+
+    <!-- Alignment pagination -->
+
+    <div class="mt-5"></div>
+    <h1>Alignment pagination</h1>
+    <!-- 
+      Secara default pagination berada di sisi kiri halaman. Kita bisa tambah class .justify-
+      content-center agar pindah ke tengah halaman, atau class .justify-content-end untuk
+      mengaturnya tampil di sisi kanan halaman.
+      Berikut contoh pengaturan alignment pagination:
+    -->
+
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+    </ul>
+
+    <!-- 
+      Class .justify-content-center dan .justify-content-end sebenarnya masuk dalam class
+      Bootstrap tentang flexbox. Lebih jauh mengenai flexbox akan kita bahas dalam bab tersendiri.
+    -->
+
+    <!-- _______________________________________________________________________________________________________ -->
+
+    <!-- Badges -->
+
+    <div class="mt-5"></div>
+    <h1>Badges</h1>
+
+    <!-- 
+      Badges adalah komponen Bootstrap berbentuk label dengan tampilan mirip tombol. Badges
+      bisa dibuat dari tag <span> maupun inline style element lain.
+
+      Untuk membuat badges, tambahkan class .badge ke sebuah tag <span>, kemudian warnai
+      dengan class .bg-<contextual_class> seperti .bg-primary, .bg-secondary, .bg-warning, dst.
+
+      Berikut contoh pembuatan badges Bootstrap:
+    -->
+
+    <span class="badge bg-primary">Primary</span>
+    <span class="badge bg-secondary">Secondary</span>
+    <span class="badge bg-success">Success</span>
+    <span class="badge bg-danger">Danger</span>
+    <span class="badge bg-warning">Warning</span>
+    <span class="badge bg-info">Info</span>
+    <span class="badge bg-light text-dark">Light</span>
+    <span class="badge bg-dark">Dark</span>
+
+    <!-- Untuk membuat badges dengan sudut membulat, tambahkan class .rounded-pill seperti
+         contoh berikut: 
+    -->
+
+    <div class="mt-3"></div>
+
+    <span class="badge bg-primary rounded-pill">Primary</span>
+    <span class="badge bg-secondary rounded-pill">Secondary</span>
+    <span class="badge bg-success rounded-pill">Success</span>
+
+    <!-- ________________________________________________________________________________________________________________ -->
+
+    <!-- List Group -->
+
+    <div class="mt-5"></div>
+    <h1>List Group</h1>
+
+    <!-- 
+      List group adalah komponen Bootstrap berbentuk list yang bisa di-style. Karena ini adalah list,
+      maka biasa dibuat dari kumpulan tag <li> di dalam tag <ul> atau <ol>.
+
+      Berikut struktur dasar list group Bootstrap:
+     -->
+
+    <ul class="list-group">
+      <li class="list-group-item">List Group Item 1</li>
+      <li class="list-group-item">List Group Item 2</li>
+      <li class="list-group-item">List Group Item 3</li>
+      <li class="list-group-item">List Group Item 4</li>
+    </ul>
+
+    <!-- 
+    Untuk membuat list group, tambah class .list-group ke dalam tag <ul> maupun tag <ol>
+    (baris 1). Kemudian tambah class .list-group-item ke setiap tag <li> (baris 2-5).
+      
+    Karena tag <li> merupakan block level element, maka list group akan memanjang memenuhi
+    perent element (melebar ke samping). Jika kita ingin membatasi lebar list group, bisa
+    menggunakan property width CSS atau tempatkan list group ke dalam Bootstrap grid.
+    -->
+
+    <!-- List Group disabled and active -->
+
+    <div class="mt-5"></div>
+    <h1>List Group disable and active</h1>
+
+    <!-- 
+      Untuk membuat efek list yang sedang terpilih, tambahkan class .active ke dalam list. Dan
+      untuk membuat efek list yang tidak bisa dipilih, tambahkan class .disabled. Berikut contoh
+      penggunaan kedua class ini:
+    -->
+
+    <ul class="list-group">
+      <li class="list-group-item active">List Group Item 1</li>
+      <li class="list-group-item">List Group Item 2</li>
+      <li class="list-group-item">List Group Item 3</li>
+      <li class="list-group-item disabled">List Group Item 4</li>
+    </ul>
+
+    <!-- 
+      Dengan penambahan class .active di baris 2, warna background list menjadi biru. Sedangkan
+      dengan penambahan class .disabled di baris 5, warna teks menjadi abu-abu. Efek ini akan
+      bervariasi tergantung warna list yang dipakai.
+    -->
+
+    <!-- List Group color -->
+
+    <div class="mt-5"></div>
+    <h1>List Group color</h1>
+
+    <ul class="list-group">
+      <li class="list-group-item">List Group Item - Default</li>
+      <li class="list-group-item list-group-item-primary">
+        List Group Item - Primary
+      </li>
+      <li class="list-group-item list-group-item-secondary">
+        List Group Item - Secondary
+      </li>
+      <li class="list-group-item list-group-item-success">
+        List Group Item - Success
+      </li>
+      <li class="list-group-item list-group-item-danger">
+        List Group Item - Danger
+      </li>
+      <li class="list-group-item list-group-item-warning">
+        List Group Item - Warning
+      </li>
+      <li class="list-group-item list-group-item-info">
+        List Group Item - Info
+      </li>
+      <li class="list-group-item list-group-item-light">
+        List Group Item - Light
+      </li>
+      <li class="list-group-item list-group-item-dark">
+        List Group Item - Dark
+      </li>
+    </ul>
+
+    <!-- 
+      Untuk mengubah warna list group, kita perlu menggabung class .list-group-item dengan
+      contextual class list-group-item-<kode warna> ke dalam tag <li>. 
+    -->
+
+    <!-- _____________________________________________________________________________________________________________________ -->
+
+    <!-- Button dan Link list group-->
+
+    <div class="mt-5"></div>
+    <h1>Button and link</h1>
+
+    <!-- 
+      Meskipun bernama list group, tapi juga bisa dipakai membuat tampilan list dari tag <button>
+      dan <a>. Berikut contohnya:
+    -->
+
+    <div class="list-group">
+      <button type="button" class="list-group-item active">
+        List Group Item 1
+      </button>
+      <button type="button" class="list-group-item">List Group Item 2</button>
+      <button type="button" class="list-group-item">List Group Item 3</button>
+      <button type="button" class="list-group-item disabled">
+        List Group Item 4
+      </button>
+    </div>
+    <div class="mt-3"></div>
+    <div class="list-group">
+      <a href="#" class="list-group-item active">List Group Item 1</a>
+      <a href="#" class="list-group-item">List Group Item 2</a>
+      <a href="#" class="list-group-item">List Group Item 3</a>
+      <a href="#" class="list-group-item disabled">List Group Item 4</a>
+    </div>
+
+    <!-- _____________________________________________________________________________________________________________________ -->
+
+    <!-- Hover Effect-->
+
+    <div class="mt-5"></div>
+    <h1>Hover Effect list group</h1>
+
+    <!-- 
+      Terdapat tambahan class .list-group-item-action yang bisa dipakai untuk membuat efek
+      hover ke dalam list group. Berikut tampilan yang dimaksud:
+    -->
+
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-action">List Group Item 1</li>
+      <li class="list-group-item list-group-item-action">List Group Item 2</li>
+      <li class="list-group-item list-group-item-action">List Group Item 3</li>
+      <li class="list-group-item list-group-item-action">List Group Item 4</li>
+    </ul>
+
+    <!-- Efek hover ini juga berlaku untuk list dengan berbagai warna: -->
+
+    <div class="mt-5"></div>
+    <h1>Hover Effect list group color</h1>
+
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-action">
+        List Group Item - Default
+      </li>
+      <li
+        class="list-group-item list-group-item-primary list-group-item-action"
+      >
+        List Group Item - Primary
+      </li>
+      ...
+      <li class="list-group-item list-group-item-dark list-group-item-action">
+        List Group Item - Dark
+      </li>
+    </ul>
+
+    <!-- _________________________________________________________________________________________________________ -->
+
+    <!-- FLush list group-->
+
+    <div class="mt-5"></div>
+    <h1>Flush list group</h1>
+
+    <!-- 
+      Dalam situasi tertentu, kadang kita ingin membuat list group tanpa border. Bootstrap
+      menyediakan class .list-group-flush untuk keperluan ini:
+    -->
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">List Group Item 1</li>
+      <li class="list-group-item">List Group Item 2</li>
+      <li class="list-group-item">List Group Item 3</li>
+      <li class="list-group-item">List Group Item 4</li>
+    </ul>
+
+    <!-- Salah satu situasi .list-group-flush diperlukan adalah ketika list group digabung dengan
+         komponen Bootstrap lain, seperti Card. 
+    -->
+
+    <!-- _______________________________________________________________________________________________________________ -->
+
+    <!-- List Group dan Badges-->
+
+    <div class="mt-5"></div>
+    <h1>List Group dan Badges</h1>
+
+    <!-- Sama seperti button, list group juga bisa ditambah dengan komponen badges. Berikut hasilnya: -->
+
+    <ul class="list-group">
+      <li class="list-group-item">
+        List Group Item 1 <span class="badge bg-primary rounded-pill">14</span>
+      </li>
+      <li class="list-group-item">
+        List Group Item 2 <span class="badge bg-primary rounded-pill">9</span>
+      </li>
+      <li class="list-group-item">
+        List Group Item 3 <span class="badge bg-primary rounded-pill">32</span>
+      </li>
+      <li class="list-group-item">
+        List Group Item 4 <span class="badge bg-primary rounded-pill">100</span>
+      </li>
+    </ul>
+
+    <!-- Dalam kode program di atas, saya menambahkan komponen badges di akhir setiap list item.
+        Tampilan seperti ini cocok dipakai untuk membuat informasi mengenai jumlah artikel, jumlah
+        pesan yang belum dijawab, dsb. Di tambah dengan efek warna atau contextual class Bootstrap,
+        hasilnya bisa lebih menarik lagi. 
+    -->
+
+    <script src="./js/bootstrap.bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display related component</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+  </head>
+  <body>
+    <!-- Card -->
+    <h1>Card</h1>
+    <!-- 
+        Card adalah komponen Bootstrap untuk membuat berbagai fitur tampilan. Card diperkenalkan
+        di Bootstrap 4, dan berasal dari gabungan komponen panel, well, dan thumbnail di Bootstrap
+        3. Karena berasal dari gabungan 3 komponen, maka tidak heran card menjadi salah satu
+        komponen Bootstrap terpanjang yang akan kita bahas dalam bab ini.
+     -->
+
+    <div class="card">
+      <div class="card-body">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+        autem. Fugiat ipsum, explicabo earum nesciunt officia nulla expedita.
+        Reiciendis ad ipsam obcaecati nulla.
+      </div>
+    </div>
+
+    <!--    Dalam bentuknya yang paling sederhana, card tampil berbentuk teks di dalam sebuah kotak.
+            Seluruh struktur card ditulis dalam tag <div> dengan class .card. Pada kode di atas, hanya
+            terdapat 1 isi card, yakni tag <div> dengan class .card-body. Sesuai dengan namanya, class
+            .card-body dipakai untuk membuat teks di dalam "badan" card. 
+    -->
+
+    <div class="mt-5"></div>
+
+    <div class="card">
+      <div class="card-header">Card Header</div>
+      <div class="card-body">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+        autem. Fugiat ipsum, explicabo earum nesciunt officia nulla expedita.
+        Reiciendis ad ipsam obcaecati nulla.
+      </div>
+      <div class="card-footer">Card Footer</div>
+    </div>
+
+    <div class="mt-5"></div>
+
+    <div class="card text-center">
+      <h2 class="card-header">Quote of the day</h2>
+      <div class="card-body">
+        <blockquote class="blockquote">
+          <p>
+            Kurang cerdas dapat diperbaiki dengan belajar, kurang cakap dapat
+            dihilangkan dengan pengalaman. Namun tidak jujur sulit diperbaiki.
+          </p>
+        </blockquote>
+        <footer class="blockquote-footer mt-3">
+          <cite title="Source Title">Mohammad Hatta</cite>
+        </footer>
+      </div>
+      <div class="card-footer text-muted">2 minutes ago</div>
+    </div>
+
+    <!-- 
+        Dalam kode ini saya membuat card header dari tag <h2> (baris 2), hasilnya teks di dalam header
+        tampil dengan huruf besar.
+
+        Isi card body berupa tag <blockquote> yang dipakai untuk membuat kutipan (baris 4-10). Tag
+        <blockquote> sendiri sudah pernah kita bahas dalam bab content Bootstrap.
+            
+        Di bagian card footer saya menambah class .text-muted untuk membuat teks dengan warna
+        abu-abu (baris 12). Seluruh teks dalam card tampil dengan rata tengah hasil dari penggunaan
+        utility class .text-center di baris 1.
+    -->
+
+    <!-- ____________________________________________________________________________________________________________ -->
+
+    <!-- Card Content -->
+    <div class="mt-5"></div>
+    <h1>Card Content</h1>
+
+    <!-- 
+        Untuk membuat struktur card body agar lebih rapi, tersedia 4 class tambahan: .card-title,
+        .card-subtitle, .card-text dan .card-link. Berikut contoh penggunaannya:
+     -->
+
+    <div class="card">
+      <h2 class="card-header">Card Header</h2>
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+          autem. Fugiat ipsum, explicabo earum nesciunt officia nulla expedita.
+          Reiciendis ad ipsam obcaecati nulla.
+        </p>
+        <p class="card-text">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore.
+        </p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+      <div class="card-footer text-muted">2 minutes ago</div>
+    </div>
+
+    <!-- 
+        Kali ini terdapat class .card-title di baris 4, class .card-subtitle di baris 5, class .card-text
+        di baris 6 dan 9, serta class .card-link di baris 12 dan 13. Semua class tidak berpengaruh
+        banyak ke tampilan teks, tapi hanya mengubah sedikit margin agar hasilnya lebih pas.
+    -->
+
+    <!-- ________________________________________________________________________________________________ -->
+
+    <!-- Lebih jauh lagi kita bisa menggabung berbagai komponen Bootstrap ke dalam card: -->
+
+    <div class="mt-5"></div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Card Title</h5>
+        <p class="card-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+          autem. Fugiat ipsum, explicabo earum nesciunt officia nulla expedita.
+          Reiciendis ad ipsam obcaecati nulla.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+      <div class="card-body text-end">
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+
+    <!-- 
+      Dalam card terdapat komponen list group di baris 8 – 12, serta komponen button di baris 14.
+      Perhatikan bahwa list group ini berada di luar class .card-body, namun untuk membuat efek
+      yang "menyatu", perlu class .list-group-flush. Jika anda masih ingat, class .list-group-
+      flush dipakai untuk membuat list group tanpa bingkai (tanpa border).
+
+      Class .card-body sendiri ada di 2 tempat, baris 2 - 7 dan baris 13 - 15. Meskipun terpisah,
+      Bootstrap men-style keduanya dengan baik agar menjadi satu kesatuan. Dengan demikian kita
+      bisa memisah bagian-bagian card dengan beberapa class .card-body apabila diperlukan.
+    -->
+
+    <!-- _______________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Card Width</h1>
+
+    <!-- 
+      Jika di perhatikan, card tampil sebagai block level element yang melebar memenuhi parent
+      element. Kita bisa membatasi lebar card menggunakan property width CSS, utility class
+      Bootstrap, atau memasukkannya ke dalam grid.
+
+      Berikut contoh pembatasan card dari property width CSS dan utility class Bootstrap:
+    -->
+
+    <div class="card" style="width: 80%">
+      <div class="card-body">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquam
+          incidunt unde repudiandae cum fugiat quos placeat voluptatum corporis
+          dicta cumque consequatur, necessitatibus totam ipsum iure blanditiis
+          quaerat dignissimos atque aliquid ducimus illo, ad rerum. Obcaecati
+          quaerat, minima animi magnam laborum doloribus repellat vel velit quam
+          nesciunt alias commodi est enim officiis ducimus libero. Rerum alias
+          illum enim, voluptatem ea autem id voluptatum adipisci rem vel
+          explicabo laborum a expedita delectus distinctio excepturi facere cum
+          sequi. Corrupti rem corporis unde! Quisquam veniam laborum consectetur
+        </p>
+        <button class="btn btn-primary">button</button>
+      </div>
+    </div>
+    <div class="mt-3"></div>
+    <div class="card w-50">
+      <div class="card-body">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquam
+          incidunt unde repudiandae cum fugiat quos placeat voluptatum corporis
+          dicta cumque consequatur, necessitatibus totam ipsum iure blanditiis
+          quaerat dignissimos atque aliquid ducimus illo, ad rerum. Obcaecati
+          quaerat, minima animi magnam laborumi doloribus repellat vel velit
+          quam nesciunt alias commodi est enim officiis ducimus libero. Rerum
+          alias illum enim, voluptatem ea autem id voluptatum adipisci rem vel
+          explicabo laborum a expedita delectus distinctio excepturi facere cum
+          sequi. Corrupti rem corporis unde! Quisquam veniam laborum consectetur
+        </p>
+        <button class="btn btn-primary">button</button>
+      </div>
+    </div>
+
+    <!-- 
+      Dalam contoh ini saya membuat 2 buah card. Card pertama (atas) di set dengan lebar 80%
+      menggunakan kode CSS inline style="width:80%;". Sedangkan card kedua (bawah) di set dari
+      utility class Bootstrap .w-50, yang artinya lebar card sama dengan 50% lebar parent element.
+    -->
+
+    <!-- Alternatif lain bisa menggunakan grid -->
+
+    <div class="mt-3"></div>
+    <h1>width card menggunakan grid</h1>
+
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              aliquam incidunt unde repudiandae cum fugiat quos placeat
+              voluptatum corporis dicta cumque consequatur, necessitatibus totam
+              ipsum iure blanditiis quaerat dignissimos atque aliquid ducimus
+              illo, ad rerum. Obcaecati quaerat, minima animi magnam laborumi
+              doloribus repellat vel velit quam nesciunt alias commodi est enim
+              officiis ducimus libero. Rerum alias illum enim, voluptatem ea
+              autem id voluptatum adipisci rem vel explicabo laborum a expedita
+              delectus distinctio excepturi facere cum sequi. Corrupti rem
+              corporis unde! Quisquam veniam laborum consectetur
+            </p>
+            <button class="btn btn-primary">button</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              aliquam incidunt unde repudiandae cum fugiat quos placeat
+              voluptatum corporis dicta cumque consequatur, necessitatibus totam
+              ipsum iure blanditiis quaerat dignissimos atque aliquid ducimus
+              illo, ad rerum. Obcaecati quaerat, minima animi magnam laborumi
+              doloribus repellat vel velit quam nesciunt alias commodi est enim
+              officiis ducimus libero. Rerum alias illum enim, voluptatem ea
+              autem id voluptatum adipisci rem vel explicabo laborum a expedita
+              delectus distinctio excepturi facere cum sequi. Corrupti rem
+              corporis unde! Quisquam veniam laborum consectetur
+            </p>
+            <button class="btn btn-primary">button</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+      Card sebelah kanan berada dalam class .col-sm-8, sehingga mengambil tempat 8 segmen.
+      Sedangkan card sebelah kiri berada dalam class .col-sm-4, sehingga mengambil tempat
+      sebesar 4 segmen.
+    -->
+
+    <!-- ______________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Card Image</h1>
+
+    <!-- 
+      Card mendukung penambahan gambar, dan ini membuat tampilannya jadi sangat menarik:
+     -->
+
+    <div class="card" style="width: 20rem">
+      <img
+        class="card-img-top"
+        src="https://www.researchgate.net/publication/328512173/figure/tbl1/AS:685620645093378@1540476108351/EXAMPLES-OF-SUB-IMAGES-500-X-500-PIXELS-WITH-EARS-DETECTED-BY-MODEL-2.png"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+          autem.
+        </p>
+        <p class="card-text">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </p>
+      </div>
+    </div>
+
+    <!-- 
+      Dalam contoh di atas saya menempatkan satu tag <img> dengan class .card-img-top di baris 2,
+      yakni tepat sebelum card body. Hasilnya, gambar tampil di bagian atas card.
+     -->
+
+    <!-- nah jika ingin membuat image nya di bawah , ganti saja class card nya menjadi card-image-bottom -->
+
+    <!-- ______________________________________________________________________________________________________________ -->
+
+    <div class="mt-3"></div>
+    <h1>card overlay</h1>
+
+    <!-- 
+      Penambahan gambar ke dalam card sangat cocok untuk membuat potongan artikel di halaman
+      utama website seperti halaman home. Efek lain dari penggunaan gambar ke dalam card adalah
+      membuat image overlay:
+    -->
+
+    <div class="card text-light" style="width: 20rem">
+      <img
+        class="card-img"
+        src="https://www.researchgate.net/publication/328512173/figure/tbl1/AS:685620645093378@1540476108351/EXAMPLES-OF-SUB-IMAGES-500-X-500-PIXELS-WITH-EARS-DETECTED-BY-MODEL-2.png"
+      />
+      <div class="card-img-overlay">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+          autem.
+        </p>
+        <p class="card-text">Last updated 3 mins ago</p>
+      </div>
+    </div>
+
+    <!-- 
+      Overlay merupakan istilah design untuk menyebut sebuah element yang berada di atas
+      element lain. Dalam kasus kita, ini merujuk ke teks yang ada di atas gambar.
+
+      Ketika membuat image overlay seperti ini, harus diperhatikan kontras warna antara teks
+      dengan gambar. Jika warnanya kurang kontras seperti di atas, teks menjadi susah dibaca. Akan
+      lebih baik jika gambar dibuat lebih gelap agar tidak mengganggu warna teks yang putih.
+     -->
+
+    <!-- _________________________________________________________________________________________________________ -->
+
+    <!-- Card Color -->
+
+    <div class="mt-5"></div>
+
+    <h1>Card color</h1>
+
+    <!-- 
+      Sama seperti mayoritas komponen Bootstrap, kita bisa mengatur warna card. Class yang
+      dipakai tidak secara khusus untuk card, tapi menggunakan utility class Bootstrap biasa seperti
+      .bg-primary, .border-primary, .text-white, dst:
+    -->
+
+    <div class="card text-white bg-primary mt-3 w-25">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Primary card title</h5>
+        <p class="card-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+          autem.
+        </p>
+      </div>
+    </div>
+
+    <div class="card text-white bg-secondary m-3 w-25">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Primary card title</h5>
+        <p class="card-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+          autem.
+        </p>
+      </div>
+    </div>
+
+    <!-- __________________________________________________________________________________________________________________ -->
+
+    <!-- card group -->
+
+    <div class="mt-5"></div>
+    <h1>card group</h1>
+
+    <!-- 
+      Card Group adalah container khusus yang dipakai untuk menampung beberapa card yang
+      menjadi satu kesatuan. Cara membuat card group sangat mudah, cukup tempatkan beberapa
+      card di dalam tag <div> dengan class .card-group:
+     -->
+
+    <div class="card-group">
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="https://www.researchgate.net/publication/328512173/figure/tbl1/AS:685620645093378@1540476108351/EXAMPLES-OF-SUB-IMAGES-500-X-500-PIXELS-WITH-EARS-DETECTED-BY-MODEL-2.png"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Primary card title</h5>
+          <p class="card-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+            autem.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="https://www.researchgate.net/publication/328512173/figure/tbl1/AS:685620645093378@1540476108351/EXAMPLES-OF-SUB-IMAGES-500-X-500-PIXELS-WITH-EARS-DETECTED-BY-MODEL-2.png"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Primary card title</h5>
+          <p class="card-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+            autem.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="https://www.researchgate.net/publication/328512173/figure/tbl1/AS:685620645093378@1540476108351/EXAMPLES-OF-SUB-IMAGES-500-X-500-PIXELS-WITH-EARS-DETECTED-BY-MODEL-2.png"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Primary card title</h5>
+          <p class="card-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+            autem.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+      Saya membuat 3 buah card dan menempatkannya ke dalam class .card-group. Perhatikan
+      meskipun tinggi setiap card berbeda-beda, tapi bagian footer tetap menyatu. Artinya, tinggi
+      maksimum card group sama dengan card tertinggi.
+
+      Isi dari class card group ini juga fleksibel. Jika kita menginput 4 buah card, maka ukurannya
+      akan disesuaikan agar muat 4 card dalam 1 baris. Jika ditempatkan 5 card, maka lebar masing-
+      masing card akan lebih kecil lagi supaya muat 5 card dalam 1 baris.
+    -->
+
+    <!-- _________________________________________________________________________________________________ -->
+
+    <!-- Grid Cards -->
+
+    <div class="mt-5"></div>
+    <h1>Grid Cards</h1>
+
+    <!-- 
+      Card group yang kita bahas sebelum ini hanya mendukung satu baris saja. Setiap pemambahan
+      card baru akan mengurangi lebar card yang sudah ada. Jika ingin membuat kumpulan card
+      yang responsive dan pindah ke baris baru, gunakan grid cards.
+
+      Grid cards sebenarnya gabungan dari row columns grid dengan komponen card Bootstrap. Di
+      bab tentang grid system, kita pernah bahas bahwa row columns adalah cara mengatur jumlah
+      baris kolom secara global, yakni dengan class seperti .row-cols-sm-2 atau .row-cols-lg-3.
+      Inilah yang dimanfaatkan untuk membuat grid cards. Berikut contoh penerapannya:
+    -->
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+      <div class="col">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="https://www.researchgate.net/publication/328512173/figure/tbl1/AS:685620645093378@1540476108351/EXAMPLES-OF-SUB-IMAGES-500-X-500-PIXELS-WITH-EARS-DETECTED-BY-MODEL-2.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+              autem.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="https://www.researchgate.net/publication/328512173/figure/tbl1/AS:685620645093378@1540476108351/EXAMPLES-OF-SUB-IMAGES-500-X-500-PIXELS-WITH-EARS-DETECTED-BY-MODEL-2.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+              autem.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="https://www.researchgate.net/publication/328512173/figure/tbl1/AS:685620645093378@1540476108351/EXAMPLES-OF-SUB-IMAGES-500-X-500-PIXELS-WITH-EARS-DETECTED-BY-MODEL-2.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+              autem.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="https://www.researchgate.net/publication/328512173/figure/tbl1/AS:685620645093378@1540476108351/EXAMPLES-OF-SUB-IMAGES-500-X-500-PIXELS-WITH-EARS-DETECTED-BY-MODEL-2.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+              autem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+      Di baris 1 terdapat class .row-cols-1, .row-cols-sm-2, dan .row-cols-lg-3. Ketiga class inilah
+      yang mengatur jumlah card dalam setiap baris pada breakpoint tertentu.
+     -->
+
+    <!-- 
+      Saat masuk ke breakpoint extra-small dan small, setiap baris hanya bisa diisi oleh 1 card saja.
+      Begitu masuk ke breakpoint medium, setiap baris akan berisi 2 card. Dan ketika masuk ke
+      breakpoint medium ke atas, setiap baris akan berisi 3 card.
+
+      Tambahan class .g-4 di baris 1 merupakan singkatan dari gutter level 4. Ini merupakan utility
+      class Bootstrap untuk mengatur jarak antar card. Mirip seperti padding dan margin, terdapat 5
+      level jarak gutter yang disediakan Bootstrap, yakni dari .g-1 sampai dengan .g-5 serta
+      mendukung breakpoint seperti .g-sm-2 atau .g-lg-4.
+
+      Untuk membuat grid cards, setiap card harus berada dalam class .col. Sedangkan isi dari class
+      .card sendiri bisa ditulis seperti biasa.
+    -->
+
+    <!-- 
+      Jika kita ingin agar setiap card memiliki tinggi yang sama dalam setiap baris, tambah class .h-
+      100 ke setiap class card
+     -->
+
+    <!-- ________________________________________________________________________________________________________________ -->
+
+    <!-- Carousel -->
+
+    <div class="mt-5"></div>
+    <h1>Carousel</h1>
+
+    <!-- 
+      Jika kata masonry diambil dari bidang arsitektur, kata carousel berarti komidi putar. Carousel
+      sendiri adalah istilah British English, di Amerika komidi putar lebih populer dengan sebutan
+      merry-go-round.
+
+      Dalam web design, carousel adalah istilah formal untuk menyebut slider, yakni komponen web
+      berbentuk gambar yang berganti secara berkala. Pembuatan carousel sebenarnya cukup rumit
+      karena harus melibatkan JavaScript. Jika anda sudah membaca buku JavaScript Uncover
+      Duniailkom, pembuatan slider menjadi studi kasus di bab terakhir.
+
+      Menggunakan Bootstrap, slider atau carousel ini bisa dibuat dengan sangat mudah. Berikut
+      struktur dasar kode HTML untuk pembuatan carousel:
+     -->
+
+    <!-- <div id="mySlide" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            class="d-block w-1/2"
+            src="https://www.researchgate.net/publication/328512173/figure/tbl1/AS:685620645093378@1540476108351/EXAMPLES-OF-SUB-IMAGES-500-X-500-PIXELS-WITH-EARS-DETECTED-BY-MODEL-2.png"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-1/2"
+            src="https://www.researchgate.net/publication/328512173/figure/tbl1/AS:685620645093378@1540476108351/EXAMPLES-OF-SUB-IMAGES-500-X-500-PIXELS-WITH-EARS-DETECTED-BY-MODEL-2.png"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-1/2"
+            src="https://www.researchgate.net/publication/328512173/figure/tbl1/AS:685620645093378@1540476108351/EXAMPLES-OF-SUB-IMAGES-500-X-500-PIXELS-WITH-EARS-DETECTED-BY-MODEL-2.png"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-1/2"
+            src="https://www.researchgate.net/publication/328512173/figure/tbl1/AS:685620645093378@1540476108351/EXAMPLES-OF-SUB-IMAGES-500-X-500-PIXELS-WITH-EARS-DETECTED-BY-MODEL-2.png"
+          />
+        </div>
+      </div>
+    </div> -->
+
+    <div id="mySlide" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            class="d-block w-1/2"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt5h5Y3hJ1lM0jLirxF-FFUNnYD2dsn1ym5gATIynuZQ&s"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-1/2"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt5h5Y3hJ1lM0jLirxF-FFUNnYD2dsn1ym5gATIynuZQ&s"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-1/2"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt5h5Y3hJ1lM0jLirxF-FFUNnYD2dsn1ym5gATIynuZQ&s"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-1/2"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt5h5Y3hJ1lM0jLirxF-FFUNnYD2dsn1ym5gATIynuZQ&s"
+          />
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#mySlide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#mySlide" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+
+    <!-- ________________________________________________________________________________________________ -->
+
+    <!-- Jumbotron -->
+
+    <div class="mt-5"></div>
+    <h1>Jumbotron</h1>
+
+    <!-- Collapse -->
+
+    <!-- 
+      Collapse adalah komponen Bootstrap untuk membuat efek element yang bisa disembunyikan.
+      Berikut kodenya:
+     -->
+
+    <p>
+      <a
+        class="btn btn-primary"
+        data-bs-toggle="collapse"
+        href="#collapseExample"
+      >
+        Show / Hide
+      </a>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+          autem. Fugiat ipsum, explicabo earum nesciunt officia nulla expedita.
+          Reiciendis ad ipsam obcaecati nulla.
+        </p>
+      </div>
+    </div>
+
+    <!-- ___________________________________________________________________________________________________________________ -->
+
+    <!-- Accordion -->
+
+    <div class="mt-5"></div>
+    <h1>Accordion</h1>
+
+    <!-- 
+      Di dalam web design, accordion adalah sebutan untuk kumpulan teks yang saling menutup
+      ketika bagian lain terbuka. Fitur seperti ini sering dipakai untuk bagian FAQ (Frequently Asked
+      Questions).
+
+      Berikut struktur kode HTML untuk membuat komponen accordion Bootstrap:
+     -->
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+          >
+            Pertanyaan 1
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+            autem. Fugiat ipsum, explicabo earum nesciunt officia nulla
+            expedita. Reiciendis ad ipsam obcaecati nulla.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+          >
+            Pertanyaan 2
+          </button>
+        </h2>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            Expedita, id! Quaerat dolore hic cum quae dicta eius cupiditate,
+            illo tempora voluptatibus harum eveniet expedita quis dolorum
+            quibusdam voluptates ducimus. Dolorum quas, totam at officiis
+            suscipit dolores nihil obcaecati voluptas dolore.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+          >
+            Pertanyaan 3
+          </button>
+        </h2>
+        <div
+          id="collapseThree"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            Aliquam nihil accusamus velit! Vitae asperiores facere est eum quas
+            minima unde eos provident placeat aut voluptatem architecto nemo
+            vero ab corporis cum, voluptates tempore autem enim voluptas labore
+            50 quam pariatur dolorum. Nam!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+      Seluruh accordion berada dalam class .accordion (baris 1). Tag <div> ini juga memiliki atribut
+      id="accordionExample" yang akan menjadi rujukan dari semua accordion item. Accordion
+      item sendiri berada dalam tag <div class="accordion-item"> dengan 2 struktur utama:
+      bagian judul dan konten.
+
+      Judul accordion saya buat dari tag <h2> dengan class .accordion-header. Di dalamnya
+      terdapat tag <button> dengan class .accordion-collapse dan .collapse, atribut type=
+      "button", serta atribut data-bs-toggle="collapse" dan data-bs-target="#collapseOne".
+      Nilai dari atribut data-bs-target ini nantinya akan berpasangan dengan bagian konten.
+      Teks judul sendiri ditulis antara tag <button> dan </button>, yang dalam contoh accordion
+    -->
+
+    <!-- 
+      item pertama berisi teks "Pertanyaan 1" (baris 7).
+      Konten dari accordion item berada dalam tag <div> dengan class .accordion-collapse dan
+      .collapse. Tag ini juga memiliki atribut id yang berpasangan dengan atribut data-bs-target
+      dari tombol sebelumnya. Selain itu terdapat juga atribut data-bs-parent yang butuh nilai id
+      milik accordion container, yakni "accordionExample".
+
+      Terakhir, terdapat <div class="accordion-body"> tempat konten accordion ditulis. Kita bebas
+      ingin mengisi konten apa saja termasuk gambar dan video. Jika ingin membuat beberapa
+      accordion item, tinggal menulis struktur yang sama seperti di baris 20 – 35 dan 37 – 52.
+    -->
+
+    <!-- ______________________________________________________________________________________________________________ -->
+
+    <!-- Alert -->
+
+    <div class="mt-5"></div>
+    <h1>Alert</h1>
+
+    <!-- 
+      Alert adalah komponen Bootstrap untuk membuat text-box berisi peringatan atau
+      pemberitahuan (alert). Ini biasa dipakai untuk menampilkan pesan kesalahan di sebuah form
+      atau untuk memberitahu user bahwa ada tambahan informasi baru.
+
+      Untuk membuat alert, tempatkan class .alert ke sebuah tag HTML seperti tag <div>,
+      kemudian pakai class warna alert dengan format dasar .alert-<kode_warna> seperti .alert-
+      primary, .alert-secondary, dst.
+
+      Berikut contoh pembuatan komponen alert Bootstrap:
+    -->
+
+    <div class="alert alert-primary">A simple primary alert, check it out!</div>
+    <div class="alert alert-secondary">
+      A simple secondary alert,check it out!
+    </div>
+    <div class="alert alert-success">A simple success alert, check it out!</div>
+    <div class="alert alert-danger">A simple danger alert, check it out!</div>
+    <div class="alert alert-warning">A simple warning alert, check it out!</div>
+    <div class="alert alert-info">A simple info alert, check it out!</div>
+    <div class="alert alert-light">A simple light alert, check it out!</div>
+    <div class="alert alert-dark">A simple dark alert, check it out!</div>
+
+    <!-- Seperti yang terlihat, komponen alert hanya men-style teks dengan warna background serta
+        tambahan efek sudut membulat (rounding corner). Efek seperti ini sebenarnya tidak terlalu
+        susah dibuat dari CSS, tapi tentu lebih efisien menggunakan class Bootstrap yang siap pakai.
+        Terdapat juga class .alert-link untuk men-style teks link agar mengikuti warna dari alert.
+        Berikut perbandingannya: 
+      -->
+
+    <div class="alert alert-danger">
+      A simple alert with <a href="#">an example link</a>.
+    </div>
+    <div class="alert alert-success">
+      A simple alert with <a href="#">an example link</a>.
+    </div>
+    <div class="alert alert-danger">
+      A simple alert with <a href="#" class="alert-link">an example link</a>.
+    </div>
+    <div class="alert alert-success">
+      A simple alert with <a href="#" class="alert-link">an example link</a>.
+    </div>
+
+    <!-- 
+      Semua alert ini memiliki teks dan link. Dua alert pertama dibuat dari tag <a> biasa yang tampil
+      dengan warna biru (baris 2 & 5). Dua alert terakhir menggunakan tag <a> dengan tambahan
+      class .alert-link (baris 9 & 12). Class .alert-link ini membuat warna link berubah sesuai
+      warna alert.
+    -->
+
+    <!-- ________________________________________________________________________________________________________________ -->
+
+    <!-- Alert Dismissing -->
+
+    <div class="mt-5"></div>
+    <h1>ALet Dismissing</h1>
+
+    <!-- 
+      Alert dismissing adalah sebutan untuk efek interaktif alert dengan tambahan icon close. Icon
+     -->
+
+    <div class="alert alert-info alert-dismissible fade show">
+      <strong>Halo Andi,</strong> kamu mendapat sebuah pesan baru
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <!-- 
+      Sekarang alert tampil dengan icon close atau tanda silang (x) di sisi kanan. Ketika icon ini di
+      klik, kotak alert menghilang.
+
+      Untuk membuatnya, perlu tambahan class . alert-dismissible, .fade dan .show (baris 1). Icon
+      close sendiri dibuat dari tag <button> dengan class .btn-close. Tambahan atribut data-bs-
+      dismiss="alert" berfungsi untuk membuat efek interaktif agar alert menghilang.
+    -->
+
+    <!-- ___________________________________________________________________________________________________________________ -->
+
+    <!-- Modal -->
+
+    <div class="mt-5"></div>
+    <h1>Modal</h1>
+
+    <!-- 
+      Dalam programming secara umum (tidak hanya web saja), modal adalah sebutan untuk jendela
+      atau tampilan yang berada di atas jendela lain. Biasanya jendela modal berfungsi memberikan
+      informasi, peringatan atau meminta inputan user. Fitur ini dibuat dari perpaduan HTML, CSS
+      dan JavaScript.
+
+      Jendela modal tidak berdiri sendiri tapi "menginduk" ke jendela parent. Ketika modal tampil,
+      kita tidak bisa mengakses jendela parent selama modal belum ditutup. Bootstrap menyediakan
+      cara mudah untuk membuat jendela modal dengan struktur dasar sebagai berikut:
+     -->
+
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#contohModal"
+    >
+      Tampilkan Modal
+    </button>
+    <div class="modal fade" id="contohModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>Ini adalah pesan yang tampil dalam sebuah modal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ________________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Popovers</h1>
+
+    <!-- 
+      Popovers (bentuk jamak dari popover) adalah komponen Bootstrap untuk membuat efek teks
+      yang tampil di samping element saat ini. Popover mirip seperti tooltips namun dengan
+      tampilan yang lebih menarik. Popover sendiri berasal dari library JavaScript Popper.js.
+
+      Karena alasan performa, secara default komponen popover tidak aktif. Kita harus
+      mengaktifkannya secara manual menggunakan kode JavaScript berikut:
+    -->
+
+    <!-- <script>
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+    </script> -->
+
+    <!-- 
+      Tempatkan kode di atas pada akhir tag <body>, yakni setelah kode JavaScript untuk menginput
+      file bootstrap.bundle.js. Kode ini kurang lebih berarti: "Cari semua element HTML yang
+      memiliki atribut data-bs-toggle="popover", lalu aktifkan popover untuk element tersebut".
+
+      Kode di atas bukan satu-satunya cara untuk mengaktifkan popover, kita juga bisa
+      menggunakan JavaScript untuk mengaktifkan popover di element tertentu saja.
+
+      Berikut kode dasar pembuatan komponen popover Bootstrap:
+    -->
+
+    <button
+      type="button"
+      class="btn btn-lg btn-danger"
+      data-bs-toggle="popover"
+      title="Popover title"
+      data-bs-content="Sebuah pesan interaktif dari popover Bootstrap"
+    >
+      Tampilkan Popover
+    </button>
+
+    <!-- _____________________________________________________________________________________________-------- -->
+
+    <!-- Popover direction -->
+
+    <div class="mt-5"></div>
+    <h1>Popover direction</h1>
+
+    <!-- Untuk mengatur penempatan posisi popover secara manual, terdapat atribut data-bs-
+          placement yang bisa diisi salah satu dari nilai top, bottom, left dan right. Berikut contoh
+          tampilannya: 
+    -->
+
+    <button
+      type="button"
+      class="btn btn-lg btn-danger mt-5"
+      data-bs-toggle="popover"
+      title="Popover title"
+      data-bs-placement="left"
+      data-bs-content="Sebuah pesan interaktif dari popover Bootstrap"
+    >
+      Popover Left
+    </button>
+    <button
+      type="button"
+      class="btn btn-lg btn-danger mt-5"
+      data-bs-toggle="popover"
+      title="Popover title"
+      data-bs-placement="top"
+      data-bs-content="Sebuah pesan interaktif dari popover Bootstrap"
+    >
+      Popover Top
+    </button>
+    <button
+      type="button"
+      class="btn btn-lg btn-danger mt-5"
+      data-bs-toggle="popover"
+      title="Popover title"
+      data-bs-placement="bottom"
+      data-bs-content="Sebuah pesan interaktif dari popover Bootstrap"
+    >
+      Popover Bottom
+    </button>
+    <button
+      type="button"
+      class="btn btn-lg btn-danger mt-5"
+      data-bs-toggle="popover"
+      title="Popover title"
+      data-bs-placement="right"
+      data-bs-content="Sebuah pesan interaktif dari popover Bootstrap"
+    >
+      Popover Right
+    </button>
+
+    <!-- 
+      Tambahan atribut data-placement terdapat di baris 2, 7, 12 dan 17. Hasilnya, tampilan popover
+      akan muncul sesuai nilai atribut ini. Namun kembali, popover akan mencari ruang yang
+      kosong. Silahkan tes kecilkan lebar layar web browser, maka posisi popover akan ikut berubah
+      mencari ruang yang masih tersisa.
+    -->
+
+    <!-- _______________________________________________________________________________________---------------- -->
+
+    <!-- Popovers Dismiss -->
+
+    <div class="mt-5"></div>
+    <h1>Popovers Dimiss</h1>
+
+    <!-- 
+      Dari beberapa contoh sebelum ini, kita harus klik tombol trigger untuk menutup popover.
+      Alternatif yang lebih baik adalah seperti komponen modal, dimana kita bisa menutup modal
+      cukup dengan men-klik sembarang tempat di luar element modal.
+
+      Untuk membuat efek yang sama di popover, tambahkan atribut tabindex="0" dan data-bs-
+      trigger="focus" seperti contoh berikut:
+    -->
+
+    <button
+      type="button"
+      class="btn btn-lg btn-danger"
+      data-bs-toggle="popover"
+      title="Popover title"
+      data-bs-content="Sebuah pesan interaktif dari popover Bootstrap"
+      tabindex="0"
+      data-bs-trigger="focus"
+    >
+      Tampilkan Popover
+    </button>
+
+    <!-- 
+      Dengan tambahan atribut tabindex="0" dan data-trigger="focus" di baris 4, popover akan
+      hilang ketika kita meng-klik di sembarang tempat selain di button itu sendiri. Secara teknis
+      yang terjadi adalah, popover menghilang ketika tag <button> kehilangan event focus.
+
+      JADI INTINYA POPOVERNYA AKAN HILANG KETIKA KETIKA MENGKLIK SEMBARANG 
+    -->
+
+    <!-- ________________________________________________________________________________________________________ -->
+
+    <!-- Popovers Trigger -->
+
+    <div class="mt-5"></div>
+    <h1>Popovers Trigger</h1>
+
+    <!-- 
+      Sepanjang pembahasan tentang popover kita menggunakan tag <button> sebagai trigger atau
+      element yang akan menampilkan popover. Pada dasarnya, hampir semua element HTML bisa
+      dipakai untuk menampilkan popover (sebagai trigger), dengan syarat terdapat atribut yang
+      diperlukan. Berikut contohnya:
+     -->
+
+    <a
+      href="#"
+      data-bs-toggle="popover"
+      title="Popover title"
+      data-bs-content="Sebuah pesan interaktif dari popover Bootstrap"
+      tabindex="0"
+      data-bs-trigger="focus"
+    >
+      Tampilkan Popover</a
+    >
+    <span
+      data-bs-toggle="popover"
+      title="Popover title"
+      data-bs-content="Sebuah pesan interaktif dari popover Bootstrap"
+      tabindex="0"
+      data-bs-trigger="focus"
+    >
+      Tampilkan Popover</span
+    >
+    <i
+      data-bs-toggle="popover"
+      title="Popover title"
+      data-bs-content="Sebuah pesan interaktif dari popover Bootstrap"
+      tabindex="0"
+      data-bs-trigger="focus"
+    >
+      Tampilkan Popover</i
+    >
+
+    <!-- 
+        Di sini saya menempatkan popover ke dalam tag <a>, <span> dan <i>. Hasilnya, popover tampil
+        ketika salah satu element di klik. Namun akan lebih baik jika tampilan element ditambah
+        sedikit efek untuk memberitahu user bahwa element tersebut akan menampilkan popover
+        saat di klik.
+       -->
+
+    <!-- ________________________________________________________________________________________________________________ -->
+
+    <!-- Popovers Hover -->
+    <div class="mt-5"></div>
+    <h1>Popovers Hover</h1>
+
+    <!-- 
+      Bagaimana jika kita ingin popover tampil tanpa perlu di klik? tapi cukup mengarahkan cursor
+      mouse ke atas element trigger? Yup bisa, caranya gunakan atribut data-trigger="hover"
+      seperti contoh berikut:
+    -->
+
+    <p>
+      Silahkan hover
+      <mark
+        tabindex="0"
+        data-bs-toggle="popover"
+        data-bs-trigger="hover"
+        title="Popover title"
+        data-bs-content="Sebuah pesan interaktif dari popover Bootstrap"
+      >
+        text ini</mark
+      >
+      untuk menampilkan efek popover
+    </p>
+
+    <!-- 
+      Dengan menambah atribut data-trigger="hover", popover berperilaku seperti tooltips dan
+      tampil begitu cursor mouse berada di atasnya. Popover ini juga langsung menghilang saat
+      cursor mouse keluar dari element tersebut.
+    -->
+
+    <!-- _____________________________________________________________________________________________________ -->
+
+    <!-- Tooltips -->
+    <div class="mt-5"></div>
+    <h1>Tooltips</h1>
+
+    <!-- 
+      Tooltips (bentuk jamak dari tooltip) adakah komponen Bootstrap untuk menampilkan teks
+      saat cursor mouse berada di atas sebuah element. Efek tooltip sebenarnya sudah ada di dalam
+      HTML dengan cara menambah atribut title ke sebuah element:
+    -->
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur
+      <abbr title="Tooltips pertama">adipisicing elit</abbr>. Reprehenderit
+      nobis cupiditate laborum earum placeat numquam quasi,
+      <strong title="Tooltips kedua">impedit sin</strong>
+      impedit sint? Repellendus similique maiores placeat saepe explicabo
+      <a href="#" title="Tooltips ketiga">eligendi quo</a>.
+    </p>
+
+    <!-- 
+      Komponen tooltip Bootstrap men-style tampilan tooltip bawaan HTML dengan efek yang lebih
+      menarik. Caranya, tambah atribut data-bs-toggle="tooltip" ke dalam setiap element:
+    -->
+
+    <div class="mt-3"></div>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur
+      <abbr title="Tooltips pertama" data-bs-toggle="tooltip"
+        >adipisicing elit</abbr
+      >. Reprehenderit nobis cupiditate laborum earum placeat numquam quasi,
+      <strong title="Tooltips kedua" data-bs-toggle="tooltip"
+        >impedit sin</strong
+      >
+      impedit sint? Repellendus similique maiores placeat saepe explicabo
+      <a href="#" title="Tooltips ketiga" data-bs-toggle="tooltip"
+        >eligendi quo</a
+      >
+    </p>
+
+    <!-- 
+      Sekarang efek tooltips terlihat lebih menarik dan lebih jelas. Namun sama seperti popover,
+      secara default komponen tooltip Bootstrap tidak aktif. Kita harus mengaktifkannya dengan
+      kode JavaScript berikut:
+
+      <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll(
+      '[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+      </script>
+     -->
+
+    <!-- ___________________________________________________________________________________________________ -->
+
+    <!-- Progress -->
+
+    <div class="mt-5"></div>
+    <h1>Progress</h1>
+
+    <!-- 
+      Progress adalah komponen Bootstrap untuk membuat tampilan bar atau garis warna. Disebut
+      sebagai progress karena komponen ini sering dipakai sebagai indikator proses yang sedang
+      berlangsung. Contohnya ketika upload file, akan lebih interaktif jika ada garis indikator berapa
+      persen file sudah terupload.
+
+      Sebenarnya di HTML5 juga terdapat element yang berfungsi mirip, yakni tag <progress>.
+      Namun Bootstrap membuat komponen progress dari tag <div> yang di-style menggunakan
+      CSS.
+
+      Komponen progress Bootstrap terdiri dari 2 bagian: sebuah container dengan class .progress
+      serta class .progress-bar yang ada di dalam container tersebut. Berikut contoh
+      penggunaannya:
+    -->
+
+    <div class="progress mt-3">
+      <div class="progress-bar"></div>
+    </div>
+    <div class="progress mt-3">
+      <div class="progress-bar" style="width: 25%"></div>
+    </div>
+    <div class="progress mt-3">
+      <div class="progress-bar" style="width: 50%"></div>
+    </div>
+    <div class="progress mt-3">
+      <div class="progress-bar" style="width: 75%"></div>
+    </div>
+    <div class="progress mt-3">
+      <div class="progress-bar" style="width: 100%"></div>
+    </div>
+
+    <!-- _____________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Progress label</h1>
+
+    <!-- 
+      Jika kita ingin memberi teks keterangan (label) seperti 10% atau 25%,
+      tempatkan di antara tag pembuka
+      <div class="progress-bar">dan tag penutup</div>
+      seperti contoh berikut: 
+    -->
+
+    <div class="progress mt-3">
+      <div class="progress-bar" style="width: 25%">25%</div>
+    </div>
+    <div class="progress mt-3">
+      <div class="progress-bar" style="width: 75%">75%</div>
+    </div>
+    <div class="progress mt-3">
+      <div class="progress-bar" style="width: 100%">100%</div>
+    </div>
+
+    <!-- Secara otomatis teks label akan tampil di tengah progress-bar. -->
+
+    <!-- ____________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Progress height</h1>
+
+    <!-- 
+      Untuk mengatur tinggi dari progress, bisa di set dari property height CSS ke dalam tag <div
+      class="progress>, seperti contoh berikut:
+    -->
+
+    <div class="progress mt-3" style="height: 5px">
+      <div class="progress-bar" style="width: 25%"></div>
+    </div>
+    <div class="progress mt-3" style="height: 15px">
+      <div class="progress-bar" style="width: 75%"></div>
+    </div>
+    <div class="progress mt-3" style="height: 35px">
+      <div class="progress-bar" style="width: 100%"></div>
+    </div>
+
+    <!-- Dalam contoh ini saya men-set tinggi progress sebesar 5px, 15px dan 35px. -->
+
+    <!-- ______________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Progress color</h1>
+
+    <!-- 
+      Untuk mengubah warna progress, tempatkan utilities class background color seperti .bg-
+      primary, .bg-success, atau .bg-info ke dalam tag <div class="progress-bar">:
+    -->
+
+    <div class="progress mt-3">
+      <div class="progress-bar bg-success" style="width: 25%"></div>
+    </div>
+    <div class="progress mt-3">
+      <div class="progress-bar bg-info" style="width: 75%"></div>
+    </div>
+    <div class="progress mt-3">
+      <div class="progress-bar bg-danger" style="width: 100%"></div>
+    </div>
+
+    <!-- 
+      Di sini saya memakai class .bg-success, .bg-info dan .bg-danger untuk membuat progress
+      bar yang berwarna hijau, biru dan merah
+    -->
+
+    <!-- ___________________________________________________________________________________________ -->
+
+    <!-- Progress Striped -->
+
+    <div class="mt-5"></div>
+    <h1>Progress striped</h1>
+
+    <!-- 
+      Progress striped adalah variasi tampilan progress dengan efek warna belang-belang. Untuk
+      membuatnya, tambah class .progress-bar-striped ke dalam tag <div class="progress-
+      bar">:  
+    -->
+
+    <div class="progress mt-3">
+      <div
+        class="progress-bar bg-success progress-bar-striped"
+        style="width: 25%"
+      ></div>
+    </div>
+    <div class="progress mt-3">
+      <div
+        class="progress-bar bg-info progress-bar-striped"
+        style="width: 75%"
+      ></div>
+    </div>
+    <div class="progress mt-3">
+      <div
+        class="progress-bar bg-danger progress-bar-striped"
+        style="width: 100%"
+      ></div>
+    </div>
+
+    <!-- Efek stripped ini akan lebih menarik jika ditambah animasi dari class .progress-bar-animated : -->
+
+    <div class="mt-3"></div>
+
+    <div class="progress mt-3">
+      <div
+        class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+        style="width: 25%"
+      ></div>
+    </div>
+    <div class="progress mt-3">
+      <div
+        class="progress-bar bg-info progress-bar-striped progress-bar-animated"
+        style="width: 75%"
+      ></div>
+    </div>
+    <div class="progress mt-3">
+      <div
+        class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
+        style="width: 100%"
+      ></div>
+    </div>
+
+    <!-- 
+      Hasilnya, efek stripped seolah-olah bergerak. Untuk melihat animasi ini, silahkan jalankan
+      langsung kode di atas.
+    -->
+
+    <!-- ____________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Multiple bars</h1>
+
+    <!-- 
+      Fitur lain yang bisa dibuat dari komponen progress Bootstrap adalah multiple bars, yakni
+      menggabung beberapa progress bar menjadi satu. Caranya, tempatkan beberapa class
+      .progress-bar ke dalam 1 tag <div class="progress> seperti contoh berikut:
+    -->
+
+    <div class="progress mt-3">
+      <div class="progress-bar bg-success" style="width: 15%">15%</div>
+      <div class="progress-bar bg-info" style="width: 25%">25%</div>
+      <div class="progress-bar bg-danger" style="width: 35%">35%</div>
+    </div>
+
+    <!--
+        Pada contoh di atas, saya menggabungkan 3 buah progress bar. Setiap bar bisa diatur lebarnya
+        secara individu. 
+    -->
+
+    <!-- _____________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Spinnners</h1>
+
+    <!-- 
+      Spinners adalah komponen kecil untuk menampilkan animasi "berputar" (spin). Animasi ini
+      cukup sering kita temukan pada saat proses loading. Cara membuatnya sangat mudah, cukup
+      tempatkan class .spinner-border ke sebuah element:
+    -->
+
+    <div class="spinner-border"></div>
+
+    <!-- 
+      Spinner tampil dalam bentuk lingkaran yang sedikit terpotong dan terus berputar searah
+      jarum jam.
+
+      Dalam dokumentasi Bootstrap, kita disarankan menambah atribut role="status" serta class
+      tag <span class="visually-hidden">Loading...</span> untuk membantu assistive
+      technology, namun ini tidak wajib dan tidak ada perubahan tampilan apapun:
+     -->
+
+    <div class="mt-5"></div>
+
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+
+    <!-- 
+      Komponen spinner juga bisa diwarnai dengan berbagai class teks Bootstrap seperti .text-
+      primary, .text-secondary, .text-danger, dll:
+     -->
+
+    <div class="mt-5"></div>
+
+    <div class="spinner-border text-primary"></div>
+    <div class="spinner-border text-secondary"></div>
+    <div class="spinner-border text-success"></div>
+    <div class="spinner-border text-danger"></div>
+    <div class="spinner-border text-warning"></div>
+    <div class="spinner-border text-info"></div>
+    <div class="spinner-border text-light"></div>
+    <div class="spinner-border text-dark"></div>
+
+    <!-- ____________________________________________________________________________________________________ -->
+
+    <!-- Growing Spinner -->
+
+    <div class="mt-5"></div>
+    <h1>Growing Spinner</h1>
+
+    <!-- 
+      Selain dalam bentuk lingkaran berputar, Bootstrap menyediakan variasi tampilan lain
+      berbentuk titik lingkaran yang membesar. Ini dibuat dari class .spinner-grow:
+    -->
+
+    <div class="spinner-grow"></div>
+    <div class="spinner-grow text-primary"></div>
+    <div class="spinner-grow text-secondary"></div>
+    <div class="spinner-grow text-success"></div>
+    <div class="spinner-grow text-danger"></div>
+    <div class="spinner-grow text-warning"></div>
+    <div class="spinner-grow text-info"></div>
+    <div class="spinner-grow text-light"></div>
+    <div class="spinner-grow text-dark"></div>
+
+    <!-- ____________________________________________________________________________________________________ -->
+
+    <!-- Spinner size -->
+
+    <div class="mt-5"></div>
+    <h1>Spinner size</h1>
+
+    <!-- Membuat size untuk spinner -->
+
+    <div class="spinner-border spinner-border-sm"></div>
+    <div class="spinner-border"></div>
+    <div class="spinner-border" style="width: 3rem; height: 3rem"></div>
+
+    <!-- ______________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Spinner size</h1>
+
+    <!-- Untuk membuat efek lanjutan, spinner bisa digabung dengan komponen lain seperti button: -->
+
+    <button class="btn btn-primary" type="button" disabled>
+      <span class="spinner-border spinner-border-sm"></span>
+      <span class="visually-hidden">Loading...</span>
+    </button>
+    <button class="btn btn-primary" type="button" disabled>
+      <span class="spinner-border spinner-border-sm"></span>
+      Loading...
+    </button>
+
+    <!-- 
+      Penerapan spinner untuk proses loading di luar cakupan Bootstrap, di sini kita hanya
+      menampilkan animasinya saja.
+    -->
+
+    <!-- ____________________________________________________________________________________________________________ -->
+
+    <!-- Placeholders -->
+
+    <div class="mt-5"></div>
+    <h1>Placeholders</h1>
+
+    <!-- Mirip seperti spinner, placeholders bisa dipakai untuk menandakan proses loading yang sedang berlangsung, 
+         tapi kali ini tampilannya menyerupai struktur web. 
+    -->
+
+    <!-- 
+      Umumnya, konten web di ambil dari database untuk kemudian di tampilkan. Jika server web
+      sedang sibuk, kadang terdapat jeda antara proses permintaan sampai teks tersebut tampil ke
+      web browser.
+
+      Daripada terlihat teks kosong saja, beberapa web ada yang menampilkan "kerangka" atau teks
+      dummy untuk mengisi konten sementara. Tampilan dummy inilah yang bisa dibuat
+      menggunakan komponen placeholder dari Bootstrap.
+      Untuk membuat placeholder, cukup tempatkan class .placeholder ke sebuah element seperti
+      tag <div> atau <span>. Lebar element selanjutnya bisa diatur menggunakan class grid
+      Bootstrap seperti .col-2, .col-4, utility class seperti .w-25 dan .w-50, atau diatur manual
+      menggunakan property width CSS.
+
+      Berikut contoh penggunaan komponen placeholder Bootstrap:
+     -->
+
+    <div class="row">
+      <div class="col-sm-6 border p-4">
+        <h2 class="placeholder col-6"></h2>
+        <p>
+          <span class="placeholder col-7"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-6"></span>
+          <span class="placeholder w-75"></span>
+          <span class="placeholder" style="width: 400px"></span>
+        </p>
+      </div>
+    </div>
+
+    <!-- 
+      Ketika sebuah element berisi class .placeholder, tampilannya akan berubah menjadi kotak
+      berwarna abu-abu. Selain itu ketika cursor mouse berada di atas element (hover), akan tampak
+      menjadi tanda loading yang sama seperti efek cursor: wait di CSS.
+     -->
+
+    <!-- _______________________________________________________________________________________________ -->
+    <div class="mt-5"></div>
+    <h1>Placeholders Color</h1>
+
+    <!-- 
+      Jika tampilan abu-abu terasa kurang menarik, Bootstrap mengizinkan kita menggunakan
+      utility class color seperti .bg-primary, atau .bg-secondary:
+      -->
+
+    <div class="row">
+      <div class="border p-4">
+        <h2 class="placeholder col-6 bg-primary"></h2>
+        <div>
+          <span class="placeholder col-7 bg-secondary"></span>
+          <span class="placeholder col-4 bg-success"></span>
+          <span class="placeholder col-4 bg-danger"></span>
+          <span class="placeholder col-6 bg-info"></span>
+          <span class="placeholder w-75 bg-warning"></span>
+          <span class="placeholder bg-dark" style="width: 400px"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sekarang tampilan placeholder terlihat berwarna-warni. -->
+
+    <!-- ____________________________________________________________________________________________________ -->
+
+    <!-- Placeholders Sizing -->
+
+    <div class="mt-5"></div>
+    <h1>Placeholders Sizing</h1>
+
+    <!-- 
+      Untuk mengatur tinggi placeholder, tersedia juga class .placeholder-lg, .placeholder-sm,
+      dan .placeholder-xs:
+    -->
+
+    <div class="row">
+      <div class="border p-4">
+        <span class="placeholder col-7 placeholder-lg"></span>
+        <span class="placeholder col-7"></span>
+        <span class="placeholder col-7 placeholder-sm"></span>
+        <span class="placeholder col-7 placeholder-xs"></span>
+      </div>
+    </div>
+
+    <!-- _________________________________________________________________________________________________________ -->
+
+    <!-- Placeholders Animation -->
+
+    <div class="mt-5"></div>
+    <h1>Placeholder Animation</h1>
+
+    <!-- 
+      Efek loading biasanya lebih pas jika ada sedikit animasi. Bootstrap menyediakan class
+      .placeholder-glow dan .placeholder-wave untuk keperluan ini:
+    -->
+
+    <div class="row">
+      <div class="col-sm-6 border p-4 placeholder-glow">
+        <h2 class="placeholder col-6"></h2>
+        <p>
+          <span class="placeholder col-7"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-6"></span>
+        </p>
+      </div>
+      <div class="col-sm-6 border p-4 placeholder-wave">
+        <h2 class="placeholder col-6"></h2>
+        <p>
+          <span class="placeholder col-7"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-6"></span>
+        </p>
+      </div>
+    </div>
+
+    <!-- 
+      Karena berbentuk animasi, tampilan dari kedua efek ini baru bisa terlihat saat dijalankan
+      langsung. Box di sisi kiri akan memiliki efek berpendar setiap beberapa saat sebagai efek dari
+      class .placeholder-glow di baris 2. Sedangkan box di sisi kanan akan ada efek gelombang
+      setiap beberapa saat sebagai efek dari class .placeholder-wave di baris 11.
+
+      Sama seperti spinner, penggunaan komponen ini akan butuh kode JavaScript untuk mengganti
+      tampilan placeholder menjadi teks begitu konten website siap untuk ditampilkan.
+    -->
+
+    <!-- ___________________________________________________________________________________________________________ -->
+
+    <!-- Toast -->
+
+    <div class="mt-5"></div>
+    <h1>Toast</h1>
+
+    <!-- 
+      Toast adalah komponen berbentuk kotak kecil yang bisa diisi informasi singkat. Secara konsep
+      toast ini mirip seperti gabungan modal dan alert.
+
+      Berikut struktur pembuatan toast untuk tampilan di atas:
+     -->
+
+    <button
+      class="btn btn-lg btn-info mb-4 text-white"
+      id="tombol1"
+      type="button"
+    >
+      Tampilkan Toast
+    </button>
+    <div class="toast">
+      <div class="toast-header">
+        <span
+          style="height: 15px; width: 15px"
+          class="bg-info rounded me-2"
+        ></span>
+        <strong class="me-auto">Update</strong>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="toast"
+        ></button>
+      </div>
+      <div class="toast-body">Anda mendapat 1 pesan baru</div>
+    </div>
+
+    <!-- 
+      Kode di baris 1 – 2 berfungsi untuk membuat tombol trigger. Tombol ini bukan bagian dari
+      toast dan berfungsi untuk menampilkan toast saja.
+
+      Struktur toast berada pada container class .toast (baris 4), yang di dalamnya terdapat
+      pasangan class .toast-header untuk membuat judul toast, serta .toast-body untuk membuat
+      isi teks toast. Pada class .toast-header juga terdapat tag <button> yang menampilkan icon
+      silang (x) untuk menutup toast.
+
+      Sama seperti popover, Bootstrap tidak mengaktifkan toast secara default. Untuk bisa
+      menampilkan toast, harus diaktifkan terlebih dahulu dengan kode JavaScript berikut:
+
+      <script>
+        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        var toastList = toastElList.map(function (toastEl) {
+          return new bootstrap.Toast(toastEl)
+        });
+        var tombol1 = document.getElementById('tombol1');
+        tombol1.addEventListener("click", function() {
+          toastList[0].show();
+        });
+      </script>
+
+      Tempatkan kode ini di akhir tag <body>, yakni setelah kode JavaScript untuk menginput file
+      bootstrap.bundle.js . Kode di baris 2 - 5 kurang lebih berarti: "Cari semua element HTML
+      yang memiliki class .toast, lalu aktifkan toast untuk element tersebut". Sedangkan kode di
+      baris 7 – 10 dipakai untuk menambah event click ke dalam tombol "Tampilkan Toast" yang kita
+      buat sebelumnya.
+     -->
+
+    <!-- __________________________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Offcanvas</h1>
+
+    <!-- 
+      Offcanvas merupakan komponen baru di Bootstrap 5. Komponen ini mirip seperti modal,
+      yakni menampilkan box baru di atas halaman yang sudah ada. Akan tetapi posisi offcanvas
+      hanya bisa "menempel" di sisi kiri, kanan atau bawah jendela web browser.
+
+      Langsung saja kita lihat praktek dan tampilan dari offcanvas:
+    -->
+
+    <a
+      class="btn btn-primary"
+      data-bs-toggle="offcanvas"
+      href="#offcanvasContoh"
+    >
+      Link dengan href
+    </a>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasContoh">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Offcanvas</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid
+          nemo sint dolor temporibus repellendus facere exercitationem minus
+          magni.
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+      Dalam kode ini terdapat sebuah tombol yang ketika di klik akan menampilkan offcanvas di sisi
+      kiri halaman.
+      Prinsip dasar penulisan offcanvas mirip seperti modal. Pertama kita perlu element yang
+      menjadi trigger. Dalam contoh di atas trigger ini berasal dari tag <a class="btn btn-
+      primary">, yang dipadu dengan atribut data-bs-toggle="offcanvas" serta
+      href="#offcanvasContoh" . Nilai dari atribut href harus berpasangan dengan nilai atribut id
+      milik offcanvas yang terdapat di baris 4.
+
+      Kedua, kita perlu membuat struktur HTML offcanvas. Ini ada di tag <div> dengan class
+      .offcanvas dan .offcanvas-start (baris 4 – 16). Di dalamnya terdapat kode untuk bagian
+      header <div class= "offcanvas-header"> , serta bagian body <div class="offcanvas-body">.
+      Untuk header, berisi lagi class .offcanvas-title untuk judul, serta tag <button> untuk
+      membuat tombol close (x).
+
+      Bagian body offcanvas hanya berisi teks tag <div> saja di baris 11 – 14. Bagian ini bebas diganti
+      dengan element HTML apa saja, termasuk mengisinya dengan komponen Bootstrap lain
+      seperti menu navigasi.
+
+      Untuk menutup jendela offcanvas, klik tanda silang (x) di bagian atas atau klik sembarang
+      tempat di halaman parent yang memiliki overlay abu-abu.
+    -->
+
+    <script src="./js/bootstrap.bundle.js"></script>
+
+    <script>
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+
+      var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+      var toastList = toastElList.map(function (toastEl) {
+        return new bootstrap.Toast(toastEl);
+      });
+      var tombol1 = document.getElementById("tombol1");
+      tombol1.addEventListener("click", function () {
+        toastList[0].show();
+      });
+    </script>
+  </body>
+</html>

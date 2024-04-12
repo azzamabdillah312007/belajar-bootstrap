@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap icons</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./icons/bootstrap-icons.css">
+  </head>
+  <body>
+    <h1>Bootstrap Icon SVG</h1>
+
+    <!-- 
+        Cara pertama dan paling praktis untuk menggunakan bootstrap icon adalah dengan men-copy
+        langsung kode SVG ke dalam file HTML. Ini lebih disarankan jika kita hanya butuh 1 atau
+        beberapa icon saja. Silahkan cari icon yang ingin di pakai pada alamat icons.getbootstrap.com:
+
+        Klik salah satu icon, dan akan terbuka halaman detail dari icon tersebut. Di bagian kanan
+        bawah terdapat judul "Copy HTML". Inilah kode yang kita
+
+        Buat file HTML biasa (tidak harus mengakses file Bootstrap), lalu paste kode tersebut:
+    -->
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="currentColor"
+      class="bi bi-app-indicator"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5
+        14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5
+        4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z"
+      />
+      <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+    </svg>
+
+    <!-- 
+        Dari kode yang di copy tersebut, kita bisa melihat struktur kode HTML normal seperti atribut
+        width, height serta class. Ketika atribut ini bisa di modifikasi untuk mengatur besar dan
+        warna icon:
+    -->
+
+    <div class="mt-3"></div>
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40"
+      height="40"
+      fill="currentColor"
+      class="bi bi-app-indicator text-info"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5
+        14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5
+        4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z"
+      />
+      <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+    </svg>
+
+    <!-- 
+        Kali ini saya mengubah nilai atribut width dan height menjadi 40. Ini akan membuat ukuran
+        icon menjadi 40 pixel. Selain itu tambahan class .text-info akan mengubah warna icon
+        menjadi kebiruan (cyan) yang berasal dari utility class Bootstrap.
+
+        Mengakses bootstrap icon dengan SVG memang sangat praktis. Namun kode yang diperlukan
+        memang cukup panjang karena itulah yang dipakai untuk "menggambar" icon. Namun jika kita
+        butuh mengakses banyak icon di berbagai halaman, bisa memakai cara import sebagai gambar
+        atau font.
+
+     -->
+
+     <!-- ______________________________________________________________________________________________________ -->
+
+     <div class="met-5"></div>
+     <h1>Bootstrap Icon CSS</h1>
+
+     <!-- 
+        Cara terakhir untuk menggunakan bootstrap icon adalah mengimportnya sebagai file font CSS
+        dan diakses dari nama class. Untuk keperluan ini, silahkan buka kembali file source code
+        bootstrap icon, kali ini copy isi folder font ke folder belajar_bootstrap:
+    -->
+
+    <i class="bi-alarm"></i>
+
+
+
+    <script src="./js/bootstrap.bundle.js"></script>
+  </body>
+</html>

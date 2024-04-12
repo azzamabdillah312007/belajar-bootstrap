@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<lbr lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boostrap content</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+
+    <style>
+      
+    </style>
+  </head>
+
+  <!-- CSS RESET/REBOOT -->
+  <h1>CSS REBOOT</h1>
+
+    <!-- 
+        Css reboot di gunakan akan secara otomatis ada di bootstrap , di html sendiri ada css bawaan nya seperti di elemen h1-h5
+        yang memakai margin bottom dan margin top , tapi di bootstrap hanya memakai margin-bottom dan banyak lagi elemen yang sudah 
+        di reboot oleh bootstrap
+    -->
+
+
+    </lbr></br></br></br>
+    <h1>Margin-top dan Margin-bottom</h1>
+
+    <!-- 
+
+        Efek lain yang diubah oleh Bootstrap reboot adalah menghapus margin-top dari mayoritas
+        element dan hanya menggunakan margin-bottom. Ini dilakukan untuk menghindari berbagai
+        efek seperti margin collapsing.
+
+        Untuk menghindari efek-efek yang tidak diinginkan, bootstrap reboot menghapus margin-top
+        dan hanya menggunakan margin-bottom saja. Secara teknis, heading element tag <h1>, <h2>,
+        hingga <h6> di set dengan margin-bottom:0.5rem. Untuk paragraf element, yakni tag <p>, di
+        set dengan margin-bottom:1rem.
+
+        jadi intinya di bootstrap untuk penggunaan h1,h2 - h5 hanya menggunakan margin bottom , berikut contohnya : 
+
+     -->
+
+     <h1>Belajar bootstrap</h1>
+     <h2>Belajar bootstrap</h2>
+     <h3>Belajar bootstrap</h3>
+     <h4>Belajar bootstrap</h4>
+     <h5>Belajar bootstrap</h5>
+
+     <!-- Lihat di inspect element dan arahkan kursornya ke elemen h1-h5 di atas , pasti ada margin bottom nya dan tidak ada 
+          margin top nya
+    -->
+
+    <!-- Tampilan di atas adalah hasil dari Inspect Element tag <h1> yang sudah menggunakan
+         Bootstrap. Perhatikan warna kuning sebagai penanda margin sekarang hanya ada di sisi bawah
+         saja. Ini berlaku untuk hampir semua block level element, termasuk list element seperti tag
+         <ol> dan <ul>:
+     -->
+
+    </br>
+
+     <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Facilisis in pretium nisl aliquet</li>
+        <li>Nulla volutpat aliquam velit
+          <ul>
+            <li>Phasellus iaculis neque</li>
+            <li>Purus sodales ultricies</li>
+            <li>Ac tristique libero volutpat at</li>
+          </ul>
+        </li>
+        <li>Faucibus porta lacus fringilla vel</li>
+        <li>Eget porttitor lorem</li>
+    </ul>
+    <ol>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetur adipiscing elit</li>
+        <li>Integer molestie lorem at massa</li>
+        <li>Facilisis in pretium nisl aliquet</li>
+        <li>Eget porttitor lorem</li>
+    </ol>
+
+<!-- __________________________________________________________________________________________________________________ -->
+ 
+    </br></br></br>
+
+    <h1>#Element Style</h1>
+
+    <!-- 
+
+        Empat materi yang kita bahas sebelum ini, font stack, box sizing, rem sizing dan margin
+        berdampak global pada semua element. Selain itu, Bootstrap reboot juga mengubah tampilan
+        beberapa element yang secara khusus berdampak pada element itu saja.
+
+        Element style dari Bootstrap reboot yang akan kita bahas adalah description list, table, form,
+        address, blockquote, abbr dan summary.
+
+        Perubahan dari Bootstrap reboot juga dibuat seminimal mungkin. Untuk efek lanjutan, bisa di
+        dapat dengan menambah class khusus. Sebagai contoh untuk men-style tag <tabel> nantinya
+        terdapat class .table-dark, .table-bordered, .table-sm, .table-responsive, dll. Class-class
+        ini akan kita pelajari di bagian table content secara terpisah.
+
+        Berikut perbedaan tampilan description list tanpa dan dengan Bootstrap:
+
+     -->
+
+     <h2>Description list</h2>
+
+    <dl>
+        <dt>Description lists</dt>
+        <dd>A description list is perfect for defining terms.</dd>
+        <dt>Euismod</dt>
+        <dd>Vestibulum id ligula porta felis euismod semper lacinia odio sem.</dd>
+        <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+        <dt>Malesuada porta</dt>
+        <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+    </dl>
+
+    <!-- 
+
+        Description list adalah jenis list yang dipakai untuk membuat struktur mirip kamus, yakni list
+        yang memiliki judul beserta keterangannya. Untuk membuat description list, butuh perpaduan
+        dari tag <dt> dan <dd>.
+
+        Seperti yang terlihat, Bootstrap reboot mengubah style kedua element ini. Property CSS
+        margin-left pada tag <dd> di set menjadi 0 serta ditambahkan margin-bottom:.5rem . Selain
+        itu isi teks tag <dt> di buat menjadi tebal (bold).
+     -->
+
+     <!-- ___________________________________________________________________________________________________________ -->
+
+     <!-- Untuk table element, berikut hasil tampilan tanpa dan dengan Bootstrap: -->
+
+     <h2>Table</h2>
+
+
+     <table>
+        <caption>
+            Disini tempat untuk table caption
+        </caption>
+       <thead>
+        <tr>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+        </tr>
+       </thead>
+        <tbody>
+            <tr>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+            </tr>
+            <tr>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+            </tr>
+            <tr>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 
+        Selain jenis font, Bootstrap memindahkan posisi table caption dari sisi atas ke bagian bawah
+        tabel. Kemudian juga ada tambahan property border-collapse:collapse.
+
+     -->
+
+     <!-- ______________________________________________________________________________________________________________ -->
+
+     <!-- Untuk address element, berikut hasil tampilan tanpa dan dengan Bootstrap: -->
+
+     <h2>Address</h2>
+
+    <div>
+        <address>
+            <strong>Duniailkom</strong>
+            <br>
+            Jl. Perintis Kemerdekaan No.1<br>
+            Kel. Aman Makmur, Kec. Sukses Jaya<br>
+            <abbr title="Phone">HP:</abbr>
+            083180285808
+        </address>
+        <address>
+            <strong>Andre Pratama</strong><br>
+            <a href="mailto:#">duniailkom@gmail.com</a>
+        </address>
+    </div>
+
+
+    <!-- ___________________________________________________________________________________________________________________ -->
+
+    <h2>Blockquote</h2>
+
+    <!-- 
+        Untuk blockquote element, berikut hasil tampilan tanpa dan dengan Bootstrap:
+     -->
+
+     <div>
+        <blockquote>
+            <p>
+                I knew that if I failed I wouldn't regret that,
+                but I knew the one thing I might regret is not trying.
+            </p>
+            <cite title="Source Title">Jeff Bezos (founder & CEO of Amazon.com)</cite>
+        </blockquote>
+    </div>
+
+    <!-- 
+
+        Tag <blockquote> dan <cite> dipakai untuk membuat kutipan. Secara default bawaan web
+        browser, tag <blockquote> memiliki margin 1em 40px. Bootstrap menggantinya dengan 0 0
+        1rem, yakni hanya ada margin-bottom sebesar 1rem.
+
+     -->
+        
+    <!-- ___________________________________________________________________________________________________________________ -->
+
+    <h2>Abbr</h2>
+
+    <!-- 
+        Untuk abbr element, berikut hasil tampilan tanpa dan dengan Bootstrap:
+     -->
+
+     <div>
+        <p>
+            <abbr title="Hypertext Markup Language">HTML</abbr> dan
+            <abbr title="Cascading Style Sheet">CSS</abbr>
+            wajib dipahami sebelum belajar Bootstrap.
+        </p>
+    </div>
+
+    <!-- 
+        Tag <abbr> bisa dipakai untuk membuat singkatan yang menampilkan kepanjangan kata dalam
+        bentuk teks pop-up. Perubahan yang dilakukan Bootstrap adalah menambah efek cursor dari
+        property CSS cursor:help. Tanpa Bootstrap, tidak ada tanda cursor apapun, dimana cursor
+        berbentuk normal berupa tanda 'I'.
+     -->
+
+    <!-- ___________________________________________________________________________________________________________________ -->
+
+    <h2>Details & Sumary</h2>
+
+    <!-- Penambahan efek cursor ini juga dilakukan untuk details dan summary element: -->
+
+    <div>
+        <details>
+            <summary>Pengertian HTML</summary>
+            <p>
+            HTML atau HyperText Markup Language adalah bahasa markup standar yang
+            digunakan untuk membuat halaman web
+            </p>
+        </details>
+        <details open>
+            <summary>Pengertian CSS </summary>
+            <p>Cascading Style Sheets (CSS) adalah bahasa style sheet yang digunakan
+            untuk mengatur tampilan dan format dari sebuah dokumen yang ditulis
+            dengan bahasa markupâ€.</p>
+        </details>
+    </div>
+
+    <!-- 
+        Tag <details> dan <summary> adalah tag baru dari HTML 5.1 yang berfungsi untuk membuat
+        konten teks yang dikenal sebagai accordion. Isi teks awalnya tersembunyi dan baru tampil jika
+        judul di klik.
+
+        Sama seperti tag <abbr>, Bootstrap menambah efek mouseover berupa cursor "tangan" yang
+        berasal dari property CSS cursor:pointer.
+     -->
+
+    <!-- _____________________________________________________________________________________________________________________ -->
+
+    <h2>Form</h2>
+
+    <!-- 
+        Terakhir (dan yang cukup kompleks), Bootstrap mengubah tampilan form element, yakni tag-
+        tag HTML untuk membuat form. Berikut perbedaan tampilannya:
+    -->
+
+    <!-- 
+        Untuk menghemat tempat saya tidak menampilkan kode program yang dipakai. Jika tertarik,
+        silahkan buka file 13.form.html di file belajar_bootstrap.zip.
+
+        Kalau dilihat sekilas, tampilan form bootstrap tidak lebih cantik daripada bawaan web browser.
+        Namun seperti yang dibahas di awal materi bootstrap reboot, proses mempercantik element
+        menjadi pilihan opsional di dalam Bootstrap, caranya dengan menambah berbagai class yang
+        akan kita pelajari di bab sendiri
+     -->
+
+     <!-- 
+
+        Salah satu efek paling terlihat adalah bootstrap menghapus border, padding dan margin dari
+        tag <fieldset> dan <legend>. Tujuannya agar bisa dipakai sebagai "container" bagi beberapa
+        komponen form. Secara default bawaan web browser, tag <fieldset> dan <legend>
+        memberikan efek bingkai di sekeliling form.
+
+    -->
+
+    <!-- __________________________________________________________________________________________________________________________ -->
+
+     <div class="m-5"></div>
+
+     <h1>#Typography</h1>
+     <div class="m-3"></div>
+     
+
+     <h2>Heading</h2>
+
+     <!-- 
+        Untuk membuat heading, di dalam HTML tersedia tag <h1> hingga <h6>. Selain itu bootstrap
+        juga menyediakan class .h1, .h2, .h3, .h4, .h5 dan .h6 untuk membuat efek yang sama. Class
+        ini bisa dipakai dalam situasi kita perlu efek heading tapi tidak ingin menggunakan heading
+        element. Berikut tampilan dari class ini:
+
+      -->
+
+      <div class="container">
+        <div>
+            <h1>h1. Bootstrap heading</h1>
+            <h2>h2. Bootstrap heading</h2>
+            <h3>h3. Bootstrap heading</h3>
+            <h4>h4. Bootstrap heading</h4>
+            <h5>h5. Bootstrap heading</h5>
+            <h6>h6. Bootstrap heading</h6>
+        </div>
+      </div>
+
+      <div class="container">
+        <div>
+            <p class="h1">h1. Bootstrap heading</p>
+            <p class="h2">h2. Bootstrap heading</p>
+            <p class="h3">h3. Bootstrap heading</p>
+            <p class="h4">h4. Bootstrap heading</p>
+            <p class="h5">h5. Bootstrap heading</p>
+            <p class="h6">h6. Bootstrap heading</p>
+        </div>
+      </div>
+
+      <!-- 
+
+        Tampilan teks di sebelah kiri menggunakan heading element tag <h1> sampai <h6>, sedangkan
+        teks di sebelah kanan adalah tag <p> yang berisi class .h1 hingga .h6. Terlihat tampilan
+        keduanya sama persis.
+
+        Untuk mendapatkan efek lanjutan, heading element bisa digabung dengan berbagai utility
+        class bootstrap yang sudah kita pelajari dalam bab sebelumnya:
+
+       -->
+
+        <h3 class="text-center">Bootstrap Uncover
+          <small class="text-muted">panduan belajar framework CSS</small>
+        </h3>
+
+    <!-- Di sini saya mengombinasikan heading element <h3> dengan class .text-center serta tag
+        <small> dengan class .text-muted. Tag <small> berfungsi untuk membuat teks dengan ukuran
+        yang lebih kecil, kemudian class .text-muted membuat efek teks berwarna abu-abu.
+    -->
+
+    <!-- ___________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h2>Display</h2>
+
+    <!-- 
+        Heading element seperti tag <h1> cocok dipakai untuk judul artikel. Jika kita ingin teks yang
+        lebih besar, bootstrap menyediakan class .display-1 hingga .display-4. Berikut contoh
+        penggunaan class display bootstrap:
+    -->
+
+    <h1 class="display-1">Display 1</h1>
+    <h1 class="display-2">Display 2</h1>
+    <h1 class="display-3">Display 3</h1>
+    <h1 class="display-4">Display 4</h1>
+
+    <!-- 
+        Dengan teks yang terbilang "sangat besar", class display ini pas digunakan sebagai judul teks
+        untuk keperluan display seperti dalam slideshow.
+     -->
+
+     <!-- _________________________________________________________________________________________________________________ -->
+
+     <div class="mt-5"></div>
+     <h2>Lead</h2>
+
+     <!-- 
+        Lead adalah class khusus untuk membuat sebuah paragraf tampil "beda", yakni dengan huruf
+        yang lebih besar daripada paragraf lain. Berikut contoh penggunaannya:
+      -->
+
+    <p class="lead">
+        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+        Duis mollis, est non commodo luctus.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+        vitae alias, ducimus cupiditate inventore impedit eos aspernatur ea
+        expedita neque quam, totam minus obcaecati fugit iste possimus
+        voluptates consectetur illo?
+    </p>
+
+    <!-- 
+        Paragraf yang ditambahkan class .lead tampil dengan huruf besar dan sedikit lebih ramping.
+        Secara teknis, Bootstrap memakai property CSS font-size:1.25rem dan font-weight:300
+        untuk mendapatkan efek ini. Class .lead cocok dipakai untuk bagian artikel yang ingin lebih
+        diutamakan.
+     -->
+
+    <!-- _________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+     <h2>Inline Text Elements</h2>
+
+     <!-- Bootstrap tidak banyak mengubah style tampilan dari inline element. Berikut diantaranya: -->
+
+    <p>Mark element bisa dipakai untuk <mark>highlight text</mark>.</p>
+    <p><del>Ini dimaksudkan sebagai teks yang akan dihapus</del></p>
+    <p><s>Ini dimaksudkan sebagai teks yang tidak akurat</s></p>
+    <p><ins>Ini dimaksudkan sebagai teks tambahan</ins></p>
+    <p><u>Ini dimaksudkan sebagai teks dengan garis bawah</u></p>
+    <p><small>Ini dimaksudkan sebagai teks dengan huruf lebih kecil</small></p>
+    <p><strong>Teks ini akan tampil dengan huruf tebal</strong></p>
+    <p><strong>Teks ini juga tampil dengan huruf tebal</strong></p>
+    <p><em>Teks ini akan tampil dengan huruf miring</em></p>
+    <p><i>Teks ini juga akan tampil dengan huruf miring</i></p>
+
+    <!-- Khusus untuk tag <mark> dan <small>, tersedia class .mark dan .small untuk mendapatkan
+        efek yang sama: -->
+
+    <p>Mark class bisa dipakai untuk <span class="mark">highlight text</span>.</p>
+    <p><span class="small">Ini sebagai teks dengan huruf lebih kecil</span></p>
+
+
+    <!-- ___________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+     <h2>Blockquotes</h2>
+
+     <!-- Untuk membuat kutipan, tersedia tag <blockquote>. Bootstrap menyediakan class
+         .blockquote serta .blockquote-footer untuk mempercantik tampilan tag ini. Berikut contoh
+          penggunaannya: -->
+
+    <blockquote class="blockquote">
+        <p>Your most unhappy customers are your greatest source of learning</p>
+        <footer class="blockquote-footer">
+            <cite>Bill Gates</cite> (Microsoft co-founder)
+        </footer>
+    </blockquote>
+
+    <!-- _____________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h2>List</h2>
+
+     <!-- 
+        Selain membuat daftar atau list, list element juga sering dipakai untuk membuat struktur menu
+        navigasi website. Salah satu langkah untuk mengkonversi list menjadi menu navigasi adalah
+        menghapus karakter list yang ada di sisi kiri (karakter "bullet" atau "numbering"). Ini bisa
+        dilakukan dengan kode CSS list-style:none, atau untuk bootstrap tersedia class .list-
+        unstyled yang menghasilkan efek serupa.
+
+        berikut contoh penggunaan nya 
+
+      -->
+
+    <ul class="list-unstyled">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetur adipiscing elit</li>
+        <li>Nulla volutpat aliquam velit
+    <ul>
+        <li>Phasellus iaculis neque</li>
+        <li>Vestibulum laoreet porttitor sem</li>
+        <li>Ac tristique libero volutpat at</li>
+    </ul>
+        </li>
+        <li>Faucibus porta lacus fringilla vel</li>
+        <li>Eget porttitor lorem</li>
+    </ul>
+
+    <!-- Class .list-unstyled akan menghapus karakter list di sisi kiri, namun ini berlaku hanya untuk
+        1 level kedalaman saja. Untuk nested list seperti di atas, kita harus tulis kembali class .list-
+        unstyled untuk setiap tag <ul> dan <ol>. -->
+
+    
+    
+    <!-- Class lain yang disediakan bootstrap adalah untuk mengubah tampilan list dari block menjadi
+        inline. Ini bisa didapat dari kombinasi class .list-inline dan .list-inline-item seperti
+        contoh berikut: -->
+
+    <ul class="list-inline">
+        <li class="list-inline-item">Lorem ipsum</li>
+        <li class="list-inline-item">Phasellus iaculis</li>
+        <li class="list-inline-item">Nulla volutpat</li>
+    </ul>
+
+    <!-- Class .list-inline ditempatkan ke dalam tag <ul>, sedangkan class .list-inline-item
+        ditempatkan ke semua tag <li>. Hasilnya, list item berjejer dari kiri ke kanan sebagaimana
+        inline level element. -->
+    
+    <!-- ________________________________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>#Image & figure</h1>
+
+    <div class="mt-5"></div>
+    <h2>Responsive Images</h2>
+
+    <!-- 
+        Meskipun sudah menggunakan Bootstrap, namun secara default gambar itu sendiri belum
+        responsive. Untuk itu tambahkan class .img-fluid ke dalam tag <img>. Berikut contoh
+        penggunaannya:
+    -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <img src="https://live.staticflickr.com/65535/49389103952_ff4b2cf256.jpg" class="img-fluid">
+            </div>
+            <div class="col-6 im">
+                <img src="https://live.staticflickr.com/65535/49389103952_ff4b2cf256.jpg">
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        Dalam contoh ini saya membuat dua buah tag <img> dengan gambar yang sama persis. Tag
+        <img> pertama ditambahkan class .img-fluid. Efek dari penambahan class ini baru terlihat
+        ketika lebar layar diperkecil.
+
+        Untuk tag <img> dengan tambahan class .img-fluid, gambar ikut mengecil sesuai ukuran
+        parent element. Untuk tag <img> tanpa class .img-fluid, gambar akan mempertahankan
+        ukurannya. Jika lebar parent element mengecil, maka gambar akan "melimpah" keluar
+        (overflow).
+
+        Class .img-fluid ini akan sering kita pakai karena sudah seharusnya gambar juga ikut
+        mengecil begitu parent element-nya tidak bisa menampung gambar tersebut. Secara internal
+        class .img-fluid men-set 2 buah propery CSS, yakni max-width:100% dan height:auto.
+     -->
+
+    <!-- ____________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h2>Image Thumbnails</h2>
+
+    <!-- 
+        Mungkin anda menebak kalau image thumbnail yang dimaksud adalah versi kecil dari gambar
+        sebenarnya, namun class image thumbnail Bootstrap hanyalah berupa tambahan efek bingkai
+        ke sebuah gambar. Caranya, gunakan class .img-thumbnail seperti contoh berikut:
+     -->
+
+     <div class="container">
+        <img src="https://live.staticflickr.com/65535/49389103952_ff4b2cf256.jpg" class="img-thumbnail">
+    </div>
+
+    <!-- ____________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h2>Figures</h2>
+
+    <!-- 
+
+        HTML5 membawa tag <figure> dan <figcaption> yang bisa dipakai untuk mengelompokkan
+        gambar serta membuat keterangan gambar (caption). Bootstrap menyediakan 3 class:
+
+        ✔ class .figure untuk tag <figure>
+        ✔ class .figure-img untuk tag <img>
+        ✔ class .figure-caption untuk tag <figcaption>
+
+        Berikut perbedaan tampilan dari ketiga class ini:
+
+     -->
+
+    <figure class="figure">
+        <img src="https://live.staticflickr.com/65535/49389103952_ff4b2cf256.jpg" class="figure-img" alt="City Night">
+        <figcaption class="figure-caption">
+           A beautiful city night picture
+        </figcaption>
+    </figure>
+
+    <!-- __________________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h2>Table</h2>
+
+    <!-- 
+
+        Bootstrap menyediakan cukup banyak class untuk mempercantik tampilan tabel, mulai dari
+        membuat border, membuat efek strip, mengubah warna background, menambahkan caption
+        hingga membuat tabel yang responsive. Semua efek ini akan kita bahas satu per satu.
+
+        Secara default, Bootstrap sengaja tidak banyak mengubah style bawaan tag <table> karena
+        table element banyak dipakai di komponen lain seperti calendars dan date pickers. Jika terlalu
+        banyak efek yang ditambah, bisa mempengaruhi komponen-komponen tersebut.
+
+        Berikut tampilan tabel Bootstrap tanpa tambahan class apapun:
+
+     -->
+
+      <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Asal</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Ikhsan Prayoga</td>
+                    <td>Jakarta</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Sari Citra Lestari</td>
+                    <td>Surabaya</td>
+                    <td>Farmasi</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Sandri Fatmala</td>
+                    <td>Medan</td>
+                    <td>Sistem Informasi</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+    <!-- 
+        Tampilan tabel di atas mirip seperti bentuk default web browser, yakni tanpa bingkai sehingga
+        tidak tampak seperti tabel.
+    -->
+    
+    <!-- Class yang hampir selalu dibutuhkan untuk membuat tabel Bootstrap adalah class .table.
+         Class ini langsung mempercantik tampilan tabel seperti contoh berikut: 
+    -->
+
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Asal</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Ikhsan Prayoga</td>
+                    <td>Jakarta</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Sari Citra Lestari</td>
+                    <td>Surabaya</td>
+                    <td>Farmasi</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Sandri Fatmala</td>
+                    <td>Medan</td>
+                    <td>Sistem Informasi</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+    <!-- 
+        Selain tampak lebih menarik, lebar tabel juga otomatis menyesuaikan diri dengan parent
+        element. Jika kita memperkecil lebar jendela web browser, lebar tabel akan ikut mengecil.
+
+        Bootstrap juga menyediakan tambahan class .table-dark untuk membuat tabel dengan
+        background gelap dan teks putih. Berikut tampilan dari class .table-dark :
+     -->
+
+     
+     <div class="container">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Asal</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Ikhsan Prayoga</td>
+                    <td>Jakarta</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Sari Citra Lestari</td>
+                    <td>Surabaya</td>
+                    <td>Farmasi</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Sandri Fatmala</td>
+                    <td>Medan</td>
+                    <td>Sistem Informasi</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+    <!-- _______________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h2>Table Head Optioons</h2>
+
+    <!-- 
+        Dalam struktur tabel, baris pertama biasanya berisi judul untuk setiap kolom. Judul kolom ini
+        umumnya diletakkan ke dalam tag <thead>. Jika class .table-light dan .table-dark di
+        tempatkan ke dalam tag <thead>, maka hanya bagian header saja yang berubah warna. Berikut
+        contoh penggunaannya:
+     -->
+
+     <div class="container">
+        <table class="table">
+            <thead class="table-light">
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Asal</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Ikhsan Prayoga</td>
+                    <td>Jakarta</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Sari Citra Lestari</td>
+                    <td>Surabaya</td>
+                    <td>Farmasi</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Sandri Fatmala</td>
+                    <td>Medan</td>
+                    <td>Sistem Informasi</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+    <!-- atau dark -->
+
+    <div class="container">
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Asal</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Ikhsan Prayoga</td>
+                    <td>Jakarta</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Sari Citra Lestari</td>
+                    <td>Surabaya</td>
+                    <td>Farmasi</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Sandri Fatmala</td>
+                    <td>Medan</td>
+                    <td>Sistem Informasi</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+    <!-- ___________________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h2>Table  Striped Rows</h2>
+
+        <!-- 
+            Efek selanjutnya yang sering dibuat ke dalam tabel adalah striped rows atau baris belang-
+            belang. Untuk membuatnya, tambah class .table-striped ke dalam tag <table>.
+
+            Class .table-striped bisa dipakai untuk table light (tabel dengan background putih) maupun
+            table dark (tabel dengan background hitam). Berikut contoh hasilnya:
+        -->
+    
+        <div class="container">
+            <table class="table table-striped">
+                <thead class="table-light">
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Asal</th>
+                        <th>Jurusan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Ikhsan Prayoga</td>
+                        <td>Jakarta</td>
+                        <td>Teknik Informatika</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Sari Citra Lestari</td>
+                        <td>Surabaya</td>
+                        <td>Farmasi</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Sandri Fatmala</td>
+                        <td>Medan</td>
+                        <td>Sistem Informasi</td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+
+
+        <div class="container">
+            <table class="table table-dark table-striped">
+                <thead class="table-light">
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Asal</th>
+                        <th>Jurusan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Ikhsan Prayoga</td>
+                        <td>Jakarta</td>
+                        <td>Teknik Informatika</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Sari Citra Lestari</td>
+                        <td>Surabaya</td>
+                        <td>Farmasi</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Sandri Fatmala</td>
+                        <td>Medan</td>
+                        <td>Sistem Informasi</td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+
+    <!-- _______________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h2>Bordered Table</h2>
+
+    <!-- 
+        Secara default tabel Bootstrap tidak memiliki border di sisi luar, hanya ada border pemisah
+        antar baris. Untuk menambahkan efek border di sekeliling tabel, tersedia class .table-
+        bordered seperti contoh berikut:
+     -->
+
+     <div class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Asal</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Ikhsan Prayoga</td>
+                    <td>Jakarta</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Sari Citra Lestari</td>
+                    <td>Surabaya</td>
+                    <td>Farmasi</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Sandri Fatmala</td>
+                    <td>Medan</td>
+                    <td>Sistem Informasi</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+    <!-- atau dark -->
+
+    <div class="container">
+        <table class="table table-dark table-bordered ">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Asal</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Ikhsan Prayoga</td>
+                    <td>Jakarta</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Sari Citra Lestari</td>
+                    <td>Surabaya</td>
+                    <td>Farmasi</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Sandri Fatmala</td>
+                    <td>Medan</td>
+                    <td>Sistem Informasi</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+    <!-- ____________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h2>Hoverable rows</h2>
+
+    <!-- 
+        Hoverable rows adalah istilah untuk menyebut efek tabel yang barisnya berubah warna ketika
+        cursor mouse berada di atas tabel. Perubahan warna ini membantu kita membedakan setiap
+        baris. Untuk membuat hoverable rows, tambahkan class .table-hover ke dalam tag <table>.
+     -->
+    
+     <div class="container">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Asal</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Ikhsan Prayoga</td>
+                    <td>Jakarta</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Sari Citra Lestari</td>
+                    <td>Surabaya</td>
+                    <td>Farmasi</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Sandri Fatmala</td>
+                    <td>Medan</td>
+                    <td>Sistem Informasi</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+    <!-- atau dark -->
+
+    <div class="container">
+        <table class="table table-dark table-bordered table-hover ">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Asal</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Ikhsan Prayoga</td>
+                    <td>Jakarta</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Sari Citra Lestari</td>
+                    <td>Surabaya</td>
+                    <td>Farmasi</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Sandri Fatmala</td>
+                    <td>Medan</td>
+                    <td>Sistem Informasi</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+    <!-- _____________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h2>Small table</h2>
+
+    <!-- small table lebih kecil dari table default bawaah bootstrap  -->
+
+    <div class="container">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Asal</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Ikhsan Prayoga</td>
+                    <td>Jakarta</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Sari Citra Lestari</td>
+                    <td>Surabaya</td>
+                    <td>Farmasi</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Sandri Fatmala</td>
+                    <td>Medan</td>
+                    <td>Sistem Informasi</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+    <!-- atau dark -->
+
+    <div class="container">
+        <table class="table table-dark table-sm ">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Asal</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Ikhsan Prayoga</td>
+                    <td>Jakarta</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Sari Citra Lestari</td>
+                    <td>Surabaya</td>
+                    <td>Farmasi</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Sandri Fatmala</td>
+                    <td>Medan</td>
+                    <td>Sistem Informasi</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+    <!-- ____________________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h2>Contextual classes</h2>
+
+    <!-- 
+        Contextual classes adalah sebutan Bootstrap untuk sistem pewarnaan konten. Jika sudah
+        berkaitan dengan warna, maka nama class yang dipakai Bootstrap tidak jauh-jauh dari nama
+        primary, secondary, warning, danger, info dst. Nama warna ini dirancang agar sesuai dengan
+        maksud dari class tersebut (sesuai dengan konteksnya), misalkan class warning cocok dipakai
+        untuk konten yang berisi peringatan, class info untuk konten yang berisi informasi, dst.
+    -->
+
+    <!--
+        Untuk menambah contextual classes ke dalam tabel, atau lebih sederhana bisa disebut untuk
+        "mewarnai background tabel", terdapat beberapa class yang bisa ditulis pada tag <tr> maupun
+        tag <td>. Berikut class warna untuk tabel yang disediakan Bootstrap:
+
+        ✔ .table-active
+        ✔ .table-primary
+        ✔ .table-secondary
+        ✔ .table-success
+        ✔ .table-danger
+        ✔ .table-warning
+        ✔ .table-info
+        ✔ .table-light
+        ✔ .table-dark 
+
+     -->
+
+     <!-- 
+        Jika class ini ditempatkan ke dalam tag <tr> maka itu akan mengubah warna background
+        seluruh sel tabel dalam 1 baris. Jika class ini ditempatkan ke dalam tag <td> maka yang
+        berubah hanya warna background untuk sel itu saja.
+
+        Berikut contoh penggunaan dari contextual classes untuk tabel:
+    -->
+
+    <table class="table">
+        <tr class="table-primary">
+            <th>1</th>
+            <td>Ikhsan Prayoga</td>
+            <td>Jakarta</td>
+            <td>Teknik Informatika</td>
+        </tr>
+        <tr class="table-danger">
+            <th>2</th>
+            <td>Sari Citra Lestari</td>
+            <td>Surabaya</td>
+            <td>Farmasi</td>
+        </tr>
+        <tr class="table-info">
+            <th>3</th>
+            <td>Sandri Fatmala</td>
+            <td>Medan</td>
+            <td>Sistem Informasi</td>
+        </tr>
+    </table>
+
+    <!-- jika yang di beri warna <td> nya maka akan seperti ini -->
+
+    <table class="table">
+        <tr>
+            <th>1</th>
+            <td class="table-success">Ikhsan Prayoga</td>
+            <td>Jakarta</td>
+            <td class="table-warning">Teknik Informatika</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>Sari Citra Lestari</td>
+            <td class="table-info">Surabaya</td>
+            <td>Farmasi</td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td class="table-primary">Sandri Fatmala</td>
+            <td class="table-secondary" >Medan</td>
+            <td class="table-active">Sistem Informasi</td>
+        </tr>
+    </table>
+
+    <!-- _______________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h2>Contextual caption</h2>
+
+    <!--
+        Table caption dipakai untuk membuat keterangan atau penjelasan tambahan. Untuk
+        membuatnya, tempatkan tag <caption> ke dalam struktur tabel. Oleh Bootstrap, caption ini
+        akan berada di bagian bawah tabel, seperti contoh berikut:
+    -->
+
+
+    <div class="container">
+        <table class="table">
+            <caption class="text-end">Daftar nama mahasiswa</caption>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Asal</th>
+                    <th>Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Ikhsan Prayoga</td>
+                    <td>Jakarta</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Sari Citra Lestari</td>
+                    <td>Surabaya</td>
+                    <td>Farmasi</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Sandri Fatmala</td>
+                    <td>Medan</td>
+                    <td>Sistem Informasi</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+
+    <!-- ___________________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h2>Responsive Table</h2>
+
+    <!-- 
+        Di awal materi tentang class table, terdapat penjelasan bahwa tabel akan menyesuaikan diri
+        dengan ukuran parent element. Namun efek ini hanya berlaku selama isi tabel masih lebih kecil
+        daripada lebar parent element.
+
+        Apabila isi tabel cukup banyak (punya banyak kolom), pada titik tertentu tabel tidak lagi
+        menjadi responsive. Tabel akan overflow dan memanjang ke kanan
+
+        Sebagai solusi, Bootstrap menyediakan class .table-responsive dengan efek sebagai berikut:
+     -->
+
+     <div class="table-responsive w-50 m-auto">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+    <!-- 
+        Sekarang ketika tabel terlalu lebar dan tidak bisa ditampilkan semua, scrollbar akan muncul di
+        sisi bawah tabel, bukan dari web browser. Perhatikan di sisi kanan tabel masih terdapat ruang
+        putih (margin) karena tabel masih ada di dalam parent element (tidak overflow ke kanan).
+        Namun yang menjadi catatan, class .table-responsive ditempatkan bukan ke dalam tag
+        <tabel>, tapi ke parent element dari tag <table>. Dalam contoh di atas, parent element ini
+        adalah sebuah tag <div> yang sengaja saya tambah.
+
+        Selain itu, class .table-responsive juga memiliki fitur breakpoint. Artinya kita bisa mengatur
+        kapan efek responsive bisa berjalan. Penulisan class nya adalah dengan format .table-
+        responsive-<breakpoint> , seperti .table-responsive-sm, .table-responsive-md atau
+        .table-responsive-lg. Berikut contoh penggunaannya:
+     -->
+
+     <div class="table-responsive-lg">
+        <table class="table w-50 m-auto">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+
+
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+    <!-- jika kita buat seperti ini dia akan meng set responsive nya dari lf-xl saja dari sm-md dia tidka akan responsive table -->
+
+    <!-- ________________________________________________________________________________________________________________________ -->
+
+
+
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script></script>
+  </body>
+</html>

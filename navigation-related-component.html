@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navigation-related-component</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+  </head>
+  <body>
+    <h1>Breadcrumb</h1>
+
+    <!-- 
+        Breadcrumb adalah istilah untuk menyebut teks yang menandakan posisi halaman saat ini dari
+        keseluruhan struktur website.
+
+        Biasanya breadcrumb berada di sisi atas atau bawah halaman (atau keduanya). Dalam tampilan
+        di atas, bisa disimpulkan bahwa halaman saat ini berada di dalam struktur Data, yang
+        merupakan bagian dari Library. Kemudian Library ini juga berada di bawah struktur Home.
+        Dengan men-klik link breadcrumb, kita bisa pindah ke halaman tersebut.
+
+        Berikut kode program untuk membuat breadcrumb menggunakan Bootstrap:
+    -->
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active">Data</li>
+    </ol>
+
+    <!-- Cukup simple. Caranya, buat tag <ol> dengan class .breadcrumb yang berisi beberapa tag <li>.  -->
+
+    <!-- Agar teks breadcrumb bisa berfungsi sebagai link, tempatkan tag <a> ke dalam semua tag <li>,
+        kecuali teks terakhir yang biasanya adalah halaman saat ini (teks paling kanan). Class .active
+        dipakai agar tampilan teks berbeda dengan teks breadcrumb yang berfungsi sebagai link.
+
+        Meskipun tidak wajib, dokumentasi bootstrap menempatkan breadcrumb ke dalam tag <nav>,
+        seperti contoh berikut: 
+    -->
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Library</a></li>
+        <li class="breadcrumb-item active">Data</li>
+      </ol>
+    </nav>
+
+    <!-- 
+        Di dalam tag <nav> terdapat atribut aria-label="breadcrumb" yang merupakan bagian dari
+        atribut opsional ARIA. Fungsinya untuk memberitahu screen reader bahwa struktur ini
+        merupakan sebuah breadcrumb.
+    -->
+
+    <!-- __________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Nav</h1>
+
+    <!-- 
+        Nav adalah komponen Bootstrap yang menjadi struktur dasar menu navigasi. Menu navigasi
+        sendiri nantinya dibuat menggunakan komponen Navbar yang akan kita bahas terpisah. Boleh
+        dibilang bahwa Nav adalah versi minimalis dari Navbar.
+
+        Berikut struktur dasar penulisan komponen nav di dalam Bootstrap:
+     -->
+
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+    <!-- Bootstrap menyediakan cara penulisan alternatif dari nav, yakni tanpa unordered list tapi cukup tag <a> saja: -->
+
+    <nav class="nav">
+      <a class="nav-link active" href="#">Active</a>
+      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </nav>
+
+    <!-- 
+      Hasilnya tetap sama seperti tampilan dengan tag <ul> dan <li>. Kita bebas ingin membuat nav
+      dengan atau tanpa unordered list. Namun karena kebiasaan mayoritas web designer membuat
+      menu navigasi dengan unordered list, maka sebaiknya tetap gunakan tag <ul> dan <li>
+      meskipun Bootstrap tidak mengharuskan hal ini.
+     -->
+
+    <!-- ________________________________________________________________________________________________------------- -->
+
+    <div class="mt-5"></div>
+    <h1>Nav Pills dan Nav Tabs</h1>
+
+    <!-- 
+      Terdapat 2 variasi style untuk nav, yakni pills dan tabs. Untuk membuat keduanya, cukup
+      tambah class .nav-pills atau .nav-tabs ke dalam tag <ul>:
+     -->
+
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+    <div class="mt-3"></div>
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+    <!-- 
+      Dengan tambahan kedua style ini, link dengan class .active sudah tampil berbeda dengan link
+      lain. Dalam contoh di atas, link pertama (paling kiri) tampil dengan tombol biru untuk nav pills
+      dan efek tab untuk nav tabs. Jika class .active dipindah ke link lain, maka efek tersebut juga
+      akan mengikuti.
+     -->
+
+    <!-- ________________________________________________________________________________________________------------- -->
+
+    <div class="mt-5"></div>
+    <h1>Nav Fill dan Nav Justified</h1>
+
+    <!-- 
+
+      Secara default, menu nav tampil sesuai panjang teks. Selain itu terdapat class .nav-fill dan
+      .nav-justified yang bisa dipakai untuk mengubah lebar menu nav. Kedua class ini
+      ditempatkan ke dalam tag <ul>.
+        
+      Berikut contoh penggunaannya:
+    -->
+
+    <!-- menggunakan nav fill -->
+    <div class="container">
+      <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+          <a class="nav-link active" href="#"
+            >Link menu pertama sungguh panjang</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+
+      <div class="mt-2"></div>
+
+      <!-- menggunakan nav justifited -->
+      <ul class="nav nav-pills nav-justified">
+        <li class="nav-item">
+          <a class="nav-link active" href="#"
+            >Link menu pertama sungguh panjang</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 
+      Efek dari penggunaan class .nav-fill dan .nav-justified, menu nav akan melebar
+      memenuhi parent element. Dalam contoh di atas, parent element dari tag <nav> adalah tag
+      <div class="container"> , maka menu nav akan melebar sesuai lebar container ini.
+
+      Bedanya, untuk class .nav-fill lebar setiap menu dibagi secara proporsional. Jika terdapat
+      teks yang cukup panjang, maka menu itu juga menjadi lebih panjang daripada menu lain.
+      Sedangkan untuk class .nav-justified, setiap menu mendapat ukuran yang sama besar, tidak
+      peduli panjang teks yang dipakai untuk membuat menu tersebut.
+
+      Menu nav bagian bawah dengan class .nav-justified butuh 2 baris karena lebarnya terlalu
+      kecil untuk menampung teks "Link Menu satu sungguh panajang". Sedangkan menu bagian atas dengan
+      class .nav-fill tetap bisa tampil dalam 1 baris karena lebar setiap menu diatur proporsional.
+    -->
+
+    <!-- Class .nav-fill atau .nav-justified juga bisa diterapkan ke dalam nav tabs: -->
+
+    <div class="mt-3"></div>
+    <ul class="nav nav-tabs nav-fill">
+      <li class="nav-item">
+        <a class="nav-link active" href="#"
+          >Link menu pertama sungguh panjang</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+    <div class="mt-2"></div>
+
+    <!-- menggunakan nav justifited -->
+    <ul class="nav nav-tabs nav-justified">
+      <li class="nav-item">
+        <a class="nav-link active" href="#"
+          >Link menu pertama sungguh panjang</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+    <!-- _____________________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Nav align</h1>
+
+    <!-- 
+      Komponen nav dibuat menggunakan struktur CSS flexbox sehingga kita bisa menggunakan
+      class flexbox Bootstrap untuk mengatur rata teks tampilan nav.
+
+      Sebagai contoh, agar tampilan menu nav berada di tengah parent element, tambahkan class
+      .justify-content-center ke dalam tag <ul>. Atau jika ingin menu nav tampil di sisi kanan
+      parent element, tambahkan class .justify-content-end ke dalam tag <ul>. Berikut contoh
+      penerapannya:
+     -->
+
+    <ul class="nav nav-pills justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="#"
+          >Link menu pertama sungguh panjang</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+    <ul class="nav nav-pills justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link active" href="#"
+          >Link menu pertama sungguh panjang</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+    <!-- ______________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>flex column</h1>
+
+    <!-- Class .flex-column juga bisa dipakai untuk mengubah tampilan nav dari horizontal menjadi
+         vertikal: -->
+
+    <ul class="nav nav-pills flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" href="#"
+          >Link menu pertama sungguh panjang</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+    <!-- __________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Nav Dropdown</h1>
+
+    <!-- 
+      Nav dropdown adalah perpaduan dari komponen nav dan dropdown. Di sini link menu nav
+      diganti menjadi tombol menu dropdown. Berikut contoh penerapannya:
+    -->
+
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
+          Dropdown button
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+          <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+          <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+    <!-- 
+      Kali ini saya mengganti list menu kedua dengan struktur dropdown (baris 5 – 14). Jika pada bab
+      sebelumnya kita memakai tag <div class="dropdown"> sebagai container dropdown, maka
+      kali ini menggunakan <li class="nav-item dropdown"> .
+        
+      Tombol dropdown juga dibuat dari tag <a>, bukan tag <button> seperti dropdown button,
+      namun class yang dipakai masih tetap sama, yakni .dropdown-toggle dan atribut data-bs-
+      toggle="dropdown".
+
+      Secara default menu dropdown Bootstrap terbuka dengan cara di-klik, bukan di hover. Ini adalah keputusan design yang dibuat oleh tim Bootstrap.
+     -->
+
+    <!-- __________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Dynamic Tabbed Interfaces</h1>
+
+    <!-- 
+      Class .nav-pills cocok dipakai untuk membuat menu navigasi karena tampilan menu item
+      yang berbentuk tombol (button). Namun nav dengan class .nav-tabs juga bisa dipakai untuk
+      membuat apa yang disebut Bootstrap sebagai dynamic tabbed interfaces.
+
+      Fitur dynamic tabbed interfaces sebenarnya butuh kode JavaScript, namun Bootstrap secara
+      cerdik mengkonversinya menjadi atribut-atribut HTML. Dengan demikian kita tidak perlu
+      menulis kode JavaScript apapun.
+
+      Dynamic tabbed interfaces terdiri dari 2 bagian: menu nav dengan class .nav-tabs serta
+      bagian konten dengan class .tab-content. Kedua bagian ini nantinya dihubungkan dengan
+      atribut id.
+      Baik, langsung saja kita masuk ke contoh prakteknya:
+     -->
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#profile">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#contact">Contact</a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="home">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+          corrupti maxime sunt voluptate distinctio ipsam, consequatur alias at,
+          culpa velit sapiente iure accusantium nam asperiores, magnam quia quam
+          quidem eum.
+        </p>
+      </div>
+      <div class="tab-pane fade" id="profile">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti
+          vero voluptatibus explicabo id est beatae sapiente a laboriosam maxime
+          culpa accusantium aliquam optio ratione, dolorem dolores quas animi
+          saepe dicta.
+        </p>
+      </div>
+      <div class="tab-pane fade" id="contact">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+          fuga assumenda iste maiores, aliquid asperiores veniam quasi tempore
+          beatae id accusamus doloribus perspiciatis dignissimos natus ipsa,
+          expedita temporibus quas optio.
+        </p>
+      </div>
+    </div>
+
+    <!-- ____________________________________________________________________________________________________________ -->
+
+    <div class="mt-5"></div>
+    <h1>Navbar</h1>
+
+    <!-- 
+      Navbar adalah komponen Bootstrap untuk membuat menu navigasi. Boleh dibilang bahwa
+      navbar adalah "versi upgrade" dari komponen nav yang baru saja kita pelajari. Navbar memiliki
+      banyak sub-komponen yang bisa ditambah sesuai kebutuhan. Struktur dasar navbar sendiri
+      sangat mirip seperti nav:
+    -->
+
+    <nav class="navbar navbar-expand">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 
+      Juga sama seperti nav, Bootstrap membolehkan kita membuat navbar dengan tag <a> saja
+      tanpa unordered list:
+    -->
+
+    <nav class="navbar navbar-expand">
+      <div class="container-fluid">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home</a>
+          <a class="nav-item nav-link" href="#">Features</a>
+          <a class="nav-item nav-link" href="#">Pricing</a>
+          <a class="nav-item nav-link disabled" href="#">Disabled</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- _______________________________________________________________________________________________________________ -->
+
+    <!-- color navbar -->
+
+    <div class="mt-5"></div>
+    <h1>Navbar color</h1>
+
+    <!-- 
+      Modifikasi pertama yang akan kita bahas adalah mengubah warna navbar. Untuk mengubah
+      warna teks, tersedia class .navbar-light dan .navbar-dark.
+
+      Penamaannya agak unik, class .navbar-light akan menghasilkan warna teks hitam yang
+      cocok untuk background terang (light), sedangkan class .navbar-dark akan menghasilkan
+      warna teks putih yang cocok untuk background gelap (dark). Jadi jika kita ingin teks putih,
+      gunakan class .navbar-dark, dan untuk teks hitam pakai class .navbar-light.
+
+      Kemudian untuk mengubah warna background dari navbar, gunakan utility class Bootstrap
+      seperti .bg-primary, .bg-secondary atau .bg-info.
+
+      Kedua jenis class warna i
+     -->
+
+    <nav class="navbar navbar-expand navbar-light bg-light">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mt-2"></div>
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mt-2"></div>
+
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mt-2"></div>
+
+    <nav class="navbar navbar-expand navbar-dark bg-info">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- __________________________________________________________________________________________________________ -->
+
+    <!-- Navbar Brand -->
+
+    <div class="mt-5"></div>
+    <h1>Nvbar brand</h1>
+
+    <!-- 
+        Navbar brand adalah tambahan "merk" atau brand ke dalam navbar. Umumnya brand ini
+        berbentuk nama atau logo website. Caranya, tempatkan sebuah inline element seperti tag <a>
+        atau <span> ke dalam struktur navbar dengan class .navbar-brand.
+
+        Berikut contoh penggunaan dari navbar brand:
+     -->
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Duniailkom</a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ____________________________________________________________________________________________________________________ -->
+
+    <!-- Navbar Dropdown -->
+
+    <div class="mt-5"></div>
+    <h1>Navbar dropdown</h1>
+
+    <!-- 
+      Seperti yang bisa di tebak, navbar dropdown adalah perpaduan navbar dengan tombol
+      dropdown. Caranya juga sama seperti di pembahasan dalam komponen nav, yakni ganti isi
+      satu menu item dengan menu dropdown.
+
+      Berikut contoh kode programnya:
+     -->
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              data-bs-toggle="dropdown"
+            >
+              Dropdown link
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+              <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+              <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ____________________________________________________________________________________________________________________ -->
+
+    <!-- Navbar Search Form -->
+
+    <div class="mt-5"></div>
+    <h1>Navbar Search Form</h1>
+
+    <!-- 
+      Fitur lain yang sering ada di dalam navbar adalah form pencarian. Berikut kode yang
+      diperlukan:
+     -->
+
+    <nav class="navbar navbar-expand navbar-light bg-light">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              data-bs-toggle="dropdown"
+            >
+              Dropdown link
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+              <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+              <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+            </div>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- 
+      Untuk form pencarian, saya membuat sebuah tag <form> dengan class .d-flex (baris 6-9).
+      Class .d-flex dipakai agar inputan form dan tombol tampil sejajar.
+
+      Di dalam tag <form>, terdapat tag <input> dengan class .form-control. Class .form-control
+      dipakai untuk mempercantik tampilan form sesuai style Bootstrap. Lebih jauh tentang class
+      untuk pembuatan form akan kita bahas dalam bab tersendiri.
+
+      Kemudian class .me-2 adalah utility class untuk membuat margin right level 2 agar terdapat
+      spasi antara inputan form dengan tombol search di sebelah kanan.
+
+      Tombol search sendiri dibuat dari tag <button> dengan class .btn dan .btn-outline-success.
+      Komponen button ini sudah kita bahas dalam bab sebelumnya.
+
+      Secara default, form search tampil di sisi kanan. Jika kita ingin tampilan form ini menyambung
+      dengan menu navbar yang sudah ada, tambahkan class .me-auto ke dalam tag <form> akan 
+      mepet ke link-link nya
+     -->
+
+    <!-- __________________________________________________________________________________________________________ -->
+
+    <!-- Navbar Responsive -->
+
+    <div class="mt-5"></div>
+    <h1>Navbar Responsive</h1>
+
+    <!-- 
+      Navbar yang sudah kita buat selama ini sebenarnya sudah responsive, dimana lebar navbar
+      akan menyesuaikan diri sesuai lebar web browser / lebar layar. Namun kondisi ini masih
+      kurang ideal terutama untuk menu yang cukup panjang seperti tampilan berikut:
+
+      Ketika lebar web browser diperkecil untuk simulasi tampilan di perangkat mobile, teks di
+      dalam menu terpaksa pindah ke baris baru karena sudah tidak muat lagi. Selain itu muncul
+      scrollbar yang menandakan lebar website sudah lebih besar dari lebar web browser.
+
+      Jika anda sering membuka website dari smartphone, tentu sudah bisa menebak alternatif
+      menu navigasi yang lebih baik, yakni "hamburger menu".
+
+      Hamburger menu adalah istilah untuk menyebut menu navigasi yang tampil ketika kita men-
+      klik tiga garis horizontal kecil di bagian atas sebuah website. Karena tombol ini mirip seperti
+      icon hamburger, maka sering disebut dengan hamburger menu. Menggunakan Bootstrap, ini
+      sangat mudah dibuat:
+    -->
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Dropdown link
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+                <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+                <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 
+      Sekarang ketika ukuran jendela web browser sampai ke breakpoint extra-small, menu navigasi
+      hilang dan berganti menjadi icon "hamburger" di kiri navbar. Begitu di klik, menu navigasi
+      muncul secara vertikal ke bawah.
+
+      Untuk membuat menu hamburger di navbar, kita butuh tambahan beberapa kode HTML.
+      Pertama, di tag <nav> sekarang terdapat class .navbar-expand-sm (baris 1), sebelumnya kita
+      hanya butuh .navbar-expand saja. Tambahan suffix atau akhiran "sm" berarti ketika masuk ke
+      breakpoint extra-small, sembunyikan menu navigasi horizontal. Tergantung kebutuhan, kita
+      bisa pakai breakpoint lain seperti .navbar-expand-md atau .navbar-expand-lg.
+
+      Selanjutnya di baris 3 – 6 adalah kode untuk membuat hamburger button, yakni tombol
+      dengan icon hamburger. Ini dibuat dari tag <button> dengan class .navbar-toggler, serta
+      atribut data-bs-toggle="collapse" dan data-bs-target="#navbarNav". Lalu diikuti sebuah
+      tag <span> kosong dengan class .navbar-toggler-icon.
+
+      Terakhir, tag <ul> yang biasa dipakai untuk membuat isi menu ditempatkan ke dalam tag
+      <div> dengan class .collapse dan .navbar-collapse serta atribut id="navbarNav"(baris 7).
+      Nilai atribut id akan berpasangan dengan nilai atribut data-bs-target di tag <button>.
+      Jika diperhatikan, dalam tag <button> saya menulis atribut data-bs-target="#navbarNav"
+      (baris 3) maka di tag <div> juga harus membuat id="navbarNav" (baris 6). Inilah cara
+      menghubungkan tombol hamburger dengan isian menu. Seandainya di halaman yang sama
+      terdapat 2 buah hamburger menu, maka setiap menu harus menggunakan pasangan atribut id
+
+      dan data-bs-target yang berbeda, misalnya data-bs-target="#navbarNavBaru" dan
+      id="navbarNavBaru".
+      -->
+
+    <!-- Jika kita tambahkan navbar brand, tombol hamburger ini akan pindah ke sisi kanan: -->
+
+    <div class="mt-5"></div>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Duniailkom</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Dropdown link
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Pilihan Menu 1</a>
+                <a class="dropdown-item" href="#">Pilihan Menu 2</a>
+                <a class="dropdown-item" href="#">Pilihan Menu 3</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script src="./js/bootstrap.bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<br lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <style>
+
+      /* selama atribut class di awali dengan col mau dia col-6 , col-3 , beri dia backround , border , dan padding  */
+      [class^="col"] {
+        background-color: rgba(86, 61, 124, 0.15);
+        border: 1px solid rgba(86, 61, 124, 0.2);
+        padding: 0.4em;
+      }
+    </style>
+  </head>
+
+  <h1>ROW COLLUMN</h1>
+
+    <!-- row collumn : kita bisa memberi jatah pada setiap row nya , collumn nya mau di beri berapa , sebagai contoh di bawah , kita memberi 
+        jatah pada collumn pada row ini adalah tiga yang artinya jika collumn nya ada 5 maka dia akan ke bawah -->
+    <div class="container">
+      <div class="row row-cols-3">
+        <div class="col">collumn 1</div>
+        <div class="col">collumn 2</div>
+        <div class="col">collumn 3</div>
+        <div class="col">collumn 4</div>
+        <div class="col">collumn 5</div>
+      </div>
+    </div>
+
+    <!-- row-cols-auto : biasanya jika mau membuat pembungkus content nya auto , kita harus meletakan cols-auto di class colsnya
+        namun kita bisa langsung saja meletakan di rows nya jadi tidak perlu menuliskan satu per satu -->
+    <div class="container">
+      <div class="row row-cols-auto">
+        <div class="col">Kolom 1</div>
+        <div class="col">Kolom 2</div>
+        <div class="col">Kolom 3 dengan teks panjang</div>
+        <div class="col">Kolom 4</div>
+        <div class="col">Kolom 5 dengan teks panjang</div>
+      </div>
+    </div>
+
+    <!-- _________________________________________________________________________________________________________________________________ -->
+
+    <!-- GRID BREAKPOINTS -->
+    
+  </br></br>  
+</br>
+
+    <h1>GRID BREAKPOINTS</h1>
+
+    <!-- Breakpoints small-->
+    <div class="container">
+      <div class="row">
+       <!--  jika jendela browser nya mencapai ukuran sm atau 576px maka proposisi tiga colom nya akan menjadi 6,4,2 segmen tiap colom -->
+        <div class="col-2 col-sm-6">small col 1</div>
+        <div class="col-6 col-sm-4">small col 2</div>
+        <div class="col-4 col-sm-2">small col 3</div>
+      </div>
+    </div>
+
+    <!-- Breakpoints medium -->
+    <div class="container">
+      <div class="row">
+        <!-- jika jendela browser nya mencapai ukuran sm atau 576px maka proposisi tiga colom nya akan menjadi 6,4,2 segmen tiap colom ,  
+             jika jendela browser nya mencapai ukuran md atau 768px ke atas maka proposisi tiga colom nya akan mencadi 2,2,8 segmen tiap colom
+         -->
+        <div class="col-2 col-sm-6 col-md-2"> medium col 1 </div>
+        <div class="col-6 col-sm-4 col-md-2"> medium col 2 </div>
+        <div class="col-4 col-sm-2 col-md-8"> medium col 3 </div>
+      </div>
+    </div>
+
+    <!-- breakpoints large -->
+    <div class="container">
+      <div class="row">
+        <!-- jika jendela browser nya mencapai ukuran sm atau 576px maka proposisi tiga colom nya akan menjadi 6,4,2 segmen tiap colom ,  
+             jika jendela browser nya mencapai ukuran md atau 768px ke atas maka proposisi tiga colom nya akan menjadi 2,2,8 segmen tiap colom,
+             dan jika jendela browser nya mencapai ukuran large atau 992px keatas maka proposisi colom nya akan menjadi 4,4,4 segmen tiap colom 
+          -->
+        <div class="col-2 col-sm-6 col-md-2 col-lg-4"> large col 1 </div>
+        <div class="col-6 col-sm-4 col-md-2 col-lg-4"> large col 2 </div>
+        <div class="col-4 col-sm-2 col-md-8 col-lg-4"> large col 3 </div>
+      </div>
+    </div>
+
+    <!-- breakpoints extra large -->
+    <div class="container">
+      <div class="row">
+          <!-- jika jendela browser nya mencapai ukuran sm atau 576px maka proposisi tiga colom nya akan menjadi 6,4,2 segmen tiap colom ,  
+             jika jendela browser nya mencapai ukuran md atau 768px ke atas maka proposisi tiga colom nya akan menjadi 2,2,8 segmen tiap colom,
+             jika jendela browser nya mencapai ukuran large atau 992px keatas maka proposisi colom nya akan menjadi 4,4,4 segmen tiap colom ,
+             dan jika jendela browser nya mencapai ukuran extra large atau 1200px ke atas maka proposisi colom nya akan menjadi 5,2,5 segmen tiap colom
+          -->
+        <div class="col-2 col-sm-6 col-md-2 col-lg-4 col-xl-5"> extra large col 1 </div>
+        <div class="col-6 col-sm-4 col-md-2 col-lg-4 col-xl-2"> extra large col 2 </div>
+        <div class="col-4 col-sm-2 col-md-8 col-lg-4 col-xl-5"> extra large col 3 </div>
+      </div>
+    </div>
+
+
+
+    <!-- CATATAN PENTING -->
+    <div class="container">
+      <div class="row">
+        <!-- Jika ditulis seperti ini, proporsi kolom 2-6-4 hanya berlaku untuk breakpoint large ke atas
+             (termasuk extra-large dan extra-extra-large). Di breakpoint medium, small dan extra-small
+             seolah-olah kita tidak memberikan proporsi apa-apa, yang berlaku adalah proporsi default,
+             yakni 12-12-12 dengan setiap kolom mengambil full 1 baris.
+    
+             Jadi, proporsi class berlaku ke atas selama tidak ditimpa oleh proporsi di atasnya. Inilah
+             penerapan konsep mobile-first di Bootstrap.
+         -->
+        <div class="col-lg-2"> CATATAN PENTING 1 </div>
+        <div class="col-lg-6"> CATATAN PENTING 2 </div>
+        <div class="col-lg-4"> CATATAN PENTING 3 </div>
+      </div>
+    </div>
+
+
+    <!-- LATIHAN BREAKPOINTS -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8">colom 1</div>
+        <div class="col-12 col-sm-6 col-md-10 col-lg-2">colom 2</div>
+        <div class="col-12 col-sm-6 col-md-2 col-lg-2">colom 3</div>
+      </div>
+    </div>
+
+    
+    <!-- _____________________________________________________________________________________________________________________ -->
+
+
+  </br></br>   
+  </br>
+  <!-- BREAKPOINTS COLLUMN ORDERING -->
+
+    <h1>BREAKPOINTS COLLUMN ORDERING</h1>
+
+    <!-- percampuran collumn ordering dan breakpoints dan breakpoints jadi seperti di kondisikan -->
+    <div class="container">
+      <div class="row">
+        <div class="col-6 order-sm-2 order-lg-3"> Main Content</div>
+        <div class="col-3 order-sm-1 order-lg-2"> Sidebar 1</div>
+        <div class="col-3 order-sm-3 order-lg-1"> Sidebar 2</div>
+      </div>
+    </div>
+
+
+    <!-- LATIHAN BREAKPOINTS COLLUMN ORDERING -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 order-md-2 col-md-8 order-lg-2 col-lg-8"> Main Content</div>
+        <div class="col-12 order-md-1 col-md-4 order-lg-1 col-lg-2"> Sidebar 1</div>
+        <div class="col-12 order-md-3 col-md-12 order-lg-3 col-lg-2"> Sidebar 2</div>
+      </div>
+    </div>
+
+    <!-- ______________________________________________________________________________________________________________________________ -->
+
+    </br></br>   
+    </br>
+    <!-- BREAKPOINTS ROW COLLUMN -->
+
+    <h1>BREAKPOINTS ROW COLLUMN</h1>
+
+
+
+    <!-- kita bisa meng kondisikan juga rows nya seperti di bawah ini , jika ukran jendela browser nya small atau extra small maka rows nya akan di buat satu 
+         collumn saja , jika ukuran medium akan di buat tiga collumn , dan jika ukuran large maka akan di buat 4 collumn
+    -->
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
+      <div class="col"> Kolom 1 </div>
+      <div class="col"> Kolom 2 </div>
+      <div class="col"> Kolom 3 </div>
+      <div class="col"> Kolom 4 </div>
+      <div class="col"> Kolom 5 </div>
+      <div class="col"> Kolom 6 </div>
+      <div class="col"> Kolom 7 </div>
+      <div class="col"> Kolom 8 </div>
+      <div class="col"> Kolom 9 </div>
+    </div>
+
+    <!-- _____________________________________________________________________________________________________________________________________________________ -->
+
+  </br></br>   
+  </br>
+   <!-- BREAKPOINTS AND OFFSSET -->
+
+    <h1>BREAKPOINTS AND OFFSET</h1>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-7 offset-md-2 offset-lg-0 "> Kolom 1</div>
+        <div class="col-3 offset-lg-2"> Kolom 2</div>
+      </div>
+    </div>
+
+    <!-- LATIHAN BREAKPOINTS AND OFFSET -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-3 offset-sm-0 offset-md-0 offset-lg-3"> Kolom 1</div>
+        <div class="col-3 offset-sm-0 offset-md-3 offset-lg-0"> Kolom 2</div>
+        <div class="col-3 offset-sm-3 offset-md-0 offset-lg-0"> Kolom 2</div>
+      </div>
+    </div>
+
+
+    <!-- ______________________________________________________________________________________________________________________ -->
+
+    <!-- BREAKPOINTS CONTAINER -->
+
+    </br></br>   
+    </br>
+
+    <h1>BREAKPOINTS CONTAINER</h1>
+
+    <!-- Salah satu fitur baru di Bootstrap 5 adalah, class .container sekarang mendukung tambahan
+         breakpoint.
+
+          Secara default, class .container memiliki ruang kosong (margin) di sisi kiri dan kanan, namun
+          begitu masuk ke breakpoint extra small (lebar layar kurang dari 576px), margin ini akan hilang
+          dan container melebar memenuhi 100% lebar layar. Berikut contoh tampilan yang dimaksud: 
+     -->
+
+     <div class="container">
+      <div class="row">
+        <div class="col"> Lebar 100% pada breakpoint extra small</div>
+      </div>
+     </div>
+
+
+     <!-- Gambar pertama (atas) adalah tampilan class .container di breakpoint large. Perhatikan ada
+          margin di sisi kiri dan kanan. Sedangkan gambar kedua (bawah) adalah tampilan untuk
+          breakpoint extra small. Di sini tidak ada lagi margin dan class .container melebar 100%
+          sepanjang web browser.
+
+          Di Bootstrap 5, kita bisa mengatur kapan container ini melebar 100%. Caranya, ganti
+          penggunaan class .container dengan salah satu dari .container-sm, .container-md,
+          .container-lg, .container-xl, dan .container-xxl. Berikut contoh prakteknya: 
+        
+      -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col"> Lebar 100% pada breakpoint extra small</div>
+        </div>
+      </div>
+
+      <div class="container-sm">
+        <div class="row">
+          <div class="col"> Lebar 100% pada breakpoint small</div>
+        </div>
+      </div>
+
+      <div class="container-md">
+        <div class="row">
+          <div class="col"> Lebar 100% pada breakpoint medium</div>
+        </div>
+      </div>
+
+      <div class="container-lg">
+        <div class="row">
+          <div class="col"> Lebar 100% pada breakpoint large</div>
+        </div>
+      </div>
+
+      <div class="container-xl">
+        <div class="row">
+          <div class="col"> Lebar 100% pada breakpoint extra large</div>
+        </div>
+      </div>
+
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col"> Lebar 100% pada breakpoint extra extra large</div>
+      </div>
+    </div>
+
+
+    <!-- __________________________________________________________________________________________________________________________________ -->
+
+    <!-- PERANCANGAN LAYOUT DENGAN GRID -->
+
+    </br></br></br>
+
+    <h1>PERANCANGAN LAYOUT DENGAN GRID</h1>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-2">Logo</div>
+        <div class="col-12 col-sm-10">Menu navigation</div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-9 col-lg-10">Main content</div>
+        <div class="col-12 col-sm-3 order-sm-first col-lg-2">Sidebar</div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">Footer 1</div>
+        <div class="col-12 col-sm-6 col-md-3 col-lg-4">Footer 2</div>
+        <div class="col-12 col-sm-6 col-md-3 col-lg-4">Footer 3</div>
+      </div>
+    </div>
+
+    <!-- _________________________________________________________________________________________________________________________________________ -->
+
+
+    
+
+    
+    
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script></script>
+  </body>
+</html>
